@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Load the Excel file
-df = pd.read_excel("../data/Suhopolje_19_20.xlsx")  # Replace with your file name
+df = pd.read_csv("../data/Suhopolje2021.csv.")  # Replace with your file name
 
 # Check column names
 print(df.columns)
@@ -10,5 +10,5 @@ print(df.columns)
 df['temp'] = df['t2m'] - 273.15
 
 # Save to a new Excel file
-df.to_excel("Suhopolje_19_20.xlsx", index=False)
+df.to_excel("Suhopolje2021.xlsx", index=False)
 
