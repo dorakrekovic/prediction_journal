@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "C:/Users/Dora/PycharmProjects/prediction_journal/inference_Pinova/inference_Pnova.py", line 6, in <module>
+    from tf_1h import create_X_Y, train_mean, train_std, n_ahead, lag
+  File "C:\Users\Dora\PycharmProjects\prediction_journal\tf_1h.py", line 53, in <module>
+    d = pd.read_csv(f'data/{location}_19_20.csv')
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\pandas\io\parsers\readers.py", line 912, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\pandas\io\parsers\readers.py", line 577, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\pandas\io\parsers\readers.py", line 1407, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\pandas\io\parsers\readers.py", line 1661, in _make_engine
+    self.handles = get_handle(
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\pandas\io\common.py", line 859, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: 'data/Suhopolje_19_20.csv'

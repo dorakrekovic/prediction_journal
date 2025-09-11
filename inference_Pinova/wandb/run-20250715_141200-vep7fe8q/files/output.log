@@ -1,0 +1,20 @@
+Shape of training data: (94709, 24, 1)
+Shape of the target data: (94709, 1)
+Shape of validation data: (10524, 24, 1)
+Shape of the validation target data: (10524, 1)
+Suhopolje_2025-07-15_10-45_tf
+1642/1642 [==============================] - 8s 5ms/step
+Traceback (most recent call last):
+  File "C:/Users/Dora/PycharmProjects/prediction_journal/inference_Pinova/inference_Pnova.py", line 54, in <module>
+    results_inference_df.to_csv(f'inference_results/Pinova/results_inference_on_{location}_{time_stamp}_2021data_modelUsed_{name_without_ext}.csv', index=False)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\pandas\core\generic.py", line 3772, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\pandas\io\formats\format.py", line 1186, in to_csv
+    csv_formatter.save()
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\pandas\io\formats\csvs.py", line 240, in save
+    with get_handle(
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\pandas\io\common.py", line 737, in get_handle
+    check_parent_directory(str(handle))
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\pandas\io\common.py", line 600, in check_parent_directory
+    raise OSError(rf"Cannot save file into a non-existent directory: '{parent}'")
+OSError: Cannot save file into a non-existent directory: 'inference_results\Pinova'

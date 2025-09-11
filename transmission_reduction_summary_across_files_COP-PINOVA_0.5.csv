@@ -1,0 +1,8 @@
+csv_file,location,model,total,correctly_predicted,to_transmit,reduction_percent
+inference_results/Copernicus_train_Pinova_inf\results_inference_on_Kamenac_2025-07-15_17-56_2021data_modelUsed_Kamenac_2025-03-12_15-08_tf_1h.csv,Kamenac,Kamenac_2025-03-12_15-08_tf_1h,8735,4150,4585,47.51001717229536
+inference_results/Copernicus_train_Pinova_inf\results_inference_on_Nasice_OBZ_2025-07-15_17-53_2021data_modelUsed_Nasice_2025-03-11_15-50_tf_1h.csv,Nasice_OBZ,Nasice_2025-03-11_15-50_tf_1h,8735,4787,3948,54.802518603319974
+inference_results/Copernicus_train_Pinova_inf\results_inference_on_Nedelisce_2025-07-15_17-55_2021data_modelUsed_Nedelisce_2025-03-11_16-02_tf_1h.csv,Nedelisce,Nedelisce_2025-03-11_16-02_tf_1h,8735,4909,3826,56.19919862621637
+inference_results/Copernicus_train_Pinova_inf\results_inference_on_Oklaj_2025-07-15_17-53_2021data_modelUsed_Oklaj_2025-03-11_16-33_tf_1h.csv,Oklaj,Oklaj_2025-03-11_16-33_tf_1h,8735,4328,4407,49.547796222095016
+inference_results/Copernicus_train_Pinova_inf\results_inference_on_Potomje_2025-07-15_17-54_2021data_modelUsed_Potomje_2025-03-11_16-50_tf_1h.csv,Potomje,Potomje_2025-03-11_16-50_tf_1h,8735,4034,4701,46.182026330852885
+inference_results/Copernicus_train_Pinova_inf\results_inference_on_Skenderovci_2025-07-15_17-54_2021data_modelUsed_Skenderovci_2025-03-11_16-57_tf_1h.csv,Skenderovci,Skenderovci_2025-03-11_16-57_tf_1h,8735,4589,4146,52.53577561534058
+inference_results/Copernicus_train_Pinova_inf\results_inference_on_Suhopolje_2025-07-15_17-51_2021data_modelUsed_Suhopolje_2025-03-13_11-08_tf_1h.csv,Suhopolje,Suhopolje_2025-03-13_11-08_tf_1h,8735,4891,3844,55.99313108185461

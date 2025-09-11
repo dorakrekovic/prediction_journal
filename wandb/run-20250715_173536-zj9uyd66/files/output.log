@@ -1,0 +1,124 @@
+Shape of training data: (15767, 24, 1)
+Shape of the target data: (15767, 1)
+Shape of validation data: (1752, 24, 1)
+Shape of the validation target data: (1752, 1)
+Suhopolje_2025-03-13_11-08_tf_1h
+                    time  temperature
+0    2021-01-01 00:00:00     1.500000
+1    2021-01-01 01:00:00     2.783333
+2    2021-01-01 02:00:00     1.850000
+3    2021-01-01 03:00:00     1.566667
+4    2021-01-01 04:00:00    -0.250000
+...                  ...          ...
+8755 2021-12-31 20:00:00     2.416667
+8756 2021-12-31 21:00:00     1.450000
+8757 2021-12-31 22:00:00     0.866667
+8758 2021-12-31 23:00:00     0.516667
+8759 2022-01-01 00:00:00    -0.133333
+
+[8760 rows x 2 columns]
+X_infer shape: (8735, 24, 1)
+Traceback (most recent call last):
+  File "C:/Users/Dora/PycharmProjects/prediction_journal/inference_Cop_Pinova.py", line 44, in <module>
+    predictions_scaled = inference_model.predict(X_infer)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\keras\utils\traceback_utils.py", line 65, in error_handler
+    return fn(*args, **kwargs)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\keras\engine\training.py", line 2350, in predict
+    tmp_batch_outputs = self.predict_function(iterator)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\tensorflow\python\util\traceback_utils.py", line 150, in error_handler
+    return fn(*args, **kwargs)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\tensorflow\python\eager\polymorphic_function\polymorphic_function.py", line 880, in __call__
+    result = self._call(*args, **kwds)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\tensorflow\python\eager\polymorphic_function\polymorphic_function.py", line 928, in _call
+    self._initialize(args, kwds, add_initializers_to=initializers)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\tensorflow\python\eager\polymorphic_function\polymorphic_function.py", line 749, in _initialize
+    self._variable_creation_fn    # pylint: disable=protected-access
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\tensorflow\python\eager\polymorphic_function\tracing_compiler.py", line 162, in _get_concrete_function_internal_garbage_collected
+    concrete_function, _ = self._maybe_define_concrete_function(args, kwargs)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\tensorflow\python\eager\polymorphic_function\tracing_compiler.py", line 157, in _maybe_define_concrete_function
+    return self._maybe_define_function(args, kwargs)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\tensorflow\python\eager\polymorphic_function\tracing_compiler.py", line 360, in _maybe_define_function
+    concrete_function = self._create_concrete_function(args, kwargs)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\tensorflow\python\eager\polymorphic_function\tracing_compiler.py", line 284, in _create_concrete_function
+    func_graph_module.func_graph_from_py_func(
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\tensorflow\python\framework\func_graph.py", line 1283, in func_graph_from_py_func
+    func_outputs = python_func(*func_args, **func_kwargs)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\tensorflow\python\eager\polymorphic_function\polymorphic_function.py", line 645, in wrapped_fn
+    out = weak_wrapped_fn().__wrapped__(*args, **kwds)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\tensorflow\python\framework\func_graph.py", line 1258, in autograph_handler
+    return autograph.converted_call(
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\tensorflow\python\autograph\impl\api.py", line 439, in converted_call
+    result = converted_f(*effective_args, **kwargs)
+  File "C:\Users\Dora\AppData\Local\Temp\__autograph_generated_file9dfvgt3q.py", line 15, in tf__predict_function
+    retval_ = ag__.converted_call(ag__.ld(step_function), (ag__.ld(self), ag__.ld(iterator)), None, fscope)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\tensorflow\python\autograph\impl\api.py", line 377, in converted_call
+    return _call_unconverted(f, args, kwargs, options)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\tensorflow\python\autograph\impl\api.py", line 459, in _call_unconverted
+    return f(*args)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\keras\engine\training.py", line 2123, in step_function
+    outputs = model.distribute_strategy.run(run_step, args=(data,))
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\tensorflow\python\distribute\distribute_lib.py", line 1316, in run
+    return self._extended.call_for_each_replica(fn, args=args, kwargs=kwargs)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\tensorflow\python\distribute\distribute_lib.py", line 2895, in call_for_each_replica
+    return self._call_for_each_replica(fn, args, kwargs)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\tensorflow\python\distribute\distribute_lib.py", line 3696, in _call_for_each_replica
+    return fn(*args, **kwargs)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\tensorflow\python\autograph\impl\api.py", line 689, in wrapper
+    return converted_call(f, args, kwargs, options=options)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\tensorflow\python\autograph\impl\api.py", line 377, in converted_call
+    return _call_unconverted(f, args, kwargs, options)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\tensorflow\python\autograph\impl\api.py", line 458, in _call_unconverted
+    return f(*args, **kwargs)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\keras\engine\training.py", line 2111, in run_step
+    outputs = model.predict_step(data)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\keras\engine\training.py", line 2079, in predict_step
+    return self(x, training=False)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\keras\utils\traceback_utils.py", line 65, in error_handler
+    return fn(*args, **kwargs)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\keras\engine\training.py", line 561, in __call__
+    return super().__call__(*args, **kwargs)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\keras\utils\traceback_utils.py", line 65, in error_handler
+    return fn(*args, **kwargs)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\keras\engine\base_layer.py", line 1132, in __call__
+    outputs = call_fn(inputs, *args, **kwargs)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\keras\utils\traceback_utils.py", line 96, in error_handler
+    return fn(*args, **kwargs)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\keras\engine\functional.py", line 511, in call
+    return self._run_internal_graph(inputs, training=training, mask=mask)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\keras\engine\functional.py", line 668, in _run_internal_graph
+    outputs = node.layer(*args, **kwargs)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\keras\layers\rnn\base_rnn.py", line 556, in __call__
+    return super().__call__(inputs, **kwargs)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\keras\utils\traceback_utils.py", line 65, in error_handler
+    return fn(*args, **kwargs)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\keras\engine\base_layer.py", line 1132, in __call__
+    outputs = call_fn(inputs, *args, **kwargs)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\keras\utils\traceback_utils.py", line 96, in error_handler
+    return fn(*args, **kwargs)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\keras\layers\rnn\lstm.py", line 625, in call
+    last_output, outputs, states = backend.rnn(
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\tensorflow\python\util\traceback_utils.py", line 150, in error_handler
+    return fn(*args, **kwargs)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\tensorflow\python\util\dispatch.py", line 1176, in op_dispatch_handler
+    return dispatch_target(*args, **kwargs)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\keras\backend.py", line 5142, in rnn
+    final_outputs = tf.compat.v1.while_loop(
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\tensorflow\python\ops\control_flow_ops.py", line 2716, in while_loop
+    return while_v2.while_loop(
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\tensorflow\python\ops\while_v2.py", line 307, in while_loop
+    outputs = _build_while_op(
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\tensorflow\python\ops\while_v2.py", line 508, in _build_while_op
+    return util.run_as_function_for_tape_gradients(_make_op, loop_vars)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\tensorflow\python\ops\control_flow_util_v2.py", line 376, in run_as_function_for_tape_gradients
+    return make_op(inputs)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\tensorflow\python\ops\while_v2.py", line 487, in _make_op
+    util.create_new_tf_function(body_graph),
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\tensorflow\python\ops\control_flow_util_v2.py", line 69, in create_new_tf_function
+    func = function._EagerDefinedFunction(  # pylint: disable=protected-access
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\tensorflow\python\eager\polymorphic_function\monomorphic_function.py", line 270, in __init__
+    context.add_function(fn)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\tensorflow\python\eager\context.py", line 2702, in add_function
+    context().add_function(fdef)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\tensorflow\python\eager\context.py", line 1283, in add_function
+    pywrap_tfe.TFE_ContextAddFunction(self._handle, fn)
+KeyboardInterrupt

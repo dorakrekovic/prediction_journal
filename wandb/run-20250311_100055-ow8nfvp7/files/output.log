@@ -1,0 +1,32 @@
+Model saved at torch_univariate__Suhopolje_2025-03-11_10-00.pth
+epoch 0
+1.0176026439110577 0.7505881651621604
+epoch 5
+0.19487454418197903 0.1779368303762505
+epoch 10
+0.16796373679420687 0.1505121679937574
+epoch 15
+0.16212665728936104 0.14843551612200692
+epoch 20
+0.16078187533601804 0.1493809036642352
+epoch 25
+0.160290942913 0.15027856188753122
+epoch 30
+0.16004788121733238 0.1506950787405108
+epoch 35
+0.15990373200186017 0.15083549101471277
+epoch 40
+0.1597994587777681 0.15085060652150378
+epoch 45
+0.15971433708942692 0.1508203702149864
+final loss metrics after inversing scaling
+train mse loss 3.44403571004683
+test mse loss 3.2888568393829085
+AttributeError: 'set' object has no attribute 'sqrt'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Dora\PycharmProjects\prediction_journal\pytorch_1h.py", line 243, in <module>
+    rmse_train = np.sqrt({calculate_metrics(train_dataloader)})
+TypeError: loop of ufunc does not support argument 0 of type set which has no callable sqrt method

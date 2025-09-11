@@ -1,0 +1,8 @@
+csv_file,location,model,total,correctly_predicted,to_transmit,reduction_percent
+inference_results/Copernicus\results_inference_Kamenac_2025-03-12_14-42_2021.csv,Kamenac,models/Kamenac_2025-03-12_10-10_tf_1h.h5,8735,5069,3666,58.03091013165427
+inference_results/Copernicus\results_inference_Nasice_2025-03-12_14-51_2021.csv,Nasice,models/Nasice_2025-03-12_10-09_tf_1h.h5,8735,658,8077,7.532913566113342
+inference_results/Copernicus\results_inference_Nedelisce_2025-03-12_15-05_2021.csv,Nedelisce,models/Nedelisce_2025-03-11_16-02_tf_1h.h5,8735,6347,2388,72.66170578133944
+inference_results/Copernicus\results_inference_Oklaj_2025-03-12_15-17_2021.csv,Oklaj,models/Oklaj_2025-03-11_16-33_tf_1h.h5,8735,6599,2136,75.54665140240412
+inference_results/Copernicus\results_inference_Potomje_2025-03-12_16-19_2021.csv,Potomje,models/Potomje_2025-03-11_16-50_tf_1h.h5,8735,5713,3022,65.40354894104179
+inference_results/Copernicus\results_inference_Skenderovci_2025-03-12_16-29_2021.csv,Skenderovci,models/Skenderovci_2025-03-11_16-57_tf_1h.h5,8735,5720,3015,65.48368631940468
+inference_results/Copernicus\results_inference_Suhopolje_2025-03-11_12-27_2021.csv,Suhopolje,models/Suhopolje_2025-03-11_11-35_tf_1h.h5,8735,6266,2469,71.73440183171151

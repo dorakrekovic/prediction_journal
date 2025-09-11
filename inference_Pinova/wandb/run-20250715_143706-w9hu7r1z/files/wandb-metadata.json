@@ -1,0 +1,27 @@
+{
+  "os":  "Windows-10-10.0.26100-SP0",
+  "python":  "CPython 3.8.20",
+  "startedAt":  "2025-07-15T12:37:06.639538Z",
+  "program":  "C:/Users/Dora/PycharmProjects/prediction_journal/inference_Pinova/inference_Pnova.py",
+  "codePath":  "inference_Pnova.py",
+  "email":  "dora.krekovic@fer.hr",
+  "root":  "C:\\Users\\Dora\\PycharmProjects\\prediction_journal\\inference_Pinova",
+  "host":  "DESKTOP-I96HI59",
+  "executable":  "C:\\Users\\Dora\\anaconda3\\envs\\prediction_journal_38\\python.exe",
+  "codePathLocal":  "inference_Pnova.py",
+  "cpu_count":  8,
+  "cpu_count_logical":  16,
+  "disk":  {
+    "/":  {
+      "total":  "1023248748544",
+      "used":  "632145993728"
+    }
+  },
+  "memory":  {
+    "total":  "33528926208"
+  },
+  "cpu":  {
+    "count":  8,
+    "countLogical":  16
+  }
+}

@@ -1,0 +1,15 @@
+{"time":"2025-07-15T13:58:44.4899998+02:00","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"C:\\Users\\Dora\\PycharmProjects\\prediction_journal\\inference_Pinova\\wandb\\run-20250715_135844-vqod2qg6\\logs\\debug-core.log"}
+{"time":"2025-07-15T13:58:44.8045252+02:00","level":"INFO","msg":"created new stream","id":"vqod2qg6"}
+{"time":"2025-07-15T13:58:44.8045252+02:00","level":"INFO","msg":"stream: started","id":"vqod2qg6"}
+{"time":"2025-07-15T13:58:44.8045252+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"vqod2qg6"}
+{"time":"2025-07-15T13:58:44.8045252+02:00","level":"INFO","msg":"sender: started","stream_id":"vqod2qg6"}
+{"time":"2025-07-15T13:58:44.8045252+02:00","level":"INFO","msg":"handler: started","stream_id":"vqod2qg6"}
+{"time":"2025-07-15T13:58:45.1437274+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-07-15T13:58:45.7833341+02:00","level":"INFO","msg":"stream: closing","id":"vqod2qg6"}
+{"time":"2025-07-15T13:58:45.7833341+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-07-15T13:58:45.7840088+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-07-15T13:58:46.6699939+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-07-15T13:58:46.9031054+02:00","level":"INFO","msg":"handler: closed","stream_id":"vqod2qg6"}
+{"time":"2025-07-15T13:58:46.9031054+02:00","level":"INFO","msg":"sender: closed","stream_id":"vqod2qg6"}
+{"time":"2025-07-15T13:58:46.9031054+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"vqod2qg6"}
+{"time":"2025-07-15T13:58:46.9036137+02:00","level":"INFO","msg":"stream: closed","id":"vqod2qg6"}

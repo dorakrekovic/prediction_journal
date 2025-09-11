@@ -1,0 +1,29 @@
+Model saved at torch_univariate__Nasice_2025-03-10_16-21.pth
+epoch 0
+1.0310953671033953 0.9905908099370789
+epoch 5
+0.18381863681756905 0.16923905137428985
+epoch 10
+0.16427238376968553 0.14842644693446955
+epoch 15
+0.16189609625324292 0.1477930565384163
+epoch 20
+0.16112748786124964 0.14875867289700667
+Traceback (most recent call last):
+  File "C:\Users\Dora\PycharmProjects\prediction_journal\pytorch_1h.py", line 204, in <module>
+    test_losses.append(test(test_dataloader))
+  File "C:\Users\Dora\PycharmProjects\prediction_journal\pytorch_1h.py", line 190, in test
+    out, hn, cn = model(x.reshape(past_observation, batch_size, 1), hn, cn)
+  File "C:\Users\Dora\PycharmProjects\prediction_journal\venv\lib\site-packages\torch\nn\modules\module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\Dora\PycharmProjects\prediction_journal\venv\lib\site-packages\torch\nn\modules\module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\Dora\PycharmProjects\prediction_journal\pytorch_1h.py", line 108, in forward
+    out, (hn, cn) = self.lstm(x, (hn, cn))  # out shape (past observation, batch_size, hidden_size)
+  File "C:\Users\Dora\PycharmProjects\prediction_journal\venv\lib\site-packages\torch\nn\modules\module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\Dora\PycharmProjects\prediction_journal\venv\lib\site-packages\torch\nn\modules\module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\Dora\PycharmProjects\prediction_journal\venv\lib\site-packages\torch\nn\modules\rnn.py", line 1124, in forward
+    result = _VF.lstm(
+KeyboardInterrupt

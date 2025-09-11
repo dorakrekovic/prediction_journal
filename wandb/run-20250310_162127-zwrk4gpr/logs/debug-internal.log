@@ -1,0 +1,15 @@
+{"time":"2025-03-10T16:21:28.5850898+01:00","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"C:\\Users\\Dora\\PycharmProjects\\prediction_journal\\wandb\\run-20250310_162127-zwrk4gpr\\logs\\debug-core.log"}
+{"time":"2025-03-10T16:21:29.7532951+01:00","level":"INFO","msg":"created new stream","id":"zwrk4gpr"}
+{"time":"2025-03-10T16:21:29.7538455+01:00","level":"INFO","msg":"stream: started","id":"zwrk4gpr"}
+{"time":"2025-03-10T16:21:29.7538455+01:00","level":"INFO","msg":"handler: started","stream_id":"zwrk4gpr"}
+{"time":"2025-03-10T16:21:29.7538455+01:00","level":"INFO","msg":"writer: Do: started","stream_id":"zwrk4gpr"}
+{"time":"2025-03-10T16:21:29.7538455+01:00","level":"INFO","msg":"sender: started","stream_id":"zwrk4gpr"}
+{"time":"2025-03-10T16:21:30.0767649+01:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-10T16:23:52.3778448+01:00","level":"INFO","msg":"stream: closing","id":"zwrk4gpr"}
+{"time":"2025-03-10T16:23:52.3778448+01:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-10T16:23:52.3788777+01:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-10T16:23:53.0380188+01:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-10T16:23:53.3026628+01:00","level":"INFO","msg":"handler: closed","stream_id":"zwrk4gpr"}
+{"time":"2025-03-10T16:23:53.3026628+01:00","level":"INFO","msg":"writer: Close: closed","stream_id":"zwrk4gpr"}
+{"time":"2025-03-10T16:23:53.3031746+01:00","level":"INFO","msg":"sender: closed","stream_id":"zwrk4gpr"}
+{"time":"2025-03-10T16:23:53.3031746+01:00","level":"INFO","msg":"stream: closed","id":"zwrk4gpr"}

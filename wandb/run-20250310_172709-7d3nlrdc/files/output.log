@@ -1,0 +1,7 @@
+Model saved at torch_univariate__Nasice_2025-03-10_17-27.pth
+Traceback (most recent call last):
+  File "C:\Users\Dora\PycharmProjects\prediction_journal\pytorch_updated.py", line 201, in <module>
+    train_losses.append(train(train_dataloader))
+  File "C:\Users\Dora\PycharmProjects\prediction_journal\pytorch_updated.py", line 154, in train
+    hn, cn = model.init()
+TypeError: init() missing 1 required positional argument: 'batch_size'

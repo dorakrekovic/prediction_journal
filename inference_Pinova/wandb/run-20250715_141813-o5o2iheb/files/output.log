@@ -1,0 +1,13 @@
+Shape of training data: (94709, 24, 1)
+Shape of the target data: (94709, 1)
+Shape of validation data: (10524, 24, 1)
+Shape of the validation target data: (10524, 1)
+Nedelisce_2025-07-15_11-41_tf
+Traceback (most recent call last):
+  File "C:/Users/Dora/PycharmProjects/prediction_journal/inference_Pinova/inference_Pnova.py", line 21, in <module>
+    inference_model = load_model(saved_model_path)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\keras\saving\legacy\save.py", line 227, in load_model
+    raise IOError(
+OSError: No file or directory found at models/Pinova/Nedelisce_2025-07-15_11-41_tf.h5

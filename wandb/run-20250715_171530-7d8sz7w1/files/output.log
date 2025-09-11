@@ -1,0 +1,28 @@
+Shape of training data: (15767, 24, 1)
+Shape of the target data: (15767, 1)
+Shape of validation data: (1752, 24, 1)
+Shape of the validation target data: (1752, 1)
+Suhopolje_2025-03-13_11-08_tf_1h
+X_infer shape: (52535, 24, 1)
+1642/1642 [==============================] - 5s 3ms/step
+Traceback (most recent call last):
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\pandas\core\indexes\base.py", line 3653, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas\_libs\index.pyx", line 147, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 176, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7080, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'temperature'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:/Users/Dora/PycharmProjects/prediction_journal/inference_Cop_Pinova.py", line 41, in <module>
+    predictions_unscaled = (predictions_scaled.flatten() * train_std['temperature']) + train_mean['temperature']
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\pandas\core\series.py", line 1007, in __getitem__
+    return self._get_value(key)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\pandas\core\series.py", line 1116, in _get_value
+    loc = self.index.get_loc(label)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\pandas\core\indexes\base.py", line 3655, in get_loc
+    raise KeyError(key) from err
+KeyError: 'temperature'

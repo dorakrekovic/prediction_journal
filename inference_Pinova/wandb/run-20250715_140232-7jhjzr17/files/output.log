@@ -1,0 +1,9 @@
+Shape of training data: (94709, 24, 1)
+Shape of the target data: (94709, 1)
+Shape of validation data: (10524, 24, 1)
+Shape of the validation target data: (10524, 1)
+Suhopolje_2025-07-15_10-45_tf
+Traceback (most recent call last):
+  File "C:/Users/Dora/PycharmProjects/prediction_journal/inference_Pinova/inference_Pnova.py", line 24, in <module>
+    data_2021 = pd.excel(f'../data/Pinova/{location}_2021_Pinova.xlsl')
+AttributeError: module 'pandas' has no attribute 'excel'

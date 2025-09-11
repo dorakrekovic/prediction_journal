@@ -1,0 +1,27 @@
+{
+  "os":  "Windows-10-10.0.26100-SP0",
+  "python":  "CPython 3.8.20",
+  "startedAt":  "2025-07-15T12:08:28.356151Z",
+  "program":  "C:/Users/Dora/PycharmProjects/prediction_journal/prediction_Pinova/Potomje.py",
+  "codePath":  "Potomje.py",
+  "email":  "dora.krekovic@fer.hr",
+  "root":  "C:\\Users\\Dora\\PycharmProjects\\prediction_journal\\prediction_Pinova",
+  "host":  "DESKTOP-I96HI59",
+  "executable":  "C:\\Users\\Dora\\anaconda3\\envs\\prediction_journal_38\\python.exe",
+  "codePathLocal":  "Potomje.py",
+  "cpu_count":  8,
+  "cpu_count_logical":  16,
+  "disk":  {
+    "/":  {
+      "total":  "1023248748544",
+      "used":  "630904557568"
+    }
+  },
+  "memory":  {
+    "total":  "33528926208"
+  },
+  "cpu":  {
+    "count":  8,
+    "countLogical":  16
+  }
+}

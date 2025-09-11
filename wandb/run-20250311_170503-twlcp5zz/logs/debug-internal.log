@@ -1,0 +1,12 @@
+{"time":"2025-03-11T17:05:03.8537071+01:00","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"C:\\Users\\Dora\\PycharmProjects\\prediction_journal\\wandb\\run-20250311_170503-twlcp5zz\\logs\\debug-core.log"}
+{"time":"2025-03-11T17:05:03.9754996+01:00","level":"INFO","msg":"created new stream","id":"twlcp5zz"}
+{"time":"2025-03-11T17:05:03.9754996+01:00","level":"INFO","msg":"stream: started","id":"twlcp5zz"}
+{"time":"2025-03-11T17:05:03.9754996+01:00","level":"INFO","msg":"writer: Do: started","stream_id":"twlcp5zz"}
+{"time":"2025-03-11T17:05:03.9754996+01:00","level":"INFO","msg":"handler: started","stream_id":"twlcp5zz"}
+{"time":"2025-03-11T17:05:03.9754996+01:00","level":"INFO","msg":"sender: started","stream_id":"twlcp5zz"}
+{"time":"2025-03-11T17:05:25.0346779+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp 35.186.228.49:443: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond."}
+{"time":"2025-03-11T17:05:27.4095253+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-11T17:05:41.9425099+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: getaddrinfow: This is usually a temporary error during hostname resolution and means that the local server did not receive a response from an authoritative server."}
+{"time":"2025-03-11T17:06:01.1028666+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: getaddrinfow: This is usually a temporary error during hostname resolution and means that the local server did not receive a response from an authoritative server."}
+{"time":"2025-03-11T17:06:27.2667394+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: getaddrinfow: This is usually a temporary error during hostname resolution and means that the local server did not receive a response from an authoritative server."}
+{"time":"2025-03-11T17:06:34.4682662+01:00","level":"INFO","msg":"stream: closing","id":"twlcp5zz"}

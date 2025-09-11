@@ -1,0 +1,15 @@
+Shape of training data: (94709, 24, 1)
+Shape of the target data: (94709, 1)
+Shape of validation data: (10524, 24, 1)
+Shape of the validation target data: (10524, 1)
+Suhopolje_2025-07-15_10-45_tf
+X_infer shape: (52535, 24, 1)
+1642/1642 [==============================] - 5s 3ms/step
+train_std: temperature    8.643017
+dtype: float64
+train_mean: temperature    13.563537
+dtype: float64
+train_std type: <class 'pandas.core.series.Series'>
+train_std index: Index(['temperature'], dtype='object')
+1642/1642 [==============================] - 5s 3ms/step
+Inference results saved successfully to results_inference_on_Oklaj_2025-07-15_17-26_2021data_modelUsed_Suhopolje_2025-07-15_10-45_tf.csv'

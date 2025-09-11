@@ -1,0 +1,37 @@
+Shape of training data: (15767, 24, 1)
+Shape of the target data: (15767, 1)
+Shape of validation data: (1752, 24, 1)
+Shape of the validation target data: (1752, 1)
+Suhopolje_2025-03-13_11-08_tf_1h
+X_infer shape: (52535, 24, 2)
+WARNING:tensorflow:Model was constructed with shape (None, 24, 1) for input KerasTensor(type_spec=TensorSpec(shape=(None, 24, 1), dtype=tf.float32, name='input_1'), name='input_1', description="created by layer 'input_1'"), but it was called on an input with incompatible shape (None, 24, 2).
+Traceback (most recent call last):
+  File "C:/Users/Dora/PycharmProjects/prediction_journal/inference_Cop_Pinova.py", line 37, in <module>
+    predictions_scaled = inference_model.predict(X_infer)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\Dora\AppData\Local\Temp\__autograph_generated_filew9qtqvxa.py", line 15, in tf__predict_function
+    retval_ = ag__.converted_call(ag__.ld(step_function), (ag__.ld(self), ag__.ld(iterator)), None, fscope)
+ValueError: in user code:
+
+    File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\keras\engine\training.py", line 2137, in predict_function  *
+        return step_function(self, iterator)
+    File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\keras\engine\training.py", line 2123, in step_function  **
+        outputs = model.distribute_strategy.run(run_step, args=(data,))
+    File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\keras\engine\training.py", line 2111, in run_step  **
+        outputs = model.predict_step(data)
+    File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\keras\engine\training.py", line 2079, in predict_step
+        return self(x, training=False)
+    File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+        raise e.with_traceback(filtered_tb) from None
+    File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\keras\engine\input_spec.py", line 295, in assert_input_compatibility
+        raise ValueError(
+
+    ValueError: Exception encountered when calling layer 'model' (type Functional).
+
+    Input 0 of layer "lstm" is incompatible with the layer: expected shape=(None, None, 1), found shape=(None, 24, 2)
+
+    Call arguments received by layer 'model' (type Functional):
+      • inputs=tf.Tensor(shape=(None, 24, 2), dtype=float32)
+      • training=False
+      • mask=None

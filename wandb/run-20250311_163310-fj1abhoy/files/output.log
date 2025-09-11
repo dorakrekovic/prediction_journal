@@ -1,0 +1,261 @@
+Shape of training data: (15767, 24, 1)
+Shape of the target data: (15767, 1)
+Shape of validation data: (1752, 24, 1)
+Shape of the validation target data: (1752, 1)
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #
+=================================================================
+ input_1 (InputLayer)        [(None, 24, 1)]           0
+
+ lstm (LSTM)                 (None, 50)                10400
+
+ dense (Dense)               (None, 1)                 51
+
+=================================================================
+Total params: 10,451
+Trainable params: 10,451
+Non-trainable params: 0
+_________________________________________________________________
+Model saved at models/Oklaj_2025-03-11_16-33_tf_1h.h5
+wandb: WARNING WandbCallback is deprecated and will be removed in a future release. Please use the WandbMetricsLogger, WandbModelCheckpoint, and WandbEvalCallback callbacks instead. See https://docs.wandb.ai/guides/integrations/keras for more information.
+wandb: WARNING The save_model argument by default saves the model in the HDF5 format that cannot save custom objects like subclassed models and custom layers. This behavior will be deprecated in a future release in favor of the SavedModel format. Meanwhile, the HDF5 model is saved as W&B files and the SavedModel as W&B Artifacts.
+Epoch 1/50
+493/493 [==============================] - 9s 17ms/step - loss: 0.1701 - val_loss: 0.1091
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (C:\Users\Dora\PycharmProjects\prediction_journal\wandb\run-20250311_163310-fj1abhoy\files\model-best)... Done. 0.0s
+Epoch 2/50
+493/493 [==============================] - 9s 18ms/step - loss: 0.0501 - val_loss: 0.0843
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (C:\Users\Dora\PycharmProjects\prediction_journal\wandb\run-20250311_163310-fj1abhoy\files\model-best)... Done. 0.0s
+Epoch 3/50
+493/493 [==============================] - 8s 17ms/step - loss: 0.0291 - val_loss: 0.0179
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (C:\Users\Dora\PycharmProjects\prediction_journal\wandb\run-20250311_163310-fj1abhoy\files\model-best)... Done. 0.0s
+Epoch 4/50
+493/493 [==============================] - 10s 19ms/step - loss: 0.0145 - val_loss: 0.0106
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (C:\Users\Dora\PycharmProjects\prediction_journal\wandb\run-20250311_163310-fj1abhoy\files\model-best)... Done. 0.0s
+Epoch 5/50
+493/493 [==============================] - 8s 17ms/step - loss: 0.0124 - val_loss: 0.0087
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (C:\Users\Dora\PycharmProjects\prediction_journal\wandb\run-20250311_163310-fj1abhoy\files\model-best)... Done. 0.0s
+Epoch 6/50
+493/493 [==============================] - 9s 18ms/step - loss: 0.0111 - val_loss: 0.0069
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (C:\Users\Dora\PycharmProjects\prediction_journal\wandb\run-20250311_163310-fj1abhoy\files\model-best)... Done. 0.0s
+Epoch 7/50
+493/493 [==============================] - 8s 17ms/step - loss: 0.0101 - val_loss: 0.0062
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (C:\Users\Dora\PycharmProjects\prediction_journal\wandb\run-20250311_163310-fj1abhoy\files\model-best)... Done. 0.0s
+Epoch 8/50
+493/493 [==============================] - 8s 16ms/step - loss: 0.0092 - val_loss: 0.0057
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (C:\Users\Dora\PycharmProjects\prediction_journal\wandb\run-20250311_163310-fj1abhoy\files\model-best)... Done. 0.0s
+Epoch 9/50
+493/493 [==============================] - 8s 17ms/step - loss: 0.0083 - val_loss: 0.0053
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (C:\Users\Dora\PycharmProjects\prediction_journal\wandb\run-20250311_163310-fj1abhoy\files\model-best)... Done. 0.0s
+Epoch 10/50
+493/493 [==============================] - 7s 14ms/step - loss: 0.0075 - val_loss: 0.0054
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+Epoch 11/50
+493/493 [==============================] - 7s 14ms/step - loss: 0.0067 - val_loss: 0.0069
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+Epoch 12/50
+493/493 [==============================] - 6s 13ms/step - loss: 0.0065 - val_loss: 0.0058
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+Epoch 13/50
+493/493 [==============================] - 9s 18ms/step - loss: 0.0059 - val_loss: 0.0047
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (C:\Users\Dora\PycharmProjects\prediction_journal\wandb\run-20250311_163310-fj1abhoy\files\model-best)... Done. 0.0s
+Epoch 14/50
+493/493 [==============================] - 9s 17ms/step - loss: 0.0055 - val_loss: 0.0044
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (C:\Users\Dora\PycharmProjects\prediction_journal\wandb\run-20250311_163310-fj1abhoy\files\model-best)... Done. 0.0s
+Epoch 15/50
+493/493 [==============================] - 9s 19ms/step - loss: 0.0053 - val_loss: 0.0044
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (C:\Users\Dora\PycharmProjects\prediction_journal\wandb\run-20250311_163310-fj1abhoy\files\model-best)... Done. 0.0s
+Epoch 16/50
+493/493 [==============================] - 7s 13ms/step - loss: 0.0051 - val_loss: 0.0045
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+Epoch 17/50
+493/493 [==============================] - 7s 14ms/step - loss: 0.0048 - val_loss: 0.0046
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+Epoch 18/50
+493/493 [==============================] - 7s 14ms/step - loss: 0.0047 - val_loss: 0.0047
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+Epoch 19/50
+493/493 [==============================] - 7s 13ms/step - loss: 0.0046 - val_loss: 0.0048
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+Epoch 20/50
+493/493 [==============================] - 7s 14ms/step - loss: 0.0045 - val_loss: 0.0047
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+Epoch 21/50
+493/493 [==============================] - 7s 14ms/step - loss: 0.0045 - val_loss: 0.0047
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+Epoch 22/50
+493/493 [==============================] - 6s 13ms/step - loss: 0.0043 - val_loss: 0.0048
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+Epoch 23/50
+493/493 [==============================] - 6s 13ms/step - loss: 0.0043 - val_loss: 0.0049
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+Epoch 24/50
+493/493 [==============================] - 6s 13ms/step - loss: 0.0042 - val_loss: 0.0047
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+Epoch 25/50
+493/493 [==============================] - 6s 12ms/step - loss: 0.0042 - val_loss: 0.0046
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+Epoch 26/50
+493/493 [==============================] - 6s 13ms/step - loss: 0.0041 - val_loss: 0.0047
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+Epoch 27/50
+493/493 [==============================] - 6s 13ms/step - loss: 0.0041 - val_loss: 0.0045
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+Epoch 28/50
+493/493 [==============================] - 6s 13ms/step - loss: 0.0041 - val_loss: 0.0045
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+Epoch 29/50
+493/493 [==============================] - 7s 14ms/step - loss: 0.0041 - val_loss: 0.0045
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+Epoch 30/50
+493/493 [==============================] - 7s 14ms/step - loss: 0.0040 - val_loss: 0.0047
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+Epoch 31/50
+493/493 [==============================] - 7s 14ms/step - loss: 0.0040 - val_loss: 0.0048
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+Epoch 32/50
+493/493 [==============================] - 7s 14ms/step - loss: 0.0040 - val_loss: 0.0050
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+Epoch 33/50
+493/493 [==============================] - 7s 14ms/step - loss: 0.0040 - val_loss: 0.0050
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+Epoch 34/50
+493/493 [==============================] - 7s 14ms/step - loss: 0.0040 - val_loss: 0.0049
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+Epoch 35/50
+493/493 [==============================] - 7s 14ms/step - loss: 0.0040 - val_loss: 0.0048
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+Epoch 36/50
+493/493 [==============================] - 7s 14ms/step - loss: 0.0040 - val_loss: 0.0046
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+Epoch 37/50
+493/493 [==============================] - 7s 14ms/step - loss: 0.0040 - val_loss: 0.0047
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+Epoch 38/50
+493/493 [==============================] - 7s 14ms/step - loss: 0.0040 - val_loss: 0.0047
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+Epoch 39/50
+493/493 [==============================] - 6s 13ms/step - loss: 0.0039 - val_loss: 0.0046
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+Epoch 40/50
+493/493 [==============================] - 7s 13ms/step - loss: 0.0039 - val_loss: 0.0046
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.1s
+Epoch 41/50
+493/493 [==============================] - 9s 18ms/step - loss: 0.0039 - val_loss: 0.0043
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (C:\Users\Dora\PycharmProjects\prediction_journal\wandb\run-20250311_163310-fj1abhoy\files\model-best)... Done. 0.0s
+Epoch 42/50
+493/493 [==============================] - 6s 13ms/step - loss: 0.0038 - val_loss: 0.0045
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+Epoch 43/50
+493/493 [==============================] - 6s 13ms/step - loss: 0.0038 - val_loss: 0.0044
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+Epoch 44/50
+493/493 [==============================] - 7s 13ms/step - loss: 0.0038 - val_loss: 0.0044
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+Epoch 45/50
+493/493 [==============================] - 7s 13ms/step - loss: 0.0037 - val_loss: 0.0044
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+Epoch 46/50
+493/493 [==============================] - 6s 13ms/step - loss: 0.0037 - val_loss: 0.0045
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+Epoch 47/50
+493/493 [==============================] - 7s 14ms/step - loss: 0.0037 - val_loss: 0.0044
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.1s
+Epoch 48/50
+493/493 [==============================] - 6s 13ms/step - loss: 0.0037 - val_loss: 0.0043
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+Epoch 49/50
+493/493 [==============================] - 6s 13ms/step - loss: 0.0036 - val_loss: 0.0045
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+Epoch 50/50
+493/493 [==============================] - 8s 17ms/step - loss: 0.0036 - val_loss: 0.0043
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (C:\Users\Dora\PycharmProjects\prediction_journal\wandb\run-20250311_163310-fj1abhoy\files\model-best)... Done. 0.0s
+55/55 [==============================] - 0s 4ms/step
+RMSE: 0.550173709679687 C
+count    1.752000e+03
+mean     3.026911e-01
+std      7.344962e-01
+min      8.893094e-10
+25%      1.178427e-02
+50%      6.460750e-02
+75%      2.466156e-01
+max      1.125057e+01
+Name: res_mean, dtype: float64

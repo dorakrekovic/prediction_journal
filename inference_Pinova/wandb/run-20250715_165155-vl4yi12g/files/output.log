@@ -1,0 +1,7 @@
+Shape of training data: (94709, 24, 1)
+Shape of the target data: (94709, 1)
+Shape of validation data: (10524, 24, 1)
+Shape of the validation target data: (10524, 1)
+Suhopolje_2025-07-15_10-45_tf
+1642/1642 [==============================] - 5s 3ms/step
+Inference results saved successfully to results_inference_on_Nedelisce_2025-07-15_16-52_2021data_modelUsed_Suhopolje_2025-07-15_10-45_tf.csv'

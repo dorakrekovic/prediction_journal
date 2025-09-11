@@ -1,0 +1,23 @@
+2025-07-15 17:39:40,522 INFO    MainThread:1920 [wandb_setup.py:_flush():67] Current SDK version is 0.19.8
+2025-07-15 17:39:40,522 INFO    MainThread:1920 [wandb_setup.py:_flush():67] Configure stats pid to 1920
+2025-07-15 17:39:40,522 INFO    MainThread:1920 [wandb_setup.py:_flush():67] Loading settings from C:\Users\Dora\.config\wandb\settings
+2025-07-15 17:39:40,522 INFO    MainThread:1920 [wandb_setup.py:_flush():67] Loading settings from C:\Users\Dora\PycharmProjects\prediction_journal\wandb\settings
+2025-07-15 17:39:40,522 INFO    MainThread:1920 [wandb_setup.py:_flush():67] Loading settings from environment variables
+2025-07-15 17:39:40,522 INFO    MainThread:1920 [wandb_init.py:setup_run_log_directory():647] Logging user logs to C:\Users\Dora\PycharmProjects\prediction_journal\wandb\run-20250715_173940-uvvdvbtb\logs\debug.log
+2025-07-15 17:39:40,525 INFO    MainThread:1920 [wandb_init.py:setup_run_log_directory():648] Logging internal logs to C:\Users\Dora\PycharmProjects\prediction_journal\wandb\run-20250715_173940-uvvdvbtb\logs\debug-internal.log
+2025-07-15 17:39:40,525 INFO    MainThread:1920 [wandb_init.py:init():761] calling init triggers
+2025-07-15 17:39:40,525 INFO    MainThread:1920 [wandb_init.py:init():766] wandb.init called with sweep_config: {}
+config: {'input_dim': 1, 'past_observation': 24, 'batch_size': 32, 'optimizer': 'Adam', 'loss_function': 'MSELoss', 'num_epochs': 50, '_wandb': {}}
+2025-07-15 17:39:40,525 INFO    MainThread:1920 [wandb_init.py:init():784] starting backend
+2025-07-15 17:39:40,525 INFO    MainThread:1920 [wandb_init.py:init():788] sending inform_init request
+2025-07-15 17:39:40,576 INFO    MainThread:1920 [backend.py:_multiprocessing_setup():101] multiprocessing start_methods=spawn, using: spawn
+2025-07-15 17:39:40,576 INFO    MainThread:1920 [wandb_init.py:init():798] backend started and connected
+2025-07-15 17:39:40,577 INFO    MainThread:1920 [wandb_init.py:init():891] updated telemetry
+2025-07-15 17:39:40,579 INFO    MainThread:1920 [wandb_init.py:init():915] communicating run to backend with 90.0 second timeout
+2025-07-15 17:39:41,067 INFO    MainThread:1920 [wandb_init.py:init():990] starting run threads in backend
+2025-07-15 17:39:41,448 INFO    MainThread:1920 [wandb_run.py:_console_start():2375] atexit reg
+2025-07-15 17:39:41,448 INFO    MainThread:1920 [wandb_run.py:_redirect():2227] redirect: wrap_raw
+2025-07-15 17:39:41,448 INFO    MainThread:1920 [wandb_run.py:_redirect():2292] Wrapping output streams.
+2025-07-15 17:39:41,448 INFO    MainThread:1920 [wandb_run.py:_redirect():2315] Redirects installed.
+2025-07-15 17:39:41,453 INFO    MainThread:1920 [wandb_init.py:init():1032] run started, returning control to user process
+2025-07-15 17:39:48,794 INFO    MsgRouterThr:1920 [mailbox.py:close():129] Closing mailbox, abandoning 1 handles.

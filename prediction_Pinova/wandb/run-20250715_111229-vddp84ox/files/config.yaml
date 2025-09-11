@@ -1,0 +1,68 @@
+_wandb:
+    value:
+        cli_version: 0.19.8
+        m:
+            - "1": epoch/epoch
+              "6":
+                - 3
+              "7": []
+            - "1": epoch/val_loss
+              "5": 1
+              "6":
+                - 1
+                - 3
+              "7": []
+            - "1": epoch/learning_rate
+              "5": 1
+              "6":
+                - 1
+                - 3
+              "7": []
+            - "1": epoch/loss
+              "5": 1
+              "6":
+                - 1
+                - 3
+              "7": []
+        python_version: 3.8.20
+        t:
+            "1":
+                - 2
+                - 3
+                - 55
+            "2":
+                - 2
+                - 3
+                - 55
+            "3":
+                - 3
+                - 7
+                - 8
+                - 16
+                - 23
+                - 38
+                - 39
+                - 55
+                - 62
+            "4": 3.8.20
+            "5": 0.19.8
+            "8":
+                - 3
+                - 5
+            "10":
+                - 9
+                - 17
+            "12": 0.19.8
+            "13": windows-amd64
+batch_size:
+    value: 32
+input_dim:
+    value: 1
+loss_function:
+    value: MSELoss
+num_epochs:
+    value: 50
+optimizer:
+    value: Adam
+past_observation:
+    value: 24

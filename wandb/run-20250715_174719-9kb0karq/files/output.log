@@ -1,0 +1,38 @@
+Shape of training data: (15767, 24, 1)
+Shape of the target data: (15767, 1)
+Shape of validation data: (1752, 24, 1)
+Shape of the validation target data: (1752, 1)
+Suhopolje_2025-03-13_11-08_tf_1h
+Resampled data shape: (8760, 2)
+First few timestamps:
+                  time  temperature
+0 2021-01-01 00:00:00    -0.250000
+1 2021-01-01 01:00:00     0.183333
+2 2021-01-01 02:00:00    -0.133333
+3 2021-01-01 03:00:00     0.650000
+4 2021-01-01 04:00:00     1.500000
+Any NaNs in data_2021_scaled? temperature    False
+dtype: bool
+   temperature
+0    -1.596256
+1    -1.545533
+2    -1.582600
+3    -1.490909
+4    -1.391414
+5    -1.580649
+6    -1.650881
+7    -1.590404
+8    -1.451891
+9    -1.057813
+X_infer shape: (8735, 24, 1)
+Y_real shape: (8735, 1)
+273/273 [==============================] - 1s 3ms/step
+predictions_scaled shape: (8735, 1)
+predictions_scaled sample: [[-1.266027 ]
+ [-1.2565483]
+ [-0.8809843]
+ [-1.0898567]
+ [-1.0096251]]
+Any NaNs in X_infer? False
+Max, Min of X_infer: 2.937591514225936 -2.7121603172998974
+Inference results saved successfully to results_inference_on_Nasice_OBZ_2025-07-15_17-47_2021data_modelUsed_Suhopolje_2025-03-13_11-08_tf_1h.csv'

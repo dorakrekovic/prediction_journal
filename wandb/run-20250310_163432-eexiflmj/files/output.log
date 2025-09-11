@@ -1,0 +1,41 @@
+Model saved at torch_univariate__Nasice_2025-03-10_16-34.pth
+epoch 0
+1.0289118193509712 0.9884716015582153
+epoch 5
+0.1901717708301796 0.18243143149085966
+epoch 10
+0.16758999124720272 0.15018423377775164
+epoch 15
+0.16231427017179592 0.14777890019391843
+epoch 20
+0.16115298929401267 0.1484885895246864
+epoch 25
+0.16075523084646065 0.14912983932390966
+epoch 30
+0.16052907254205834 0.14954333335370878
+epoch 35
+0.16038585449896858 0.14980157981358508
+epoch 40
+0.1602850944479324 0.14993204653667802
+epoch 45
+0.16020585676051782 0.15000597448624592
+Traceback (most recent call last):
+  File "C:\Users\Dora\PycharmProjects\prediction_journal\pytorch_1h.py", line 209, in <module>
+    plt.plot(train_losses, label="train")
+  File "C:\Users\Dora\PycharmProjects\prediction_journal\venv\lib\site-packages\matplotlib\pyplot.py", line 3794, in plot
+    return gca().plot(
+  File "C:\Users\Dora\PycharmProjects\prediction_journal\venv\lib\site-packages\matplotlib\pyplot.py", line 2742, in gca
+    return gcf().gca()
+  File "C:\Users\Dora\PycharmProjects\prediction_journal\venv\lib\site-packages\matplotlib\pyplot.py", line 1093, in gcf
+    return figure()
+  File "C:\Users\Dora\PycharmProjects\prediction_journal\venv\lib\site-packages\matplotlib\pyplot.py", line 1027, in figure
+    manager = new_figure_manager(
+  File "C:\Users\Dora\PycharmProjects\prediction_journal\venv\lib\site-packages\matplotlib\pyplot.py", line 549, in new_figure_manager
+    _warn_if_gui_out_of_main_thread()
+  File "C:\Users\Dora\PycharmProjects\prediction_journal\venv\lib\site-packages\matplotlib\pyplot.py", line 526, in _warn_if_gui_out_of_main_thread
+    canvas_class = cast(type[FigureCanvasBase], _get_backend_mod().FigureCanvas)
+  File "C:\Users\Dora\PycharmProjects\prediction_journal\venv\lib\site-packages\matplotlib\pyplot.py", line 358, in _get_backend_mod
+    switch_backend(rcParams._get("backend"))
+  File "C:\Users\Dora\PycharmProjects\prediction_journal\venv\lib\site-packages\matplotlib\pyplot.py", line 416, in switch_backend
+    canvas_class = module.FigureCanvas
+AttributeError: module 'backend_interagg' has no attribute 'FigureCanvas'

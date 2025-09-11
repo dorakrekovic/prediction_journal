@@ -1,0 +1,27 @@
+{
+  "os":  "Windows-10-10.0.26100-SP0",
+  "python":  "CPython 3.9.5",
+  "startedAt":  "2025-03-10T16:40:49.119402Z",
+  "program":  "C:\\Users\\Dora\\PycharmProjects\\prediction_journal\\pytorch_1h.py",
+  "codePath":  "pytorch_1h.py",
+  "email":  "dora.krekovic@fer.hr",
+  "root":  "C:\\Users\\Dora\\PycharmProjects\\prediction_journal",
+  "host":  "DESKTOP-I96HI59",
+  "executable":  "C:\\Users\\Dora\\PycharmProjects\\prediction_journal\\venv\\Scripts\\python.exe",
+  "codePathLocal":  "pytorch_1h.py",
+  "cpu_count":  8,
+  "cpu_count_logical":  16,
+  "disk":  {
+    "/":  {
+      "total":  "1023327391744",
+      "used":  "605925404672"
+    }
+  },
+  "memory":  {
+    "total":  "33528926208"
+  },
+  "cpu":  {
+    "count":  8,
+    "countLogical":  16
+  }
+}

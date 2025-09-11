@@ -1,0 +1,7 @@
+Shape of training data: (15767, 24, 1)
+Shape of the target data: (15767, 1)
+Shape of validation data: (1752, 24, 1)
+Shape of the validation target data: (1752, 1)
+Skenderovci_2025-03-11_16-57_tf_1h
+273/273 [==============================] - 1s 3ms/step
+Inference results saved successfully to results_inference_on_Skenderovci_2025-07-15_17-54_2021data_modelUsed_Skenderovci_2025-03-11_16-57_tf_1h.csv'

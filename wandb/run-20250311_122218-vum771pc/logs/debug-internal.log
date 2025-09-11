@@ -1,0 +1,15 @@
+{"time":"2025-03-11T12:22:18.1748114+01:00","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"C:\\Users\\Dora\\PycharmProjects\\prediction_journal\\wandb\\run-20250311_122218-vum771pc\\logs\\debug-core.log"}
+{"time":"2025-03-11T12:22:18.2978433+01:00","level":"INFO","msg":"created new stream","id":"vum771pc"}
+{"time":"2025-03-11T12:22:18.2978433+01:00","level":"INFO","msg":"stream: started","id":"vum771pc"}
+{"time":"2025-03-11T12:22:18.2978433+01:00","level":"INFO","msg":"sender: started","stream_id":"vum771pc"}
+{"time":"2025-03-11T12:22:18.2978433+01:00","level":"INFO","msg":"writer: Do: started","stream_id":"vum771pc"}
+{"time":"2025-03-11T12:22:18.2978433+01:00","level":"INFO","msg":"handler: started","stream_id":"vum771pc"}
+{"time":"2025-03-11T12:22:18.6152996+01:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-11T12:27:54.0892852+01:00","level":"INFO","msg":"stream: closing","id":"vum771pc"}
+{"time":"2025-03-11T12:27:54.0892852+01:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-11T12:27:54.0897965+01:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-11T12:27:55.4409834+01:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-11T12:27:55.6670983+01:00","level":"INFO","msg":"handler: closed","stream_id":"vum771pc"}
+{"time":"2025-03-11T12:27:55.6670983+01:00","level":"INFO","msg":"sender: closed","stream_id":"vum771pc"}
+{"time":"2025-03-11T12:27:55.6670983+01:00","level":"INFO","msg":"writer: Close: closed","stream_id":"vum771pc"}
+{"time":"2025-03-11T12:27:55.6678559+01:00","level":"INFO","msg":"stream: closed","id":"vum771pc"}

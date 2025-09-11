@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "C:/Users/Dora/PycharmProjects/prediction_journal/tf_1h.py", line 52, in <module>
+    d['datetime'] = [datetime.strptime(x, '%d/%m/%Y %H:%M') for x in d['datetime']]
+  File "C:/Users/Dora/PycharmProjects/prediction_journal/tf_1h.py", line 52, in <listcomp>
+    d['datetime'] = [datetime.strptime(x, '%d/%m/%Y %H:%M') for x in d['datetime']]
+TypeError: strptime() argument 1 must be str, not float

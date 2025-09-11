@@ -1,0 +1,7 @@
+csv_file,location,model,total,correctly_predicted,to_transmit,reduction_percent
+inference_results/Pinova/cross-site\results_inference_on_Kamenac_2025-07-15_16-50_2021data_modelUsed_Suhopolje_2025-07-15_10-45_tf.csv,Kamenac,Suhopolje_2025-07-15_10-45_tf,52535,43967,8568,83.690872751499
+inference_results/Pinova/cross-site\results_inference_on_Nasice_OBZ_2025-07-15_16-51_2021data_modelUsed_Suhopolje_2025-07-15_10-45_tf.csv,Nasice_OBZ,Suhopolje_2025-07-15_10-45_tf,52535,43933,8602,83.62615399257638
+inference_results/Pinova/cross-site\results_inference_on_Nedelisce_2025-07-15_16-52_2021data_modelUsed_Suhopolje_2025-07-15_10-45_tf.csv,Nedelisce,Suhopolje_2025-07-15_10-45_tf,52535,45943,6592,87.45217474064908
+inference_results/Pinova/cross-site\results_inference_on_Oklaj_2025-07-15_16-53_2021data_modelUsed_Suhopolje_2025-07-15_10-45_tf.csv,Oklaj,Suhopolje_2025-07-15_10-45_tf,52535,42876,9659,81.6141619872466
+inference_results/Pinova/cross-site\results_inference_on_Potomje_2025-07-15_16-53_2021data_modelUsed_Suhopolje_2025-07-15_10-45_tf.csv,Potomje,Suhopolje_2025-07-15_10-45_tf,52535,44360,8175,84.43894546492814
+inference_results/Pinova/cross-site\results_inference_on_Skenderovci_2025-07-15_16-48_2021data_modelUsed_Suhopolje_2025-07-15_10-45_tf.csv,Skenderovci,Suhopolje_2025-07-15_10-45_tf,52535,45654,6881,86.9020652898068

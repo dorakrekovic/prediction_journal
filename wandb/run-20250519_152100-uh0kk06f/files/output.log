@@ -1,0 +1,252 @@
+Shape of training data: (15767, 24, 1)
+Shape of validation data: (1752, 24, 1)
+Model saved at models/Suhopolje_2025-05-19_15-20_tflite_int8.h5
+wandb: WARNING WandbCallback is deprecated and will be removed in a future release. Please use the WandbMetricsLogger, WandbModelCheckpoint, and WandbEvalCallback callbacks instead. See https://docs.wandb.ai/guides/integrations/keras for more information.
+wandb: WARNING The save_model argument by default saves the model in the HDF5 format that cannot save custom objects like subclassed models and custom layers. This behavior will be deprecated in a future release in favor of the SavedModel format. Meanwhile, the HDF5 model is saved as W&B files and the SavedModel as W&B Artifacts.
+Epoch 1/50
+493/493 [==============================] - 4s 6ms/step - loss: 0.0835 - val_loss: 0.0201
+WARNING:tensorflow:Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0011s vs `on_train_batch_end` time: 0.0015s). Check your callbacks.
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (C:\Users\Dora\PycharmProjects\prediction_journal\wandb\run-20250519_152100-uh0kk06f\files\model-best)... Done. 0.0s
+Epoch 2/50
+493/493 [==============================] - 2s 5ms/step - loss: 0.0175 - val_loss: 0.0145
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (C:\Users\Dora\PycharmProjects\prediction_journal\wandb\run-20250519_152100-uh0kk06f\files\model-best)... Done. 0.0s
+Epoch 3/50
+493/493 [==============================] - 2s 5ms/step - loss: 0.0117 - val_loss: 0.0085
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (C:\Users\Dora\PycharmProjects\prediction_journal\wandb\run-20250519_152100-uh0kk06f\files\model-best)... Done. 0.0s
+Epoch 4/50
+493/493 [==============================] - 3s 6ms/step - loss: 0.0091 - val_loss: 0.0051
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (C:\Users\Dora\PycharmProjects\prediction_journal\wandb\run-20250519_152100-uh0kk06f\files\model-best)... Done. 0.0s
+Epoch 5/50
+493/493 [==============================] - 3s 6ms/step - loss: 0.0076 - val_loss: 0.0030
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (C:\Users\Dora\PycharmProjects\prediction_journal\wandb\run-20250519_152100-uh0kk06f\files\model-best)... Done. 0.0s
+Epoch 6/50
+493/493 [==============================] - 3s 6ms/step - loss: 0.0066 - val_loss: 0.0024
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (C:\Users\Dora\PycharmProjects\prediction_journal\wandb\run-20250519_152100-uh0kk06f\files\model-best)... Done. 0.0s
+Epoch 7/50
+493/493 [==============================] - 3s 6ms/step - loss: 0.0060 - val_loss: 0.0023
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (C:\Users\Dora\PycharmProjects\prediction_journal\wandb\run-20250519_152100-uh0kk06f\files\model-best)... Done. 0.0s
+Epoch 8/50
+493/493 [==============================] - 2s 4ms/step - loss: 0.0057 - val_loss: 0.0023
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+Epoch 9/50
+493/493 [==============================] - 2s 4ms/step - loss: 0.0056 - val_loss: 0.0023
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+Epoch 10/50
+493/493 [==============================] - 2s 4ms/step - loss: 0.0054 - val_loss: 0.0024
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+Epoch 11/50
+493/493 [==============================] - 2s 4ms/step - loss: 0.0053 - val_loss: 0.0025
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+Epoch 12/50
+493/493 [==============================] - 2s 3ms/step - loss: 0.0052 - val_loss: 0.0025
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+Epoch 13/50
+493/493 [==============================] - 2s 3ms/step - loss: 0.0052 - val_loss: 0.0025
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.1s
+Epoch 14/50
+493/493 [==============================] - 2s 3ms/step - loss: 0.0051 - val_loss: 0.0025
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+Epoch 15/50
+493/493 [==============================] - 2s 3ms/step - loss: 0.0050 - val_loss: 0.0025
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+Epoch 16/50
+493/493 [==============================] - 2s 3ms/step - loss: 0.0050 - val_loss: 0.0025
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+Epoch 17/50
+493/493 [==============================] - 2s 4ms/step - loss: 0.0049 - val_loss: 0.0024
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+Epoch 18/50
+493/493 [==============================] - 2s 3ms/step - loss: 0.0049 - val_loss: 0.0025
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+Epoch 19/50
+493/493 [==============================] - 2s 3ms/step - loss: 0.0048 - val_loss: 0.0025
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+Epoch 20/50
+493/493 [==============================] - 2s 3ms/step - loss: 0.0048 - val_loss: 0.0024
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+Epoch 21/50
+493/493 [==============================] - 2s 4ms/step - loss: 0.0047 - val_loss: 0.0025
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+Epoch 22/50
+493/493 [==============================] - 2s 3ms/step - loss: 0.0047 - val_loss: 0.0025
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+Epoch 23/50
+493/493 [==============================] - 2s 3ms/step - loss: 0.0047 - val_loss: 0.0025
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+Epoch 24/50
+493/493 [==============================] - 2s 4ms/step - loss: 0.0046 - val_loss: 0.0024
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+Epoch 25/50
+493/493 [==============================] - 2s 3ms/step - loss: 0.0046 - val_loss: 0.0026
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+Epoch 26/50
+493/493 [==============================] - 2s 3ms/step - loss: 0.0046 - val_loss: 0.0024
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+Epoch 27/50
+493/493 [==============================] - 2s 3ms/step - loss: 0.0046 - val_loss: 0.0024
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+Epoch 28/50
+493/493 [==============================] - 2s 3ms/step - loss: 0.0045 - val_loss: 0.0024
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.1s
+Epoch 29/50
+493/493 [==============================] - 2s 3ms/step - loss: 0.0045 - val_loss: 0.0023
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+Epoch 30/50
+493/493 [==============================] - 2s 5ms/step - loss: 0.0045 - val_loss: 0.0022
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (C:\Users\Dora\PycharmProjects\prediction_journal\wandb\run-20250519_152100-uh0kk06f\files\model-best)... Done. 0.0s
+Epoch 31/50
+493/493 [==============================] - 2s 5ms/step - loss: 0.0045 - val_loss: 0.0022
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (C:\Users\Dora\PycharmProjects\prediction_journal\wandb\run-20250519_152100-uh0kk06f\files\model-best)... Done. 0.0s
+Epoch 32/50
+493/493 [==============================] - 3s 5ms/step - loss: 0.0044 - val_loss: 0.0022
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (C:\Users\Dora\PycharmProjects\prediction_journal\wandb\run-20250519_152100-uh0kk06f\files\model-best)... Done. 0.0s
+Epoch 33/50
+493/493 [==============================] - 2s 5ms/step - loss: 0.0044 - val_loss: 0.0022
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (C:\Users\Dora\PycharmProjects\prediction_journal\wandb\run-20250519_152100-uh0kk06f\files\model-best)... Done. 0.0s
+Epoch 34/50
+493/493 [==============================] - 2s 5ms/step - loss: 0.0044 - val_loss: 0.0022
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (C:\Users\Dora\PycharmProjects\prediction_journal\wandb\run-20250519_152100-uh0kk06f\files\model-best)... Done. 0.0s
+Epoch 35/50
+493/493 [==============================] - 2s 5ms/step - loss: 0.0044 - val_loss: 0.0021
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (C:\Users\Dora\PycharmProjects\prediction_journal\wandb\run-20250519_152100-uh0kk06f\files\model-best)... Done. 0.0s
+Epoch 36/50
+493/493 [==============================] - 2s 3ms/step - loss: 0.0044 - val_loss: 0.0021
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+Epoch 37/50
+493/493 [==============================] - 3s 6ms/step - loss: 0.0044 - val_loss: 0.0021
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (C:\Users\Dora\PycharmProjects\prediction_journal\wandb\run-20250519_152100-uh0kk06f\files\model-best)... Done. 0.0s
+Epoch 38/50
+493/493 [==============================] - 2s 5ms/step - loss: 0.0044 - val_loss: 0.0021
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (C:\Users\Dora\PycharmProjects\prediction_journal\wandb\run-20250519_152100-uh0kk06f\files\model-best)... Done. 0.0s
+Epoch 39/50
+493/493 [==============================] - 2s 5ms/step - loss: 0.0043 - val_loss: 0.0021
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (C:\Users\Dora\PycharmProjects\prediction_journal\wandb\run-20250519_152100-uh0kk06f\files\model-best)... Done. 0.0s
+Epoch 40/50
+493/493 [==============================] - 2s 5ms/step - loss: 0.0043 - val_loss: 0.0021
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (C:\Users\Dora\PycharmProjects\prediction_journal\wandb\run-20250519_152100-uh0kk06f\files\model-best)... Done. 0.0s
+Epoch 41/50
+493/493 [==============================] - 2s 5ms/step - loss: 0.0043 - val_loss: 0.0021
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (C:\Users\Dora\PycharmProjects\prediction_journal\wandb\run-20250519_152100-uh0kk06f\files\model-best)... Done. 0.0s
+Epoch 42/50
+493/493 [==============================] - 2s 3ms/step - loss: 0.0043 - val_loss: 0.0021
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+Epoch 43/50
+493/493 [==============================] - 3s 5ms/step - loss: 0.0043 - val_loss: 0.0021
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (C:\Users\Dora\PycharmProjects\prediction_journal\wandb\run-20250519_152100-uh0kk06f\files\model-best)... Done. 0.0s
+Epoch 44/50
+493/493 [==============================] - 2s 5ms/step - loss: 0.0043 - val_loss: 0.0020
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (C:\Users\Dora\PycharmProjects\prediction_journal\wandb\run-20250519_152100-uh0kk06f\files\model-best)... Done. 0.0s
+Epoch 45/50
+493/493 [==============================] - 2s 3ms/step - loss: 0.0043 - val_loss: 0.0021
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+Epoch 46/50
+493/493 [==============================] - 2s 3ms/step - loss: 0.0043 - val_loss: 0.0021
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.1s
+Epoch 47/50
+493/493 [==============================] - 2s 3ms/step - loss: 0.0043 - val_loss: 0.0020
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+Epoch 48/50
+493/493 [==============================] - 2s 3ms/step - loss: 0.0043 - val_loss: 0.0021
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+Epoch 49/50
+493/493 [==============================] - 2s 3ms/step - loss: 0.0043 - val_loss: 0.0021
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.1s
+Epoch 50/50
+493/493 [==============================] - 3s 5ms/step - loss: 0.0043 - val_loss: 0.0020
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (C:\Users\Dora\PycharmProjects\prediction_journal\wandb\run-20250519_152100-uh0kk06f\files\model-best)... Done. 0.0s
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _update_step_xla while saving (showing 2 of 2). These functions will not be directly callable after loading.
+C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\tensorflow\lite\python\convert.py:765: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.
+  warnings.warn("Statistics for quantized inputs were expected, but not "
+TFLite INT8 model saved at: models/Suhopolje_2025-05-19_15-20_tflite_int8_int8.tflite

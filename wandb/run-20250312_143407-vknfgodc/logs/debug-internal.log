@@ -1,0 +1,15 @@
+{"time":"2025-03-12T14:34:07.5447658+01:00","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"C:\\Users\\Dora\\PycharmProjects\\prediction_journal\\wandb\\run-20250312_143407-vknfgodc\\logs\\debug-core.log"}
+{"time":"2025-03-12T14:34:07.9705026+01:00","level":"INFO","msg":"created new stream","id":"vknfgodc"}
+{"time":"2025-03-12T14:34:07.9705026+01:00","level":"INFO","msg":"stream: started","id":"vknfgodc"}
+{"time":"2025-03-12T14:34:07.9705026+01:00","level":"INFO","msg":"handler: started","stream_id":"vknfgodc"}
+{"time":"2025-03-12T14:34:07.9705026+01:00","level":"INFO","msg":"sender: started","stream_id":"vknfgodc"}
+{"time":"2025-03-12T14:34:07.9705026+01:00","level":"INFO","msg":"writer: Do: started","stream_id":"vknfgodc"}
+{"time":"2025-03-12T14:34:08.2806589+01:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-12T14:42:29.3184718+01:00","level":"INFO","msg":"stream: closing","id":"vknfgodc"}
+{"time":"2025-03-12T14:42:29.3184718+01:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-12T14:42:29.3189799+01:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-12T14:42:30.8826137+01:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-12T14:42:31.1118051+01:00","level":"INFO","msg":"handler: closed","stream_id":"vknfgodc"}
+{"time":"2025-03-12T14:42:31.1118051+01:00","level":"INFO","msg":"writer: Close: closed","stream_id":"vknfgodc"}
+{"time":"2025-03-12T14:42:31.1118051+01:00","level":"INFO","msg":"sender: closed","stream_id":"vknfgodc"}
+{"time":"2025-03-12T14:42:31.1123127+01:00","level":"INFO","msg":"stream: closed","id":"vknfgodc"}

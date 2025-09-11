@@ -1,0 +1,119 @@
+Shape of training data: (23651, 24, 1)
+Shape of the target data: (23651, 1)
+Shape of validation data: (2628, 24, 1)
+Shape of the validation target data: (2628, 1)
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #
+=================================================================
+ input_1 (InputLayer)        [(None, 24, 1)]           0
+
+ lstm (LSTM)                 (None, 50)                10400
+
+ dense (Dense)               (None, 1)                 51
+
+=================================================================
+Total params: 10,451
+Trainable params: 10,451
+Non-trainable params: 0
+_________________________________________________________________
+Model saved at models/Kamenac_2025-03-13_11-07_tf_1h.h5
+wandb: WARNING WandbCallback is deprecated and will be removed in a future release. Please use the WandbMetricsLogger, WandbModelCheckpoint, and WandbEvalCallback callbacks instead. See https://docs.wandb.ai/guides/integrations/keras for more information.
+wandb: WARNING The save_model argument by default saves the model in the HDF5 format that cannot save custom objects like subclassed models and custom layers. This behavior will be deprecated in a future release in favor of the SavedModel format. Meanwhile, the HDF5 model is saved as W&B files and the SavedModel as W&B Artifacts.
+Epoch 1/50
+739/740 [============================>.] - ETA: 0s - loss: 0.1955
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u)... Done. 0.0s
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+Traceback (most recent call last):
+  File "C:/Users/Dora/PycharmProjects/prediction_journal/inference_tf.py", line 6, in <module>
+    from tf_1h import create_X_Y, train_mean, train_std, n_ahead, lag
+  File "C:\Users\Dora\PycharmProjects\prediction_journal\tf_1h.py", line 190, in <module>
+    history = model.train()
+  File "C:\Users\Dora\PycharmProjects\prediction_journal\tf_1h.py", line 153, in train
+    history = empty_model.fit(
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\wandb\integration\keras\keras.py", line 176, in new_v2
+    return old_v2(*args, **kwargs)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\wandb\integration\keras\keras.py", line 176, in new_v2
+    return old_v2(*args, **kwargs)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\wandb\integration\keras\keras.py", line 176, in new_v2
+    return old_v2(*args, **kwargs)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\keras\utils\traceback_utils.py", line 65, in error_handler
+    return fn(*args, **kwargs)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\keras\engine\training.py", line 1712, in fit
+    callbacks.on_epoch_end(epoch, epoch_logs)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\keras\callbacks.py", line 454, in on_epoch_end
+    callback.on_epoch_end(epoch, logs)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\wandb\integration\keras\keras.py", line 644, in on_epoch_end
+    self._save_model_as_artifact(epoch)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\wandb\integration\keras\keras.py", line 1034, in _save_model_as_artifact
+    self.model.save(self.filepath[:-3], overwrite=True, save_format="tf")
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\keras\utils\traceback_utils.py", line 65, in error_handler
+    return fn(*args, **kwargs)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\keras\engine\training.py", line 2795, in save
+    save.save_model(
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\keras\utils\traceback_utils.py", line 65, in error_handler
+    return fn(*args, **kwargs)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\keras\saving\legacy\save.py", line 167, in save_model
+    saved_model_save.save(
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\keras\saving\legacy\saved_model\save.py", line 97, in save
+    saved_nodes, node_paths = save_lib.save_and_return_nodes(
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\tensorflow\python\saved_model\save.py", line 1267, in save_and_return_nodes
+    _build_meta_graph(obj, signatures, options, meta_graph_def))
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\tensorflow\python\saved_model\save.py", line 1440, in _build_meta_graph
+    return _build_meta_graph_impl(obj, signatures, options, meta_graph_def)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\tensorflow\python\saved_model\save.py", line 1395, in _build_meta_graph_impl
+    asset_info, exported_graph = _fill_meta_graph_def(
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\tensorflow\python\saved_model\save.py", line 846, in _fill_meta_graph_def
+    saver_def = saver.to_proto()
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\tensorflow\python\checkpoint\functional_saver.py", line 272, in to_proto
+    restore_op = self._traced_restore(filename_tensor).op
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\tensorflow\python\util\traceback_utils.py", line 150, in error_handler
+    return fn(*args, **kwargs)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\tensorflow\python\eager\polymorphic_function\polymorphic_function.py", line 880, in __call__
+    result = self._call(*args, **kwds)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\tensorflow\python\eager\polymorphic_function\polymorphic_function.py", line 928, in _call
+    self._initialize(args, kwds, add_initializers_to=initializers)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\tensorflow\python\eager\polymorphic_function\polymorphic_function.py", line 749, in _initialize
+    self._variable_creation_fn    # pylint: disable=protected-access
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\tensorflow\python\eager\polymorphic_function\tracing_compiler.py", line 162, in _get_concrete_function_internal_garbage_collected
+    concrete_function, _ = self._maybe_define_concrete_function(args, kwargs)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\tensorflow\python\eager\polymorphic_function\tracing_compiler.py", line 157, in _maybe_define_concrete_function
+    return self._maybe_define_function(args, kwargs)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\tensorflow\python\eager\polymorphic_function\tracing_compiler.py", line 360, in _maybe_define_function
+    concrete_function = self._create_concrete_function(args, kwargs)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\tensorflow\python\eager\polymorphic_function\tracing_compiler.py", line 284, in _create_concrete_function
+    func_graph_module.func_graph_from_py_func(
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\tensorflow\python\framework\func_graph.py", line 1283, in func_graph_from_py_func
+    func_outputs = python_func(*func_args, **func_kwargs)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\tensorflow\python\eager\polymorphic_function\polymorphic_function.py", line 645, in wrapped_fn
+    out = weak_wrapped_fn().__wrapped__(*args, **kwds)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\tensorflow\python\eager\polymorphic_function\tracing_compiler.py", line 440, in bound_method_wrapper
+    return wrapped_fn(weak_instance(), *args, **kwargs)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\tensorflow\python\checkpoint\functional_saver.py", line 292, in _traced_restore
+    restore_ops = self.restore(file_prefix)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\tensorflow\python\checkpoint\functional_saver.py", line 499, in restore
+    restore_ops = restore_fn()
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\tensorflow\python\checkpoint\functional_saver.py", line 467, in restore_fn
+    ret = restore_fn(restored_tensors)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\tensorflow\python\training\saving\saveable_object_util.py", line 774, in _restore_from_tensors
+    return saveable_object_to_restore_fn(self.saveables)(restored_tensors)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\tensorflow\python\training\saving\saveable_object_util.py", line 811, in _restore_from_tensors
+    restore_ops[saveable.name] = saveable.restore(
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\tensorflow\python\training\saving\saveable_object_util.py", line 136, in restore
+    assigned_variable = resource_variable_ops.shape_safe_assign_variable_handle(
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\tensorflow\python\ops\resource_variable_ops.py", line 308, in shape_safe_assign_variable_handle
+    return gen_resource_variable_ops.assign_variable_op(
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\tensorflow\python\ops\gen_resource_variable_ops.py", line 161, in assign_variable_op
+    _, _, _op, _outputs = _op_def_library._apply_op_helper(
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\tensorflow\python\framework\op_def_library.py", line 795, in _apply_op_helper
+    op = g._create_op_internal(op_type_name, inputs, dtypes=None,
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\tensorflow\python\framework\func_graph.py", line 749, in _create_op_internal
+    return super(FuncGraph, self)._create_op_internal(  # pylint: disable=protected-access
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\tensorflow\python\framework\ops.py", line 3807, in _create_op_internal
+    self._create_op_helper(ret, compute_device=compute_device)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\tensorflow\python\framework\ops.py", line 3882, in _create_op_helper
+    self._apply_device_functions(op)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\tensorflow\python\framework\ops.py", line 4789, in _apply_device_functions
+    for device_spec in self._device_function_stack.peek_objs():
+KeyboardInterrupt

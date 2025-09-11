@@ -1,0 +1,253 @@
+Shape of training data: (94709, 24, 1)
+Shape of the target data: (94709, 1)
+Shape of validation data: (10524, 24, 1)
+Shape of the validation target data: (10524, 1)
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #
+=================================================================
+ input_1 (InputLayer)        [(None, 24, 1)]           0
+
+ lstm (LSTM)                 (None, 50)                10400
+
+ dense (Dense)               (None, 1)                 51
+
+=================================================================
+Total params: 10,451
+Trainable params: 10,451
+Non-trainable params: 0
+_________________________________________________________________
+Model saved at ../models/Pinova/Potomje_2025-07-15_14-33_tf.h5
+wandb: WARNING WandbCallback is deprecated and will be removed in a future release. Please use the WandbMetricsLogger, WandbModelCheckpoint, and WandbEvalCallback callbacks instead. See https://docs.wandb.ai/guides/integrations/keras for more information.
+wandb: WARNING The save_model argument by default saves the model in the HDF5 format that cannot save custom objects like subclassed models and custom layers. This behavior will be deprecated in a future release in favor of the SavedModel format. Meanwhile, the HDF5 model is saved as W&B files and the SavedModel as W&B Artifacts.
+Epoch 1/50
+2960/2960 [==============================] - 36s 12ms/step - loss: 0.0209 - val_loss: 0.0027
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u-Pinova)... Done. 0.0s
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (C:\Users\Dora\PycharmProjects\prediction_journal\prediction_Pinova\wandb\run-20250715_143321-4gzzance\files\model-best)... Done. 0.0s
+Epoch 2/50
+2960/2960 [==============================] - 30s 10ms/step - loss: 0.0065 - val_loss: 0.0026
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u-Pinova)... Done. 0.0s
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (C:\Users\Dora\PycharmProjects\prediction_journal\prediction_Pinova\wandb\run-20250715_143321-4gzzance\files\model-best)... Done. 0.0s
+Epoch 3/50
+2960/2960 [==============================] - 29s 10ms/step - loss: 0.0059 - val_loss: 0.0024
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u-Pinova)... Done. 0.0s
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (C:\Users\Dora\PycharmProjects\prediction_journal\prediction_Pinova\wandb\run-20250715_143321-4gzzance\files\model-best)... Done. 0.0s
+Epoch 4/50
+2960/2960 [==============================] - 30s 10ms/step - loss: 0.0056 - val_loss: 0.0024
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u-Pinova)... Done. 0.0s
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (C:\Users\Dora\PycharmProjects\prediction_journal\prediction_Pinova\wandb\run-20250715_143321-4gzzance\files\model-best)... Done. 0.0s
+Epoch 5/50
+2960/2960 [==============================] - 29s 10ms/step - loss: 0.0054 - val_loss: 0.0025
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u-Pinova)... Done. 0.0s
+Epoch 6/50
+2960/2960 [==============================] - 35s 12ms/step - loss: 0.0052 - val_loss: 0.0024
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u-Pinova)... Done. 0.0s
+Epoch 7/50
+2960/2960 [==============================] - 29s 10ms/step - loss: 0.0051 - val_loss: 0.0025
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u-Pinova)... Done. 0.0s
+Epoch 8/50
+2960/2960 [==============================] - 28s 9ms/step - loss: 0.0050 - val_loss: 0.0025
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u-Pinova)... Done. 0.1s
+Epoch 9/50
+2960/2960 [==============================] - 29s 10ms/step - loss: 0.0050 - val_loss: 0.0026
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u-Pinova)... Done. 0.0s
+Epoch 10/50
+2960/2960 [==============================] - 29s 10ms/step - loss: 0.0050 - val_loss: 0.0027
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u-Pinova)... Done. 0.0s
+Epoch 11/50
+2960/2960 [==============================] - 28s 9ms/step - loss: 0.0049 - val_loss: 0.0026
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u-Pinova)... Done. 0.1s
+Epoch 12/50
+2960/2960 [==============================] - 35s 12ms/step - loss: 0.0048 - val_loss: 0.0026
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u-Pinova)... Done. 0.0s
+Epoch 13/50
+2960/2960 [==============================] - 34s 11ms/step - loss: 0.0049 - val_loss: 0.0025
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u-Pinova)... Done. 0.0s
+Epoch 14/50
+2960/2960 [==============================] - 36s 12ms/step - loss: 0.0049 - val_loss: 0.0026
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u-Pinova)... Done. 0.1s
+Epoch 15/50
+2960/2960 [==============================] - 38s 13ms/step - loss: 0.0051 - val_loss: 0.0028
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u-Pinova)... Done. 0.0s
+Epoch 16/50
+2960/2960 [==============================] - 35s 12ms/step - loss: 0.0048 - val_loss: 0.0025
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u-Pinova)... Done. 0.0s
+Epoch 17/50
+2960/2960 [==============================] - 35s 12ms/step - loss: 0.0048 - val_loss: 0.0029
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u-Pinova)... Done. 0.0s
+Epoch 18/50
+2960/2960 [==============================] - 36s 12ms/step - loss: 0.0047 - val_loss: 0.0025
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u-Pinova)... Done. 0.0s
+Epoch 19/50
+2960/2960 [==============================] - 36s 12ms/step - loss: 0.0048 - val_loss: 0.0028
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u-Pinova)... Done. 0.0s
+Epoch 20/50
+2960/2960 [==============================] - 36s 12ms/step - loss: 0.0048 - val_loss: 0.0024
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u-Pinova)... Done. 0.0s
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (C:\Users\Dora\PycharmProjects\prediction_journal\prediction_Pinova\wandb\run-20250715_143321-4gzzance\files\model-best)... Done. 0.0s
+Epoch 21/50
+2960/2960 [==============================] - 35s 12ms/step - loss: 0.0047 - val_loss: 0.0025
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u-Pinova)... Done. 0.0s
+Epoch 22/50
+2960/2960 [==============================] - 35s 12ms/step - loss: 0.0046 - val_loss: 0.0027
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u-Pinova)... Done. 0.0s
+Epoch 23/50
+2960/2960 [==============================] - 36s 12ms/step - loss: 0.0046 - val_loss: 0.0025
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u-Pinova)... Done. 0.0s
+Epoch 24/50
+2960/2960 [==============================] - 34s 11ms/step - loss: 0.0045 - val_loss: 0.0025
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u-Pinova)... Done. 0.0s
+Epoch 25/50
+2960/2960 [==============================] - 33s 11ms/step - loss: 0.0046 - val_loss: 0.0025
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u-Pinova)... Done. 0.0s
+Epoch 26/50
+2960/2960 [==============================] - 28s 9ms/step - loss: 0.0045 - val_loss: 0.0028
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u-Pinova)... Done. 0.0s
+Epoch 27/50
+2960/2960 [==============================] - 28s 9ms/step - loss: 0.0044 - val_loss: 0.0025
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u-Pinova)... Done. 0.0s
+Epoch 28/50
+2960/2960 [==============================] - 31s 10ms/step - loss: 0.0044 - val_loss: 0.0024
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u-Pinova)... Done. 0.0s
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (C:\Users\Dora\PycharmProjects\prediction_journal\prediction_Pinova\wandb\run-20250715_143321-4gzzance\files\model-best)... Done. 0.0s
+Epoch 29/50
+2960/2960 [==============================] - 26s 9ms/step - loss: 0.0046 - val_loss: 0.0025
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u-Pinova)... Done. 0.0s
+Epoch 30/50
+2960/2960 [==============================] - 26s 9ms/step - loss: 0.0043 - val_loss: 0.0025
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u-Pinova)... Done. 0.0s
+Epoch 31/50
+2960/2960 [==============================] - 26s 9ms/step - loss: 0.0043 - val_loss: 0.0025
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u-Pinova)... Done. 0.0s
+Epoch 32/50
+2960/2960 [==============================] - 26s 9ms/step - loss: 0.0042 - val_loss: 0.0024
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u-Pinova)... Done. 0.0s
+Epoch 33/50
+2960/2960 [==============================] - 25s 9ms/step - loss: 0.0043 - val_loss: 0.0024
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u-Pinova)... Done. 0.0s
+Epoch 34/50
+2960/2960 [==============================] - 25s 9ms/step - loss: 0.0042 - val_loss: 0.0028
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u-Pinova)... Done. 0.0s
+Epoch 35/50
+2960/2960 [==============================] - 27s 9ms/step - loss: 0.0042 - val_loss: 0.0024
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u-Pinova)... Done. 0.0s
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (C:\Users\Dora\PycharmProjects\prediction_journal\prediction_Pinova\wandb\run-20250715_143321-4gzzance\files\model-best)... Done. 0.0s
+Epoch 36/50
+2960/2960 [==============================] - 26s 9ms/step - loss: 0.0042 - val_loss: 0.0028
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u-Pinova)... Done. 0.0s
+Epoch 37/50
+2960/2960 [==============================] - 27s 9ms/step - loss: 0.0041 - val_loss: 0.0024
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u-Pinova)... Done. 0.0s
+Epoch 38/50
+2960/2960 [==============================] - 26s 9ms/step - loss: 0.0042 - val_loss: 0.0027
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u-Pinova)... Done. 0.0s
+Epoch 39/50
+2960/2960 [==============================] - 25s 9ms/step - loss: 0.0041 - val_loss: 0.0027
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u-Pinova)... Done. 0.0s
+Epoch 40/50
+2960/2960 [==============================] - 27s 9ms/step - loss: 0.0041 - val_loss: 0.0023
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u-Pinova)... Done. 0.0s
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (C:\Users\Dora\PycharmProjects\prediction_journal\prediction_Pinova\wandb\run-20250715_143321-4gzzance\files\model-best)... Done. 0.0s
+Epoch 41/50
+2960/2960 [==============================] - 26s 9ms/step - loss: 0.0042 - val_loss: 0.0024
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u-Pinova)... Done. 0.0s
+Epoch 42/50
+2960/2960 [==============================] - 26s 9ms/step - loss: 0.0041 - val_loss: 0.0026
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u-Pinova)... Done. 0.0s
+Epoch 43/50
+2960/2960 [==============================] - 28s 9ms/step - loss: 0.0041 - val_loss: 0.0023
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u-Pinova)... Done. 0.0s
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (C:\Users\Dora\PycharmProjects\prediction_journal\prediction_Pinova\wandb\run-20250715_143321-4gzzance\files\model-best)... Done. 0.0s
+Epoch 44/50
+2960/2960 [==============================] - 26s 9ms/step - loss: 0.0041 - val_loss: 0.0026
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u-Pinova)... Done. 0.0s
+Epoch 45/50
+2960/2960 [==============================] - 27s 9ms/step - loss: 0.0041 - val_loss: 0.0023
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u-Pinova)... Done. 0.0s
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (C:\Users\Dora\PycharmProjects\prediction_journal\prediction_Pinova\wandb\run-20250715_143321-4gzzance\files\model-best)... Done. 0.0s
+Epoch 46/50
+2960/2960 [==============================] - 25s 8ms/step - loss: 0.0041 - val_loss: 0.0024
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u-Pinova)... Done. 0.0s
+Epoch 47/50
+2960/2960 [==============================] - 25s 9ms/step - loss: 0.0041 - val_loss: 0.0027
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u-Pinova)... Done. 0.0s
+Epoch 48/50
+2960/2960 [==============================] - 26s 9ms/step - loss: 0.0040 - val_loss: 0.1081
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u-Pinova)... Done. 0.0s
+Epoch 49/50
+2960/2960 [==============================] - 25s 9ms/step - loss: 0.0041 - val_loss: 0.0026
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u-Pinova)... Done. 0.0s
+Epoch 50/50
+2960/2960 [==============================] - 25s 8ms/step - loss: 0.0041 - val_loss: 0.0023
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u-Pinova)... Done. 0.0s
+329/329 [==============================] - 1s 4ms/step
+RMSE: 0.3990980799592896 C
+count    1.052400e+04
+mean     1.592793e-01
+std      5.810787e-01
+min      4.622279e-12
+25%      3.731199e-03
+50%      2.139377e-02
+75%      9.552413e-02
+max      1.554571e+01
+Name: res_mean, dtype: float64

@@ -1,0 +1,27 @@
+{
+  "os":  "Windows-10-10.0.26100-SP0",
+  "python":  "CPython 3.8.20",
+  "startedAt":  "2025-03-12T13:34:07.540902Z",
+  "program":  "C:/Users/Dora/PycharmProjects/prediction_journal/inference.py",
+  "codePath":  "inference.py",
+  "email":  "dora.krekovic@fer.hr",
+  "root":  "C:\\Users\\Dora\\PycharmProjects\\prediction_journal",
+  "host":  "DESKTOP-I96HI59",
+  "executable":  "C:\\Users\\Dora\\anaconda3\\envs\\prediction_journal_38\\python.exe",
+  "codePathLocal":  "inference.py",
+  "cpu_count":  8,
+  "cpu_count_logical":  16,
+  "disk":  {
+    "/":  {
+      "total":  "1023327391744",
+      "used":  "619173351424"
+    }
+  },
+  "memory":  {
+    "total":  "33528926208"
+  },
+  "cpu":  {
+    "count":  8,
+    "countLogical":  16
+  }
+}

@@ -1,0 +1,15 @@
+threshold,csv_file,location,model,total_predictions,predicted_within_threshold,prediction_accuracy,to_transmit,data_reduction_percent,transmission_precision
+0.5,results_inference_on_Kamenac_2025-07-15_14-17_2021data_modelUsed_Kamenac_2025-07-15_11-18_tf.csv,Kamenac,Kamenac_2025-07-15_11-18_tf,52535,42906,81.67,9629,81.67,100.0
+0.5,results_inference_on_Nasice_OBZ_2025-07-15_14-37_2021data_modelUsed_Nasice_OBZ_2025-07-15_14-06_tf.csv,Nasice_OBZ,Nasice_OBZ_2025-07-15_14-06_tf,52535,44632,84.96,7903,84.96,100.0
+0.5,results_inference_on_Nedelisce_2025-07-15_14-19_2021data_modelUsed_Nedelisce_2025-07-15_11-41_tf.csv,Nedelisce,Nedelisce_2025-07-15_11-41_tf,52535,46122,87.79,6413,87.79,100.0
+0.5,results_inference_on_Oklaj_2025-07-15_14-21_2021data_modelUsed_Oklaj_2025-07-15_11-32_tf.csv,Oklaj,Oklaj_2025-07-15_11-32_tf,52535,40661,77.4,11874,77.4,100.0
+0.5,results_inference_on_Potomje_2025-07-15_15-44_2021data_modelUsed_Potomje_2025-07-15_14-33_tf.csv,Potomje,Potomje_2025-07-15_14-33_tf,52535,43519,82.84,9016,82.84,100.0
+0.5,results_inference_on_Skenderovci_2025-07-15_14-22_2021data_modelUsed_Skenderovci_2025-07-15_11-12_tf.csv,Skenderovci,Skenderovci_2025-07-15_11-12_tf,52535,45962,87.49,6573,87.49,100.0
+0.5,results_inference_on_Suhopolje_2025-07-15_14-15_2021data_modelUsed_Suhopolje_2025-07-15_10-45_tf.csv,Suhopolje,Suhopolje_2025-07-15_10-45_tf,52535,45725,87.04,6810,87.04,100.0
+1.0,results_inference_on_Kamenac_2025-07-15_14-17_2021data_modelUsed_Kamenac_2025-07-15_11-18_tf.csv,Kamenac,Kamenac_2025-07-15_11-18_tf,52535,50407,95.95,2128,95.95,100.0
+1.0,results_inference_on_Nasice_OBZ_2025-07-15_14-37_2021data_modelUsed_Nasice_OBZ_2025-07-15_14-06_tf.csv,Nasice_OBZ,Nasice_OBZ_2025-07-15_14-06_tf,52535,50809,96.71,1726,96.71,100.0
+1.0,results_inference_on_Nedelisce_2025-07-15_14-19_2021data_modelUsed_Nedelisce_2025-07-15_11-41_tf.csv,Nedelisce,Nedelisce_2025-07-15_11-41_tf,52535,51533,98.09,1002,98.09,100.0
+1.0,results_inference_on_Oklaj_2025-07-15_14-21_2021data_modelUsed_Oklaj_2025-07-15_11-32_tf.csv,Oklaj,Oklaj_2025-07-15_11-32_tf,52535,49409,94.05,3126,94.05,100.0
+1.0,results_inference_on_Potomje_2025-07-15_15-44_2021data_modelUsed_Potomje_2025-07-15_14-33_tf.csv,Potomje,Potomje_2025-07-15_14-33_tf,52535,50418,95.97,2117,95.97,100.0
+1.0,results_inference_on_Skenderovci_2025-07-15_14-22_2021data_modelUsed_Skenderovci_2025-07-15_11-12_tf.csv,Skenderovci,Skenderovci_2025-07-15_11-12_tf,52535,51346,97.74,1189,97.74,100.0
+1.0,results_inference_on_Suhopolje_2025-07-15_14-15_2021data_modelUsed_Suhopolje_2025-07-15_10-45_tf.csv,Suhopolje,Suhopolje_2025-07-15_10-45_tf,52535,51260,97.57,1275,97.57,100.0

@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "C:/Users/Dora/PycharmProjects/prediction_journal/prediction_Pinova/tf_Pinova.py", line 53, in <module>
+    d = pd.read_excel(f'../data/Pinova/{location}_19_20_Pinova.csv')
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\pandas\io\excel\_base.py", line 478, in read_excel
+    io = ExcelFile(io, storage_options=storage_options, engine=engine)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\pandas\io\excel\_base.py", line 1496, in __init__
+    ext = inspect_excel_format(
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\pandas\io\excel\_base.py", line 1371, in inspect_excel_format
+    with get_handle(
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\pandas\io\common.py", line 868, in get_handle
+    handle = open(handle, ioargs.mode)
+FileNotFoundError: [Errno 2] No such file or directory: '../data/Pinova/Suhopolje_19_20_Pinova.csv'

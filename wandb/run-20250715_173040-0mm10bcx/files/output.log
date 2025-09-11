@@ -1,0 +1,14 @@
+Shape of training data: (15767, 24, 1)
+Shape of the target data: (15767, 1)
+Shape of validation data: (1752, 24, 1)
+Shape of the validation target data: (1752, 1)
+Suhopolje_2025-03-13_11-08_tf_1h
+X_infer shape: (52535, 24, 1)
+1642/1642 [==============================] - 5s 3ms/step
+train_std: t2m    8.543148
+dtype: float64
+train_mean: t2m   -259.762946
+dtype: float64
+train_std type: <class 'pandas.core.series.Series'>
+train_std index: Index(['t2m'], dtype='object')
+Inference results saved successfully to results_inference_on_Potomje_2025-07-15_17-30_2021data_modelUsed_Suhopolje_2025-03-13_11-08_tf_1h.csv'

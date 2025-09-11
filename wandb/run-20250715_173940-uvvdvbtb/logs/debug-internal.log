@@ -1,0 +1,15 @@
+{"time":"2025-07-15T17:39:40.5806027+02:00","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"C:\\Users\\Dora\\PycharmProjects\\prediction_journal\\wandb\\run-20250715_173940-uvvdvbtb\\logs\\debug-core.log"}
+{"time":"2025-07-15T17:39:40.6996368+02:00","level":"INFO","msg":"created new stream","id":"uvvdvbtb"}
+{"time":"2025-07-15T17:39:40.6996368+02:00","level":"INFO","msg":"stream: started","id":"uvvdvbtb"}
+{"time":"2025-07-15T17:39:40.7001836+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"uvvdvbtb"}
+{"time":"2025-07-15T17:39:40.7001836+02:00","level":"INFO","msg":"sender: started","stream_id":"uvvdvbtb"}
+{"time":"2025-07-15T17:39:40.7001836+02:00","level":"INFO","msg":"handler: started","stream_id":"uvvdvbtb"}
+{"time":"2025-07-15T17:39:41.0707123+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-07-15T17:39:48.7954035+02:00","level":"INFO","msg":"stream: closing","id":"uvvdvbtb"}
+{"time":"2025-07-15T17:39:48.7954035+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-07-15T17:39:48.7959667+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-07-15T17:39:49.4783366+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-07-15T17:39:49.6835621+02:00","level":"INFO","msg":"handler: closed","stream_id":"uvvdvbtb"}
+{"time":"2025-07-15T17:39:49.6835621+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"uvvdvbtb"}
+{"time":"2025-07-15T17:39:49.6835621+02:00","level":"INFO","msg":"sender: closed","stream_id":"uvvdvbtb"}
+{"time":"2025-07-15T17:39:49.6841403+02:00","level":"INFO","msg":"stream: closed","id":"uvvdvbtb"}

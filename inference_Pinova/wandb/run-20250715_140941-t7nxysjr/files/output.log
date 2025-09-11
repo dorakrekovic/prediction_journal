@@ -1,0 +1,17 @@
+Shape of training data: (94709, 24, 1)
+Shape of the target data: (94709, 1)
+Shape of validation data: (10524, 24, 1)
+Shape of the validation target data: (10524, 1)
+Suhopolje_2025-07-15_10-45_tf
+Traceback (most recent call last):
+  File "C:/Users/Dora/PycharmProjects/prediction_journal/inference_Pinova/inference_Pnova.py", line 24, in <module>
+    data_2021 = pd.read_excel(f'../data/Pinova/{location}_2021_Pinova.xlsl')
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\pandas\io\excel\_base.py", line 478, in read_excel
+    io = ExcelFile(io, storage_options=storage_options, engine=engine)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\pandas\io\excel\_base.py", line 1496, in __init__
+    ext = inspect_excel_format(
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\pandas\io\excel\_base.py", line 1371, in inspect_excel_format
+    with get_handle(
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\pandas\io\common.py", line 868, in get_handle
+    handle = open(handle, ioargs.mode)
+FileNotFoundError: [Errno 2] No such file or directory: '../data/Pinova/Suhopolje_2021_Pinova.xlsl'

@@ -1,0 +1,23 @@
+Shape of training data: (15767, 24, 1)
+Shape of the target data: (15767, 1)
+Shape of validation data: (1752, 24, 1)
+Shape of the validation target data: (1752, 1)
+Suhopolje_2025-03-13_11-08_tf_1h
+Resampled data shape: (8760, 2)
+First few timestamps:
+                  time  temperature
+0 2021-01-01 00:00:00     1.500000
+1 2021-01-01 01:00:00     2.783333
+2 2021-01-01 02:00:00     1.850000
+3 2021-01-01 03:00:00     1.566667
+4 2021-01-01 04:00:00    -0.250000
+X_infer shape: (8735, 24, 1)
+Y_real shape: (8735, 1)
+273/273 [==============================] - 1s 3ms/step
+predictions_scaled shape: (8735, 1)
+predictions_scaled sample: [[nan]
+ [nan]
+ [nan]
+ [nan]
+ [nan]]
+Inference results saved successfully to results_inference_on_Potomje_2025-07-15_17-40_2021data_modelUsed_Suhopolje_2025-03-13_11-08_tf_1h.csv'

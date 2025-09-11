@@ -1,0 +1,65 @@
+Shape of training data: (15767, 24, 1)
+Shape of the target data: (15767, 1)
+Shape of validation data: (1752, 24, 1)
+Shape of the validation target data: (1752, 1)
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #
+=================================================================
+ input_1 (InputLayer)        [(None, 24, 1)]           0
+
+ lstm (LSTM)                 (None, 50)                10400
+
+ dense (Dense)               (None, 1)                 51
+
+=================================================================
+Total params: 10,451
+Trainable params: 10,451
+Non-trainable params: 0
+_________________________________________________________________
+Model saved at models/Nasice_2025-03-12_10-09_tf_1h.h5
+wandb: WARNING WandbCallback is deprecated and will be removed in a future release. Please use the WandbMetricsLogger, WandbModelCheckpoint, and WandbEvalCallback callbacks instead. See https://docs.wandb.ai/guides/integrations/keras for more information.
+wandb: WARNING The save_model argument by default saves the model in the HDF5 format that cannot save custom objects like subclassed models and custom layers. This behavior will be deprecated in a future release in favor of the SavedModel format. Meanwhile, the HDF5 model is saved as W&B files and the SavedModel as W&B Artifacts.
+Epoch 1/50
+486/493 [============================>.] - ETA: 0s - loss: 0.1872
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+Traceback (most recent call last):
+  File "C:/Users/Dora/PycharmProjects/prediction_journal/tf_1h.py", line 190, in <module>
+    history = model.train()
+  File "C:/Users/Dora/PycharmProjects/prediction_journal/tf_1h.py", line 153, in train
+    history = empty_model.fit(
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\wandb\integration\keras\keras.py", line 176, in new_v2
+    return old_v2(*args, **kwargs)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\wandb\integration\keras\keras.py", line 176, in new_v2
+    return old_v2(*args, **kwargs)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\wandb\integration\keras\keras.py", line 176, in new_v2
+    return old_v2(*args, **kwargs)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\keras\utils\traceback_utils.py", line 65, in error_handler
+    return fn(*args, **kwargs)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\keras\engine\training.py", line 1712, in fit
+    callbacks.on_epoch_end(epoch, epoch_logs)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\keras\callbacks.py", line 454, in on_epoch_end
+    callback.on_epoch_end(epoch, logs)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\wandb\integration\keras\callbacks\model_checkpoint.py", line 138, in on_epoch_end
+    self._log_ckpt_as_artifact(filepath, aliases=aliases)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\wandb\integration\keras\callbacks\model_checkpoint.py", line 146, in _log_ckpt_as_artifact
+    model_checkpoint_artifact = wandb.Artifact(
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\wandb\sdk\artifacts\artifact.py", line 160, in __init__
+    self._storage_policy = storage_policy_cls.from_config(config=policy_config)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\wandb\sdk\artifacts\storage_policies\wandb_storage_policy.py", line 71, in from_config
+    return cls(config=config, api=api)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\wandb\sdk\artifacts\storage_policies\wandb_storage_policy.py", line 79, in __init__
+    self._cache = cache or get_artifact_file_cache()
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\wandb\sdk\artifacts\artifact_file_cache.py", line 248, in get_artifact_file_cache
+    _artifact_file_cache = ArtifactFileCache(cache_dir)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\wandb\sdk\artifacts\artifact_file_cache.py", line 48, in __init__
+    self._sys_umask = _get_sys_umask_threadsafe()
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\wandb\sdk\artifacts\artifact_file_cache.py", line 36, in _get_sys_umask_threadsafe
+    return int(subprocess.check_output(umask_cmd))
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\subprocess.py", line 415, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\subprocess.py", line 495, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\subprocess.py", line 1015, in communicate
+    stdout = self.stdout.read()
+KeyboardInterrupt

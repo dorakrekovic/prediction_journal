@@ -1,0 +1,67 @@
+{"time":"2025-03-10T17:40:49.1244902+01:00","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"C:\\Users\\Dora\\PycharmProjects\\prediction_journal\\wandb\\run-20250310_174048-s7sqekpm\\logs\\debug-core.log"}
+{"time":"2025-03-10T17:40:49.7095481+01:00","level":"INFO","msg":"created new stream","id":"s7sqekpm"}
+{"time":"2025-03-10T17:40:49.7095481+01:00","level":"INFO","msg":"stream: started","id":"s7sqekpm"}
+{"time":"2025-03-10T17:40:49.7095481+01:00","level":"INFO","msg":"sender: started","stream_id":"s7sqekpm"}
+{"time":"2025-03-10T17:40:49.7095481+01:00","level":"INFO","msg":"writer: Do: started","stream_id":"s7sqekpm"}
+{"time":"2025-03-10T17:40:49.7095481+01:00","level":"INFO","msg":"handler: started","stream_id":"s7sqekpm"}
+{"time":"2025-03-10T17:40:50.0571609+01:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-10T17:42:05.5829133+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-10T17:42:05.5829133+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/dora123/IEEEEdge/s7sqekpm/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-10T17:42:07.7329443+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-10T17:42:07.9000725+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/dora123/IEEEEdge/s7sqekpm/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-10T17:43:50.5934149+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/dora123/IEEEEdge/s7sqekpm/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-10T17:43:50.6736797+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-10T17:43:52.7782477+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/dora123/IEEEEdge/s7sqekpm/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-10T17:43:53.1046069+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-10T17:43:57.2087432+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/dora123/IEEEEdge/s7sqekpm/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-10T17:43:57.9509554+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-10T17:45:05.7798136+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-10T17:45:22.9735037+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/dora123/IEEEEdge/s7sqekpm/file_stream\": dial tcp 35.186.228.49:443: connectex: An established connection was aborted by the software in your host machine."}
+{"time":"2025-03-10T17:45:22.9735037+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 10.19.0.126:54651->35.186.228.49:443: wsarecv: An established connection was aborted by the software in your host machine."}
+{"time":"2025-03-10T17:45:25.0062248+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-10T17:45:25.2602086+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/dora123/IEEEEdge/s7sqekpm/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-10T17:45:29.4152303+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/dora123/IEEEEdge/s7sqekpm/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-10T17:45:29.6360088+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-10T17:46:10.0336142+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/dora123/IEEEEdge/s7sqekpm/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-10T17:46:12.3392159+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/dora123/IEEEEdge/s7sqekpm/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-10T17:46:17.2234493+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/dora123/IEEEEdge/s7sqekpm/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-10T17:46:20.8727215+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-10T17:46:22.966844+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-10T17:46:25.754217+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/dora123/IEEEEdge/s7sqekpm/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-10T17:46:27.3605736+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-10T17:47:33.0609367+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/dora123/IEEEEdge/s7sqekpm/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-10T17:47:47.3879243+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/dora123/IEEEEdge/s7sqekpm/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-10T17:48:08.0114793+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-10T17:48:10.4037114+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-10T17:48:15.1453552+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-10T17:48:17.3676161+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/dora123/IEEEEdge/s7sqekpm/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-10T17:48:19.5649369+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/dora123/IEEEEdge/s7sqekpm/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-10T17:48:23.9794428+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-10T17:48:24.549131+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/dora123/IEEEEdge/s7sqekpm/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-10T17:48:53.0354987+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-10T17:48:55.4243259+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-10T17:48:56.107013+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/dora123/IEEEEdge/s7sqekpm/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-10T17:48:58.5521236+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/dora123/IEEEEdge/s7sqekpm/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-10T17:49:00.3490569+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-10T17:49:06.9431614+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/dora123/IEEEEdge/s7sqekpm/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-10T17:49:08.4902579+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-10T17:49:16.2144429+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/dora123/IEEEEdge/s7sqekpm/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-10T17:49:26.0043413+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-10T17:49:49.37055+01:00","level":"INFO","msg":"stream: closing","id":"s7sqekpm"}
+{"time":"2025-03-10T17:49:49.37055+01:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-10T17:49:49.3726451+01:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-10T17:49:58.5645632+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-10T17:50:58.8514978+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-10T17:51:05.1709699+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/dora123/IEEEEdge/s7sqekpm/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-10T17:51:07.1773703+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/dora123/IEEEEdge/s7sqekpm/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-10T17:51:58.8655562+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-10T17:52:05.1618903+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/dora123/IEEEEdge/s7sqekpm/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-10T17:52:07.2159281+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/dora123/IEEEEdge/s7sqekpm/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-10T17:52:13.3926712+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/dora123/IEEEEdge/s7sqekpm/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-10T17:52:22.275434+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/dora123/IEEEEdge/s7sqekpm/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-10T17:52:45.168394+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/dora123/IEEEEdge/s7sqekpm/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-10T17:52:59.8191076+01:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-10T17:53:22.8388456+01:00","level":"INFO","msg":"handler: closed","stream_id":"s7sqekpm"}
+{"time":"2025-03-10T17:53:22.8395178+01:00","level":"INFO","msg":"writer: Close: closed","stream_id":"s7sqekpm"}
+{"time":"2025-03-10T17:53:22.8395178+01:00","level":"INFO","msg":"sender: closed","stream_id":"s7sqekpm"}
+{"time":"2025-03-10T17:53:22.8404801+01:00","level":"INFO","msg":"stream: closed","id":"s7sqekpm"}

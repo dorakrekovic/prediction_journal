@@ -1,0 +1,69 @@
+Shape of training data: (94709, 24, 1)
+Shape of the target data: (94709, 1)
+Shape of validation data: (10524, 24, 1)
+Shape of the validation target data: (10524, 1)
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #
+=================================================================
+ input_1 (InputLayer)        [(None, 24, 1)]           0
+
+ lstm (LSTM)                 (None, 50)                10400
+
+ dense (Dense)               (None, 1)                 51
+
+=================================================================
+Total params: 10,451
+Trainable params: 10,451
+Non-trainable params: 0
+_________________________________________________________________
+Model saved at ../models/Pinova/Potomje_2025-07-15_12-05_tf.h5
+wandb: WARNING WandbCallback is deprecated and will be removed in a future release. Please use the WandbMetricsLogger, WandbModelCheckpoint, and WandbEvalCallback callbacks instead. See https://docs.wandb.ai/guides/integrations/keras for more information.
+wandb: WARNING The save_model argument by default saves the model in the HDF5 format that cannot save custom objects like subclassed models and custom layers. This behavior will be deprecated in a future release in favor of the SavedModel format. Meanwhile, the HDF5 model is saved as W&B files and the SavedModel as W&B Artifacts.
+Epoch 1/50
+2960/2960 [==============================] - 72s 23ms/step - loss: 0.0193 - val_loss: 0.0027
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u-Pinova)... Done. 0.1s
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (C:\Users\Dora\PycharmProjects\prediction_journal\prediction_Pinova\wandb\run-20250715_120526-t24frl0k\files\model-best)... Done. 0.1s
+Epoch 2/50
+2960/2960 [==============================] - ETA: 0s - loss: 0.0062
+WARNING:absl:Found untraced functions such as _update_step_xla while saving (showing 1 of 1). These functions will not be directly callable after loading.
+wandb: Adding directory to artifact (.\model-tensorflow-u-Pinova)... Traceback (most recent call last):
+  File "C:/Users/Dora/PycharmProjects/prediction_journal/prediction_Pinova/tf8.py", line 251, in <module>
+    main()
+  File "C:/Users/Dora/PycharmProjects/prediction_journal/prediction_Pinova/tf8.py", line 201, in main
+    history = model.train()
+  File "C:/Users/Dora/PycharmProjects/prediction_journal/prediction_Pinova/tf8.py", line 163, in train
+    history = empty_model.fit(
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\wandb\integration\keras\keras.py", line 176, in new_v2
+    return old_v2(*args, **kwargs)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\wandb\integration\keras\keras.py", line 176, in new_v2
+    return old_v2(*args, **kwargs)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\wandb\integration\keras\keras.py", line 176, in new_v2
+    return old_v2(*args, **kwargs)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\wandb\integration\keras\callbacks\model_checkpoint.py", line 138, in on_epoch_end
+    self._log_ckpt_as_artifact(filepath, aliases=aliases)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\wandb\integration\keras\callbacks\model_checkpoint.py", line 152, in _log_ckpt_as_artifact
+    model_checkpoint_artifact.add_dir(filepath)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\wandb\sdk\artifacts\_validators.py", line 115, in wrapper
+    return method(self, *args, **kwargs)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\wandb\sdk\artifacts\artifact.py", line 1398, in add_dir
+    pool.map(add_manifest_file, paths)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\multiprocessing\pool.py", line 364, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\multiprocessing\pool.py", line 771, in get
+    raise self._value
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\multiprocessing\pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\multiprocessing\pool.py", line 48, in mapstar
+    return list(map(*args))
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\wandb\sdk\artifacts\artifact.py", line 1389, in add_manifest_file
+    self._add_local_file(
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\wandb\sdk\artifacts\artifact.py", line 1598, in _add_local_file
+    shutil.copyfile(path, staging_path)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\shutil.py", line 264, in copyfile
+    with open(src, 'rb') as fsrc, open(dst, 'wb') as fdst:
+FileNotFoundError: [Errno 2] No such file or directory: 'model-tensorflow-u-Pinova\\saved_model.pb.tmpb12192903c534474998cfce95a78a48d'

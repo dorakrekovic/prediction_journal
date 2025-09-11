@@ -1,0 +1,15 @@
+{"time":"2025-07-15T17:56:55.6459722+02:00","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"C:\\Users\\Dora\\PycharmProjects\\prediction_journal\\wandb\\run-20250715_175655-bc376dfx\\logs\\debug-core.log"}
+{"time":"2025-07-15T17:56:55.7681199+02:00","level":"INFO","msg":"created new stream","id":"bc376dfx"}
+{"time":"2025-07-15T17:56:55.7681199+02:00","level":"INFO","msg":"stream: started","id":"bc376dfx"}
+{"time":"2025-07-15T17:56:55.7681199+02:00","level":"INFO","msg":"sender: started","stream_id":"bc376dfx"}
+{"time":"2025-07-15T17:56:55.7681199+02:00","level":"INFO","msg":"handler: started","stream_id":"bc376dfx"}
+{"time":"2025-07-15T17:56:55.7681199+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"bc376dfx"}
+{"time":"2025-07-15T17:56:56.0731819+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-07-15T17:57:03.9142232+02:00","level":"INFO","msg":"stream: closing","id":"bc376dfx"}
+{"time":"2025-07-15T17:57:03.9142232+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-07-15T17:57:03.914731+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-07-15T17:57:04.5733029+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-07-15T17:57:04.7928419+02:00","level":"INFO","msg":"handler: closed","stream_id":"bc376dfx"}
+{"time":"2025-07-15T17:57:04.7928419+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"bc376dfx"}
+{"time":"2025-07-15T17:57:04.7928419+02:00","level":"INFO","msg":"sender: closed","stream_id":"bc376dfx"}
+{"time":"2025-07-15T17:57:04.7935772+02:00","level":"INFO","msg":"stream: closed","id":"bc376dfx"}

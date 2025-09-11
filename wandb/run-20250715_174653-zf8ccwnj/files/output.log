@@ -1,0 +1,38 @@
+Shape of training data: (15767, 24, 1)
+Shape of the target data: (15767, 1)
+Shape of validation data: (1752, 24, 1)
+Shape of the validation target data: (1752, 1)
+Suhopolje_2025-03-13_11-08_tf_1h
+Resampled data shape: (8760, 2)
+First few timestamps:
+                  time  temperature
+0 2021-01-01 00:00:00    -2.450000
+1 2021-01-01 01:00:00    -2.816667
+2 2021-01-01 02:00:00    -2.983333
+3 2021-01-01 03:00:00    -3.500000
+4 2021-01-01 04:00:00    -3.716667
+Any NaNs in data_2021_scaled? temperature    False
+dtype: bool
+   temperature
+0    -1.853773
+1    -1.896692
+2    -1.916201
+3    -1.976678
+4    -2.002040
+5    -2.046910
+6    -2.062517
+7    -2.041057
+8    -1.826460
+9    -1.566993
+X_infer shape: (8735, 24, 1)
+Y_real shape: (8735, 1)
+273/273 [==============================] - 1s 3ms/step
+predictions_scaled shape: (8735, 1)
+predictions_scaled sample: [[-1.7080232]
+ [-1.52764  ]
+ [-1.5045398]
+ [-1.5710256]
+ [-1.6597961]]
+Any NaNs in X_infer? False
+Max, Min of X_infer: 2.783471902799644 -2.7570305839176785
+Inference results saved successfully to results_inference_on_Skenderovci_2025-07-15_17-46_2021data_modelUsed_Suhopolje_2025-03-13_11-08_tf_1h.csv'

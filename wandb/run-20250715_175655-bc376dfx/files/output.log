@@ -1,0 +1,7 @@
+Shape of training data: (23651, 24, 1)
+Shape of the target data: (23651, 1)
+Shape of validation data: (2628, 24, 1)
+Shape of the validation target data: (2628, 1)
+Kamenac_2025-03-12_15-08_tf_1h
+273/273 [==============================] - 1s 4ms/step
+Inference results saved successfully to results_inference_on_Kamenac_2025-07-15_17-56_2021data_modelUsed_Kamenac_2025-03-12_15-08_tf_1h.csv'

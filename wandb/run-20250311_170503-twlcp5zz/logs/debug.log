@@ -1,0 +1,154 @@
+2025-03-11 17:05:03,794 INFO    MainThread:25608 [wandb_setup.py:_flush():67] Current SDK version is 0.19.8
+2025-03-11 17:05:03,794 INFO    MainThread:25608 [wandb_setup.py:_flush():67] Configure stats pid to 25608
+2025-03-11 17:05:03,794 INFO    MainThread:25608 [wandb_setup.py:_flush():67] Loading settings from C:\Users\Dora\.config\wandb\settings
+2025-03-11 17:05:03,794 INFO    MainThread:25608 [wandb_setup.py:_flush():67] Loading settings from C:\Users\Dora\PycharmProjects\prediction_journal\wandb\settings
+2025-03-11 17:05:03,794 INFO    MainThread:25608 [wandb_setup.py:_flush():67] Loading settings from environment variables
+2025-03-11 17:05:03,795 INFO    MainThread:25608 [wandb_init.py:setup_run_log_directory():647] Logging user logs to C:\Users\Dora\PycharmProjects\prediction_journal\wandb\run-20250311_170503-twlcp5zz\logs\debug.log
+2025-03-11 17:05:03,796 INFO    MainThread:25608 [wandb_init.py:setup_run_log_directory():648] Logging internal logs to C:\Users\Dora\PycharmProjects\prediction_journal\wandb\run-20250311_170503-twlcp5zz\logs\debug-internal.log
+2025-03-11 17:05:03,796 INFO    MainThread:25608 [wandb_init.py:init():761] calling init triggers
+2025-03-11 17:05:03,796 INFO    MainThread:25608 [wandb_init.py:init():766] wandb.init called with sweep_config: {}
+config: {'input_dim': 1, 'past_observation': 24, 'batch_size': 32, 'optimizer': 'Adam', 'loss_function': 'MSELoss', 'num_epochs': 50, '_wandb': {}}
+2025-03-11 17:05:03,796 INFO    MainThread:25608 [wandb_init.py:init():784] starting backend
+2025-03-11 17:05:03,796 INFO    MainThread:25608 [wandb_init.py:init():788] sending inform_init request
+2025-03-11 17:05:03,848 INFO    MainThread:25608 [backend.py:_multiprocessing_setup():101] multiprocessing start_methods=spawn, using: spawn
+2025-03-11 17:05:03,848 INFO    MainThread:25608 [wandb_init.py:init():798] backend started and connected
+2025-03-11 17:05:03,850 INFO    MainThread:25608 [wandb_init.py:init():891] updated telemetry
+2025-03-11 17:05:03,852 INFO    MainThread:25608 [wandb_init.py:init():915] communicating run to backend with 90.0 second timeout
+2025-03-11 17:05:25,090 INFO    Thread-6  :25608 [retry.py:__call__():175] Retry attempt failed:
+Traceback (most recent call last):
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\urllib3\connection.py", line 199, in _new_conn
+    sock = connection.create_connection(
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\socket.py", line 930, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11002] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\urllib3\connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\urllib3\connectionpool.py", line 490, in _make_request
+    raise new_e
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\urllib3\connectionpool.py", line 466, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\urllib3\connectionpool.py", line 1095, in _validate_conn
+    conn.connect()
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\urllib3\connection.py", line 693, in connect
+    self.sock = sock = self._new_conn()
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\urllib3\connection.py", line 206, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: <urllib3.connection.HTTPSConnection object at 0x00000272A7F2CDC0>: Failed to resolve 'api.wandb.ai' ([Errno 11002] getaddrinfo failed)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    retries = retries.increment(
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000272A7F2CDC0>: Failed to resolve 'api.wandb.ai' ([Errno 11002] getaddrinfo failed)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\wandb\sdk\lib\retry.py", line 134, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\wandb\sdk\internal\internal_api.py", line 398, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\wandb\sdk\lib\gql_request.py", line 58, in execute
+    request = self.session.post(self.url, **post_args)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\requests\sessions.py", line 637, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\requests\adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000272A7F2CDC0>: Failed to resolve 'api.wandb.ai' ([Errno 11002] getaddrinfo failed)"))
+2025-03-11 17:05:25,091 INFO    Thread-7  :25608 [retry.py:__call__():175] Retry attempt failed:
+Traceback (most recent call last):
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\urllib3\connection.py", line 199, in _new_conn
+    sock = connection.create_connection(
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\socket.py", line 930, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\urllib3\connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\urllib3\connectionpool.py", line 490, in _make_request
+    raise new_e
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\urllib3\connectionpool.py", line 466, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\urllib3\connectionpool.py", line 1095, in _validate_conn
+    conn.connect()
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\urllib3\connection.py", line 693, in connect
+    self.sock = sock = self._new_conn()
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\urllib3\connection.py", line 206, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: <urllib3.connection.HTTPSConnection object at 0x00000272A7F3C160>: Failed to resolve 'api.wandb.ai' ([Errno 11001] getaddrinfo failed)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    retries = retries.increment(
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000272A7F3C160>: Failed to resolve 'api.wandb.ai' ([Errno 11001] getaddrinfo failed)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\wandb\sdk\lib\retry.py", line 134, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\wandb\sdk\internal\internal_api.py", line 398, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\wandb\sdk\lib\gql_request.py", line 58, in execute
+    request = self.session.post(self.url, **post_args)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\requests\sessions.py", line 637, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\requests\adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000272A7F3C160>: Failed to resolve 'api.wandb.ai' ([Errno 11001] getaddrinfo failed)"))
+2025-03-11 17:06:33,843 WARNING MainThread:25608 [wandb_init.py:init():1472] interrupted
+Traceback (most recent call last):
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\wandb\sdk\wandb_init.py", line 1468, in init
+    return wi.init(run_settings, run_config)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\wandb\sdk\wandb_init.py", line 941, in init
+    result = wait_with_progress(
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\wandb\sdk\mailbox\wait_with_progress.py", line 24, in wait_with_progress
+    return wait_all_with_progress(
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\wandb\sdk\mailbox\wait_with_progress.py", line 87, in wait_all_with_progress
+    return asyncio_compat.run(progress_loop_with_timeout)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\site-packages\wandb\sdk\lib\asyncio_compat.py", line 30, in run
+    return future.result()
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\concurrent\futures\_base.py", line 439, in result
+    self._condition.wait(timeout)
+  File "C:\Users\Dora\anaconda3\envs\prediction_journal_38\lib\threading.py", line 302, in wait
+    waiter.acquire()
+KeyboardInterrupt
+2025-03-11 17:06:34,467 INFO    MsgRouterThr:25608 [mailbox.py:close():129] Closing mailbox, abandoning 1 handles.

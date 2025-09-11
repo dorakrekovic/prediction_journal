@@ -1,0 +1,15 @@
+{"time":"2025-03-13T11:24:59.3923511+01:00","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"C:\\Users\\Dora\\PycharmProjects\\prediction_journal\\wandb\\run-20250313_112459-s4tdfjhr\\logs\\debug-core.log"}
+{"time":"2025-03-13T11:24:59.5124154+01:00","level":"INFO","msg":"created new stream","id":"s4tdfjhr"}
+{"time":"2025-03-13T11:24:59.5124154+01:00","level":"INFO","msg":"stream: started","id":"s4tdfjhr"}
+{"time":"2025-03-13T11:24:59.5124154+01:00","level":"INFO","msg":"sender: started","stream_id":"s4tdfjhr"}
+{"time":"2025-03-13T11:24:59.5124154+01:00","level":"INFO","msg":"writer: Do: started","stream_id":"s4tdfjhr"}
+{"time":"2025-03-13T11:24:59.5124154+01:00","level":"INFO","msg":"handler: started","stream_id":"s4tdfjhr"}
+{"time":"2025-03-13T11:24:59.7985808+01:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-13T11:25:02.3718371+01:00","level":"INFO","msg":"stream: closing","id":"s4tdfjhr"}
+{"time":"2025-03-13T11:25:02.3718371+01:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-13T11:25:02.3723486+01:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-13T11:25:03.0186022+01:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-13T11:25:03.2386129+01:00","level":"INFO","msg":"handler: closed","stream_id":"s4tdfjhr"}
+{"time":"2025-03-13T11:25:03.2386129+01:00","level":"INFO","msg":"sender: closed","stream_id":"s4tdfjhr"}
+{"time":"2025-03-13T11:25:03.2386129+01:00","level":"INFO","msg":"writer: Close: closed","stream_id":"s4tdfjhr"}
+{"time":"2025-03-13T11:25:03.2391575+01:00","level":"INFO","msg":"stream: closed","id":"s4tdfjhr"}

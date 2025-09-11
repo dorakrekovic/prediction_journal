@@ -1,0 +1,15 @@
+{"time":"2025-07-15T11:41:36.3817329+02:00","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"C:\\Users\\Dora\\PycharmProjects\\prediction_journal\\prediction_Pinova\\wandb\\run-20250715_114136-am4s7erq\\logs\\debug-core.log"}
+{"time":"2025-07-15T11:41:36.6635032+02:00","level":"INFO","msg":"created new stream","id":"am4s7erq"}
+{"time":"2025-07-15T11:41:36.6635032+02:00","level":"INFO","msg":"handler: started","stream_id":"am4s7erq"}
+{"time":"2025-07-15T11:41:36.6650456+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"am4s7erq"}
+{"time":"2025-07-15T11:41:36.6650456+02:00","level":"INFO","msg":"stream: started","id":"am4s7erq"}
+{"time":"2025-07-15T11:41:36.6654399+02:00","level":"INFO","msg":"sender: started","stream_id":"am4s7erq"}
+{"time":"2025-07-15T11:41:37.2179517+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-07-15T12:27:42.5067677+02:00","level":"INFO","msg":"stream: closing","id":"am4s7erq"}
+{"time":"2025-07-15T12:27:42.5067677+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-07-15T12:27:42.5078838+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-07-15T12:27:43.9245432+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-07-15T12:27:44.1772238+02:00","level":"INFO","msg":"handler: closed","stream_id":"am4s7erq"}
+{"time":"2025-07-15T12:27:44.1772238+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"am4s7erq"}
+{"time":"2025-07-15T12:27:44.1777747+02:00","level":"INFO","msg":"sender: closed","stream_id":"am4s7erq"}
+{"time":"2025-07-15T12:27:44.1777747+02:00","level":"INFO","msg":"stream: closed","id":"am4s7erq"}
