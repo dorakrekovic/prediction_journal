@@ -36,38 +36,19 @@ x_q = np.rint(x_norm / in_scale + in_zero_point).astype(np.int8)
 # interpreter.invoke()
 # _ = interpreter.get_tensor(output_details[0]['index'])
 
-# ---- 3) Invoke + measure model time only ----
+
+# (Optional) End-to-end timing (preprocess -> invoke -> postprocess):
+t0_all = time.perf_counter()
 interpreter.set_tensor(input_details[0]['index'], x_q)
-
-t0 = time.perf_counter()
 interpreter.invoke()
-t1 = time.perf_counter()
-
-invoke_ms = (t1 - t0) * 1000.0
-print(f"Inference time (invoke only): {invoke_ms:.3f} ms")
-
-y_q = interpreter.get_tensor(output_details[0]['index'])  # int8
+y_q = interpreter.get_tensor(output_details[0]['index'])
 
 # ---- 4) Dequantize output ----
 out_scale      = output_details[0]['quantization_parameters']['scales'][0]
 out_zero_point = output_details[0]['quantization_parameters']['zero_points'][0]
-y_norm = (y_q.astype(np.float32) - out_zero_point) * out_scale  # [1, n_ahead]
 
-# ---- 5) Denormalize to °C ----
+
+y_norm = (y_q.astype(np.float32) - out_zero_point) * out_scale
 y_pred_real = y_norm * t_std + t_mean
-y_true_real = 5.3
-diff = y_pred_real - y_true_real
-
-print(f"Predicted:  {y_pred_real} °C")
-print(f"Actual:     {y_true_real:.2f} °C")
-print(f"Difference: {diff} °C")
-
-# (Optional) End-to-end timing (preprocess -> invoke -> postprocess):
-# t0_all = time.perf_counter()
-# interpreter.set_tensor(input_details[0]['index'], x_q)
-# interpreter.invoke()
-# y_q = interpreter.get_tensor(output_details[0]['index'])
-# y_norm = (y_q.astype(np.float32) - out_zero_point) * out_scale
-# y_pred_real = y_norm * t_std + t_mean
-# t1_all = time.perf_counter()
-# print(f"End-to-end time: {(t1_all - t0_all)*1000:.3f} ms")
+t1_all = time.perf_counter()
+print(f"End-to-end time: {(t1_all - t0_all)*1000:.3f} ms")

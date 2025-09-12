@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import os
 import glob
+import time
 import numpy as np
 import pandas as pd
 import tensorflow as tf
@@ -24,6 +25,10 @@ train_stats_share = 0.9
 
 save_csv = True
 csv_out = f"{location}_rnn_full_results.csv"
+
+# Optional benchmarking knobs
+WARMUP_RUNS = 5         # do a few warmups before timing (0 to disable)
+PRINT_PER_SAMPLE = False  # set True to print each inference time
 
 # -------------------------
 # Helpers
@@ -116,9 +121,22 @@ print("Input spec:", in_det["shape"], in_det["dtype"])
 print("Output spec:", out_det["shape"], out_det["dtype"])
 
 # -------------------------
-# 5) Inference over ALL timestamps
+# 5) Inference over ALL timestamps + timing
 # -------------------------
 preds_real = []
+
+# Warm-up (optional)
+if WARMUP_RUNS and len(X_all) > 0:
+    x_warm = X_all[0:1].astype(np.float32)
+    x_warm = x_warm if in_det["dtype"] == np.float32 else quantize_to_int8(x_warm, in_det)
+    for _ in range(WARMUP_RUNS):
+        interpreter.set_tensor(in_det["index"], x_warm)
+        interpreter.invoke()
+        _ = interpreter.get_tensor(out_det["index"])
+
+# Total loop timing
+start_total = time.perf_counter()
+
 for i in range(len(X_all)):
     x_norm = X_all[i:i+1].astype(np.float32)  # [1, lag, 1]
 
@@ -131,7 +149,14 @@ for i in range(len(X_all)):
         raise TypeError(f"Unsupported input dtype: {in_det['dtype']}")
 
     interpreter.set_tensor(in_det["index"], x_in)
+
+    # Measure *pure* model inference time (optional per-sample print)
+    t0 = time.perf_counter()
     interpreter.invoke()
+    t1 = time.perf_counter()
+    if PRINT_PER_SAMPLE:
+        print(f"Inference {i}: {(t1 - t0)*1000:.3f} ms")
+
     y_out = interpreter.get_tensor(out_det["index"])  # [1, n_ahead]
 
     # Output dtype handling
@@ -146,32 +171,48 @@ for i in range(len(X_all)):
     y_real = y_norm * float(train_std["t2m"]) + float(train_mean["t2m"])
     preds_real.append(float(y_real[0, 0]))
 
+end_total = time.perf_counter()
+total_s = end_total - start_total
+
+if len(X_all) > 0:
+    avg_ms = (total_s / len(X_all)) * 1000.0
+    thr = len(X_all) / total_s if total_s > 0 else float('inf')
+    print(f"\nTotal inference loop duration (all {len(X_all)} samples): {total_s:.4f} s")
+    print(f"Average per-sample inference time: {avg_ms:.4f} ms")
+    print(f"Throughput: {thr:.4f} samples/sec")
+else:
+    print("\nNo samples to run inference on.")
+
 preds_real = np.array(preds_real, dtype=np.float32)
 
+# -------------------------
 # Ground truth in °C for ALL samples
+# -------------------------
 ytrue_real = (Y_all.astype(np.float32) * float(train_std["t2m"]) + float(train_mean["t2m"])).ravel()
 
 # -------------------------
 # 6) Metrics over ALL timestamps
 # -------------------------
-mae  = float(np.mean(np.abs(preds_real - ytrue_real)))
-rmse = float(sqrt(np.mean((preds_real - ytrue_real) ** 2)))
-mape = float(np.mean(np.abs((preds_real - ytrue_real) / np.clip(np.abs(ytrue_real), 1e-6, None))) * 100.0)
+if len(preds_real) > 0:
+    mae  = float(np.mean(np.abs(preds_real - ytrue_real)))
+    rmse = float(sqrt(np.mean((preds_real - ytrue_real) ** 2)))
+    mape = float(np.mean(np.abs((preds_real - ytrue_real) / np.clip(np.abs(ytrue_real), 1e-6, None))) * 100.0)
 
-print(f"\nFULL-DATASET EVALUATION (all timestamps with available targets)")
-print(f"MAE :  {mae:.3f} °C")
-print(f"RMSE:  {rmse:.3f} °C")
-print(f"MAPE:  {mape:.2f} %\n")
+    print(f"\nFULL-DATASET EVALUATION (all timestamps with available targets)")
+    print(f"MAE :  {mae:.3f} °C")
+    print(f"RMSE:  {rmse:.3f} °C")
+    print(f"MAPE:  {mape:.2f} %\n")
 
-# Show first 10 comparisons
-print("First 10 comparisons:")
-for k in range(min(10, len(preds_real))):
-    print(f"{k:3d}: time={ts_datetimes_all[k]} | y_true={ytrue_real[k]:6.2f} °C | y_pred={preds_real[k]:6.2f} °C | err={preds_real[k]-ytrue_real[k]:+6.2f} °C")
+    # Show first 10 comparisons
+    print("First 10 comparisons:")
+    for k in range(min(10, len(preds_real))):
+        print(f"{k:3d}: time={ts_datetimes_all[k]} | y_true={ytrue_real[k]:6.2f} °C | "
+              f"y_pred={preds_real[k]:6.2f} °C | err={preds_real[k]-ytrue_real[k]:+6.2f} °C")
 
 # -------------------------
 # 7) Save CSV with EVERY timestamp prediction
 # -------------------------
-if save_csv:
+if save_csv and len(preds_real) > 0:
     out_df = pd.DataFrame({
         "datetime": ts_datetimes_all,
         "y_true_C": ytrue_real,

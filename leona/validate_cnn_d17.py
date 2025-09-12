@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import os
 import glob
+import time
 import numpy as np
 import pandas as pd
 import tensorflow as tf
@@ -124,9 +125,21 @@ print("Input spec:", in_det["shape"], in_det["dtype"])
 print("Output spec:", out_det["shape"], out_det["dtype"])
 
 # -------------------------
-# 5) Inference over ALL samples
+# 5) Inference over ALL samples + timing
 # -------------------------
 preds_real = []
+times_ms = []  # per-invoke() times (ms)
+
+# Optional warm-up for stability
+if len(X_all) > 0:
+    xw = X_all[0:1].astype(np.float32)
+    xw = xw if in_det["dtype"] == np.float32 else quantize_to_int8(xw, in_det)
+    interpreter.set_tensor(in_det["index"], xw)
+    interpreter.invoke()
+    _ = interpreter.get_tensor(out_det["index"])
+
+start_total = time.perf_counter()
+
 for i in range(len(X_all)):
     x_norm = X_all[i:i+1].astype(np.float32)  # [1, lag, n_features]
 
@@ -139,7 +152,13 @@ for i in range(len(X_all)):
         raise TypeError(f"Unsupported input dtype: {in_det['dtype']}")
 
     interpreter.set_tensor(in_det["index"], x_in)
+
+    # Measure pure model time
+    t0 = time.perf_counter()
     interpreter.invoke()
+    t1 = time.perf_counter()
+    times_ms.append((t1 - t0) * 1000.0)
+
     y_out = interpreter.get_tensor(out_det["index"])  # [1, n_ahead]
 
     # Output dtype handling
@@ -154,9 +173,21 @@ for i in range(len(X_all)):
     y_real = y_norm * float(train_std["t2m"]) + float(train_mean["t2m"])
     preds_real.append(float(y_real[0, 0]))
 
+end_total = time.perf_counter()
+total_s = end_total - start_total
 preds_real = np.array(preds_real, dtype=np.float32)
 
+# Timing summary
+print(f"\nTotal inference loop duration (all {len(X_all)} samples): {total_s:.4f} s")
+if len(X_all) > 0 and total_s > 0:
+    print(f"Average per-sample (invoke only): {total_s/len(X_all)*1000:.4f} ms")
+    print(f"Throughput: {len(X_all)/total_s:.4f} samples/sec")
+    print(f"Per-inference (invoke) — Avg: {np.mean(times_ms):.4f} ms | "
+          f"Min: {np.min(times_ms):.4f} ms | Max: {np.max(times_ms):.4f} ms")
+
+# -------------------------
 # Ground truth in °C (denormalize all Y)
+# -------------------------
 ytrue_real = (Y_all.astype(np.float32) * float(train_std["t2m"]) + float(train_mean["t2m"])).ravel()
 
 # -------------------------
@@ -174,7 +205,8 @@ print(f"MAPE:  {mape:.2f} %\n")
 # Show first 10 comparisons
 print("First 10 comparisons:")
 for k in range(min(10, len(preds_real))):
-    print(f"{k:3d}: time={ts_datetimes_all[k]} | y_true={ytrue_real[k]:6.2f} °C | y_pred={preds_real[k]:6.2f} °C | err={preds_real[k]-ytrue_real[k]:+6.2f} °C")
+    print(f"{k:3d}: time={ts_datetimes_all[k]} | y_true={ytrue_real[k]:6.2f} °C | "
+          f"y_pred={preds_real[k]:6.2f} °C | err={preds_real[k]-ytrue_real[k]:+6.2f} °C")
 
 # -------------------------
 # 7) Save CSV (whole dataset)
