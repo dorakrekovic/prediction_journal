@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 import os
 import glob
+import time
+from datetime import datetime
+
 import numpy as np
 import pandas as pd
 import tensorflow as tf
@@ -10,27 +13,23 @@ from math import sqrt
 # Config
 # -------------------------
 location = "Suhopolje"
-excel_path = f"../{location}2021.xlsx"
+excel_path = f"../../{location}2021.xlsx"
 
-# Use exact path or a glob pattern; both work
-tflite_path_pattern = "models/CNN_int8.tflite"
-
+# Exact path or glob pattern; both work with load_latest_tflite()
+tflite_path_pattern = "../models/CNN_int8.tflite"
+inf_type = "invoke"
 features_final = ["t2m"]
 lag = 24
 n_ahead = 1
 
-# Normalization stats source:
-#   "train" -> first 90% of rows (recommended; avoids leakage)
-#   "all"   -> all rows (leaks info, but sometimes desired)
+# How to compute normalization stats:
+# - "train": use first (1 - train_stats_share) fraction of rows (recommended, avoids leakage)
+# - "all":   use the entire dataset (leaks info, but sometimes desired)
 NORMALIZE_ON = "train"      # "train" or "all"
-train_stats_share = 0.9
-
-# July filtering (change MONTH if needed)
-MONTH = 4
-YEAR_FILTER = None  # e.g., 2021 to restrict to a specific year; or None for "any July"
+train_stats_share = 0.9     # used only when NORMALIZE_ON == "train"
 
 save_csv = True
-csv_out = f"{location}_cnn_results_april.csv"
+csv_out = f"{location}_cnn_invokeOnly_results.csv"
 
 # -------------------------
 # Helpers
@@ -48,6 +47,7 @@ def create_X_Y(ts: np.array, lag=1, n_ahead=1, target_index=0):
 def load_latest_tflite(pattern: str) -> str:
     cand = sorted(glob.glob(pattern))
     if not cand:
+        # If exact path provided and not globbed, still allow it:
         if os.path.exists(pattern):
             return pattern
         raise FileNotFoundError(f"No TFLite files found for pattern/path: {pattern}")
@@ -102,33 +102,19 @@ for col in train_mean.index:
 ts_norm = (ts - train_mean) / train_std
 
 # -------------------------
-# 3) Build supervised samples over the whole file
+# 3) Build supervised samples OVER THE WHOLE FILE
 # -------------------------
 X_all, Y_all = create_X_Y(ts_norm.values, lag=lag, n_ahead=n_ahead)
 
 # Timestamps aligned to supervised samples (create_X_Y drops first lag+n_ahead)
-ts_times_all = d["datetime"].iloc[lag + n_ahead :].reset_index(drop=True)
-assert len(ts_times_all) == len(X_all), "Timestamp alignment mismatch."
+ts_datetimes_all = d["datetime"].iloc[lag + n_ahead :].reset_index(drop=True)
+
+assert len(ts_datetimes_all) == len(X_all), "Timestamp alignment mismatch."
+
+print(f"Total supervised samples: {X_all.shape} | Timestamps: {len(ts_datetimes_all)}")
 
 # -------------------------
-# 4) Filter to July (targets whose timestamp is in July)
-# -------------------------
-mask_month = (ts_times_all.dt.month == MONTH)
-if YEAR_FILTER is not None:
-    mask_month &= (ts_times_all.dt.year == YEAR_FILTER)
-
-idxs = np.where(mask_month.values)[0]
-if len(idxs) == 0:
-    raise ValueError("No July samples found with the current settings.")
-
-X_sub = X_all[idxs]
-Y_sub = Y_all[idxs]
-times_sub = ts_times_all.iloc[idxs].reset_index(drop=True)
-
-print(f"Total supervised samples: {len(X_all)}; July samples: {len(X_sub)}")
-
-# -------------------------
-# 5) Load TFLite model
+# 4) Load TFLite model
 # -------------------------
 tflite_model_path = load_latest_tflite(tflite_path_pattern)
 print(f"Using TFLite model: {tflite_model_path}")
@@ -141,11 +127,23 @@ print("Input spec:", in_det["shape"], in_det["dtype"])
 print("Output spec:", out_det["shape"], out_det["dtype"])
 
 # -------------------------
-# 6) Inference over July samples
+# 5) Inference over ALL samples + timing
 # -------------------------
 preds_real = []
-for i in range(len(X_sub)):
-    x_norm = X_sub[i:i+1].astype(np.float32)  # [1, lag, n_features]
+times_ms = []  # per-invoke() times (ms)
+
+# Optional warm-up for stability
+if len(X_all) > 0:
+    xw = X_all[0:1].astype(np.float32)
+    xw = xw if in_det["dtype"] == np.float32 else quantize_to_int8(xw, in_det)
+    interpreter.set_tensor(in_det["index"], xw)
+    interpreter.invoke()
+    _ = interpreter.get_tensor(out_det["index"])
+
+start_total = time.perf_counter()
+
+for i in range(len(X_all)):
+    x_norm = X_all[i:i+1].astype(np.float32)  # [1, lag, n_features]
 
     # Input dtype handling
     if in_det["dtype"] == np.float32:
@@ -156,7 +154,13 @@ for i in range(len(X_sub)):
         raise TypeError(f"Unsupported input dtype: {in_det['dtype']}")
 
     interpreter.set_tensor(in_det["index"], x_in)
+
+    # Measure pure model time
+    t0 = time.perf_counter()
     interpreter.invoke()
+    t1 = time.perf_counter()
+    times_ms.append((t1 - t0) * 1000.0)
+
     y_out = interpreter.get_tensor(out_det["index"])  # [1, n_ahead]
 
     # Output dtype handling
@@ -171,37 +175,80 @@ for i in range(len(X_sub)):
     y_real = y_norm * float(train_std["t2m"]) + float(train_mean["t2m"])
     preds_real.append(float(y_real[0, 0]))
 
+end_total = time.perf_counter()
+total_s = end_total - start_total
 preds_real = np.array(preds_real, dtype=np.float32)
 
-# Ground truth in °C (denormalize July Y)
-ytrue_real = (Y_sub.astype(np.float32) * float(train_std["t2m"]) + float(train_mean["t2m"])).ravel()
+# Timing summary
+print(f"\nTotal inference loop duration (all {len(X_all)} samples): {total_s:.4f} s")
+if len(X_all) > 0 and total_s > 0:
+    print(f"Average per-sample (invoke only): {total_s/len(X_all)*1000:.4f} ms")
+    print(f"Throughput: {len(X_all)/total_s:.4f} samples/sec")
+    print(f"Per-inference (invoke) — Avg: {np.mean(times_ms):.4f} ms | "
+          f"Min: {np.min(times_ms):.4f} ms | Max: {np.max(times_ms):.4f} ms")
 
 # -------------------------
-# 7) Metrics (July only)
+# Ground truth in °C (denormalize all Y)
 # -------------------------
-mae  = float(np.mean(np.abs(preds_real - ytrue_real)))
-rmse = float(sqrt(np.mean((preds_real - ytrue_real) ** 2)))
-mape = float(np.mean(np.abs((preds_real - ytrue_real) / np.clip(np.abs(ytrue_real), 1e-6, None))) * 100.0)
+ytrue_real = (Y_all.astype(np.float32) * float(train_std["t2m"]) + float(train_mean["t2m"])).ravel()
 
-print(f"\nJULY EVALUATION")
-print(f"MAE :  {mae:.3f} °C")
-print(f"RMSE:  {rmse:.3f} °C")
-print(f"MAPE:  {mape:.2f} %\n")
+# -------------------------
+# 6) Metrics (over the whole dataset’s supervised samples)
+# -------------------------
+#mae  = float(np.mean(np.abs(preds_real - ytrue_real)))
+#rmse = float(sqrt(np.mean((preds_real - ytrue_real) ** 2)))
+#mape = float(np.mean(np.abs((preds_real - ytrue_real) / np.clip(np.abs(ytrue_real), 1e-6, None))) * 100.0)
+
+#print(f"\nFULL-DATASET EVALUATION")
+#print(f"MAE :  {mae:.3f} °C")
+#print(f"RMSE:  {rmse:.3f} °C")
+#print(f"MAPE:  {mape:.2f} %\n")
 
 # Show first 10 comparisons
-print("First 10 July comparisons:")
-for k in range(min(10, len(preds_real))):
-    print(f"{k:3d}: time={times_sub[k]} | y_true={ytrue_real[k]:6.2f} °C | y_pred={preds_real[k]:6.2f} °C | err={preds_real[k]-ytrue_real[k]:+6.2f} °C")
+#print("First 10 comparisons:")
+#for k in range(min(10, len(preds_real))):
+    #print(f"{k:3d}: time={ts_datetimes_all[k]} | y_true={ytrue_real[k]:6.2f} °C | "
+          #f"y_pred={preds_real[k]:6.2f} °C | err={preds_real[k]-ytrue_real[k]:+6.2f} °C")
 
 # -------------------------
-# 8) Save CSV (July only)
+# 7) Save CSV (whole dataset)
 # -------------------------
 if save_csv:
     out_df = pd.DataFrame({
-        "datetime": times_sub,
+        "datetime": ts_datetimes_all,
         "y_true_C": ytrue_real,
         "y_pred_C": preds_real,
         "error_C": preds_real - ytrue_real,
     })
     out_df.to_csv(csv_out, index=False)
-    print(f"\nSaved July results to: {csv_out}")
+    print(f"\nSaved results for ALL samples to: {csv_out}")
+
+# (b) One-row summary of this run (appendable)
+    run_timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    model_name = os.path.basename(tflite_model_path)
+    summary_csv = f"summary_inference.csv"
+    # Safely handle empty list if no samples (shouldn't happen, but just in case)
+    a = np.array(times_ms, dtype=np.float64)
+    summary_row = {
+        "model_name": os.path.basename(tflite_model_path),
+        "run_timestamp": run_timestamp,
+        "inference_type": inf_type,
+        "total_samples": len(preds_real),
+        "total_wall_ms": round(total_s * 1000.0, 4),
+        "avg_ms": round(a.mean(), 4) if len(a) else None,
+        "min_ms": round(a.min(), 4) if len(a) else None,
+        "p50_ms": round(np.percentile(a, 50), 4) if len(a) else None,
+        "p90_ms": round(np.percentile(a, 90), 4) if len(a) else None,
+        "p95_ms": round(np.percentile(a, 95), 4) if len(a) else None,
+        "p99_ms": round(np.percentile(a, 99), 4) if len(a) else None,
+        "max_ms": round(a.max(), 4) if len(a) else None,
+    }
+
+    if os.path.exists(summary_csv):
+        df_summary = pd.read_csv(summary_csv)
+        df_summary = pd.concat([df_summary, pd.DataFrame([summary_row])], ignore_index=True)
+    else:
+        df_summary = pd.DataFrame([summary_row])
+
+    df_summary.to_csv(summary_csv, index=False)
+    print(f"Saved summary to: {summary_csv}")

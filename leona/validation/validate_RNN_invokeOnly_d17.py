@@ -2,32 +2,36 @@
 import os
 import glob
 import time
+from datetime import datetime
+
 import numpy as np
 import pandas as pd
 import tensorflow as tf
-from math import sqrt
 
 # -------------------------
 # Config
 # -------------------------
 location = "Suhopolje"
-excel_path = f"../{location}2021.xlsx"
-
-# Exact path or glob pattern; both work with load_latest_tflite()
-tflite_path_pattern = "models/CNN_int8.tflite"
-
-features_final = ["t2m"]
+excel_path = f"../../{location}2021.xlsx"
+tflite_path = f"../models/RNN_temp_in_C_new.tflite"  # exact path or glob pattern
+inf_type = "invoke"  # label saved to CSV
 lag = 24
 n_ahead = 1
+features_final = ["t2m"]
 
-# How to compute normalization stats:
-# - "train": use first (1 - train_stats_share) fraction of rows (recommended, avoids leakage)
-# - "all":   use the entire dataset (leaks info, but sometimes desired)
+# Normalization stats source:
+#   "train" -> first 90% of rows (recommended; avoids leakage)
+#   "all"   -> all rows (leaks info, but sometimes desired)
 NORMALIZE_ON = "train"      # "train" or "all"
-train_stats_share = 0.9     # used only when NORMALIZE_ON == "train"
+train_stats_share = 0.9
 
 save_csv = True
-csv_out = f"{location}_cnn_full_results.csv"
+csv_out = f"{location}_rnn_full_results.csv"  # (unused here but kept)
+summary_csv = "summary_inference.csv"         # <--- summary file you asked for
+
+# Optional benchmarking knobs
+WARMUP_RUNS = 5         # do a few warmups before timing (0 to disable)
+PRINT_PER_SAMPLE = False  # set True to print each inference time
 
 # -------------------------
 # Helpers
@@ -42,29 +46,25 @@ def create_X_Y(ts: np.array, lag=1, n_ahead=1, target_index=0):
     X = np.reshape(X, (X.shape[0], lag, n_features))
     return X, Y
 
-def load_latest_tflite(pattern: str) -> str:
-    cand = sorted(glob.glob(pattern))
+def load_latest_tflite(path_pattern: str) -> str:
+    # Accept exact file OR glob pattern
+    if os.path.exists(path_pattern):
+        return path_pattern
+    cand = sorted(glob.glob(path_pattern))
     if not cand:
-        # If exact path provided and not globbed, still allow it:
-        if os.path.exists(pattern):
-            return pattern
-        raise FileNotFoundError(f"No TFLite files found for pattern/path: {pattern}")
+        raise FileNotFoundError(f"No TFLite files found for: {path_pattern}")
     return cand[-1]
 
 def quantize_to_int8(x_norm: np.ndarray, in_details) -> np.ndarray:
     q = in_details["quantization_parameters"]
-    if len(q["scales"]) == 0:
-        return x_norm.astype(np.int8)
-    scale = float(q["scales"][0])
-    zp    = int(q["zero_points"][0])
+    scale = float(q["scales"][0]) if len(q["scales"]) else 1.0
+    zp    = int(q["zero_points"][0]) if len(q["zero_points"]) else 0
     return np.rint(x_norm / scale + zp).astype(np.int8)
 
 def dequantize_from_int8(y_q: np.ndarray, out_details) -> np.ndarray:
     q = out_details["quantization_parameters"]
-    if len(q["scales"]) == 0:
-        return y_q.astype(np.float32)
-    scale = float(q["scales"][0])
-    zp    = int(q["zero_points"][0])
+    scale = float(q["scales"][0]) if len(q["scales"]) else 1.0
+    zp    = int(q["zero_points"][0]) if len(q["zero_points"]) else 0
     return (y_q.astype(np.float32) - zp) * scale
 
 # -------------------------
@@ -96,25 +96,24 @@ print("Normalization stats used:")
 for col in train_mean.index:
     print(f"{col}: mean={train_mean[col]:.6f}, std={train_std[col]:.6f}")
 
-# Normalize whole dataset using chosen stats
+# Normalize entire dataset with chosen stats
 ts_norm = (ts - train_mean) / train_std
 
 # -------------------------
-# 3) Build supervised samples OVER THE WHOLE FILE
+# 3) Build supervised samples for the WHOLE file
 # -------------------------
 X_all, Y_all = create_X_Y(ts_norm.values, lag=lag, n_ahead=n_ahead)
 
-# Timestamps aligned to supervised samples (create_X_Y drops first lag+n_ahead)
+# Timestamps aligned to supervised samples (create_X_Y drops first lag + n_ahead)
 ts_datetimes_all = d["datetime"].iloc[lag + n_ahead :].reset_index(drop=True)
-
 assert len(ts_datetimes_all) == len(X_all), "Timestamp alignment mismatch."
 
-print(f"Total supervised samples: {X_all.shape} | Timestamps: {len(ts_datetimes_all)}")
+print(f"Total supervised samples: {X_all.shape[0]} (windows {X_all.shape[1]}×{X_all.shape[2]})")
 
 # -------------------------
 # 4) Load TFLite model
 # -------------------------
-tflite_model_path = load_latest_tflite(tflite_path_pattern)
+tflite_model_path = load_latest_tflite(tflite_path)
 print(f"Using TFLite model: {tflite_model_path}")
 
 interpreter = tf.lite.Interpreter(model_path=tflite_model_path)
@@ -125,23 +124,25 @@ print("Input spec:", in_det["shape"], in_det["dtype"])
 print("Output spec:", out_det["shape"], out_det["dtype"])
 
 # -------------------------
-# 5) Inference over ALL samples + timing
+# 5) Inference over ALL timestamps + timing (invoke-only per-sample)
 # -------------------------
 preds_real = []
-times_ms = []  # per-invoke() times (ms)
+times_ms = []  # collect per-sample invoke-only times
 
-# Optional warm-up for stability
-if len(X_all) > 0:
-    xw = X_all[0:1].astype(np.float32)
-    xw = xw if in_det["dtype"] == np.float32 else quantize_to_int8(xw, in_det)
-    interpreter.set_tensor(in_det["index"], xw)
-    interpreter.invoke()
-    _ = interpreter.get_tensor(out_det["index"])
+# Warm-up (optional)
+if WARMUP_RUNS and len(X_all) > 0:
+    x_warm = X_all[0:1].astype(np.float32)
+    x_warm = x_warm if in_det["dtype"] == np.float32 else quantize_to_int8(x_warm, in_det)
+    for _ in range(WARMUP_RUNS):
+        interpreter.set_tensor(in_det["index"], x_warm)
+        interpreter.invoke()
+        _ = interpreter.get_tensor(out_det["index"])
 
+# Total loop timing
 start_total = time.perf_counter()
 
 for i in range(len(X_all)):
-    x_norm = X_all[i:i+1].astype(np.float32)  # [1, lag, n_features]
+    x_norm = X_all[i:i+1].astype(np.float32)  # [1, lag, 1]
 
     # Input dtype handling
     if in_det["dtype"] == np.float32:
@@ -153,11 +154,14 @@ for i in range(len(X_all)):
 
     interpreter.set_tensor(in_det["index"], x_in)
 
-    # Measure pure model time
+    # Measure pure model inference time
     t0 = time.perf_counter()
     interpreter.invoke()
     t1 = time.perf_counter()
-    times_ms.append((t1 - t0) * 1000.0)
+    ms = (t1 - t0) * 1000.0
+    times_ms.append(ms)
+    if PRINT_PER_SAMPLE:
+        print(f"Inference {i}: {ms:.4f} ms")
 
     y_out = interpreter.get_tensor(out_det["index"])  # [1, n_ahead]
 
@@ -169,7 +173,7 @@ for i in range(len(X_all)):
     else:
         raise TypeError(f"Unsupported output dtype: {out_det['dtype']}")
 
-    # Denormalize to °C using the same stats used for normalization
+    # Denormalize to °C
     y_real = y_norm * float(train_std["t2m"]) + float(train_mean["t2m"])
     preds_real.append(float(y_real[0, 0]))
 
@@ -177,46 +181,46 @@ end_total = time.perf_counter()
 total_s = end_total - start_total
 preds_real = np.array(preds_real, dtype=np.float32)
 
-# Timing summary
-print(f"\nTotal inference loop duration (all {len(X_all)} samples): {total_s:.4f} s")
-if len(X_all) > 0 and total_s > 0:
-    print(f"Average per-sample (invoke only): {total_s/len(X_all)*1000:.4f} ms")
-    print(f"Throughput: {len(X_all)/total_s:.4f} samples/sec")
-    print(f"Per-inference (invoke) — Avg: {np.mean(times_ms):.4f} ms | "
-          f"Min: {np.min(times_ms):.4f} ms | Max: {np.max(times_ms):.4f} ms")
+# -------------------------
+# 6) Print loop-level summary
+# -------------------------
+if len(times_ms) > 0:
+    a = np.array(times_ms, dtype=np.float64)
+    avg_ms = (total_s / len(times_ms)) * 1000.0
+    thr = len(times_ms) / total_s if total_s > 0 else float("inf")
+
+    print(f"\nTotal inference loop duration (all {len(times_ms)} samples): {total_s:.4f} s")
+    print(f"Average per-sample (invoke only): {avg_ms:.4f} ms")
+    print(f"Throughput: {thr:.4f} samples/sec")
+else:
+    a = np.array([], dtype=np.float64)
+    print("\nNo samples to run inference on.")
 
 # -------------------------
-# Ground truth in °C (denormalize all Y)
-# -------------------------
-ytrue_real = (Y_all.astype(np.float32) * float(train_std["t2m"]) + float(train_mean["t2m"])).ravel()
-
-# -------------------------
-# 6) Metrics (over the whole dataset’s supervised samples)
-# -------------------------
-mae  = float(np.mean(np.abs(preds_real - ytrue_real)))
-rmse = float(sqrt(np.mean((preds_real - ytrue_real) ** 2)))
-mape = float(np.mean(np.abs((preds_real - ytrue_real) / np.clip(np.abs(ytrue_real), 1e-6, None))) * 100.0)
-
-print(f"\nFULL-DATASET EVALUATION")
-print(f"MAE :  {mae:.3f} °C")
-print(f"RMSE:  {rmse:.3f} °C")
-print(f"MAPE:  {mape:.2f} %\n")
-
-# Show first 10 comparisons
-print("First 10 comparisons:")
-for k in range(min(10, len(preds_real))):
-    print(f"{k:3d}: time={ts_datetimes_all[k]} | y_true={ytrue_real[k]:6.2f} °C | "
-          f"y_pred={preds_real[k]:6.2f} °C | err={preds_real[k]-ytrue_real[k]:+6.2f} °C")
-
-# -------------------------
-# 7) Save CSV (whole dataset)
+# 7) Save SUMMARY CSV (one row appended)
 # -------------------------
 if save_csv:
-    out_df = pd.DataFrame({
-        "datetime": ts_datetimes_all,
-        "y_true_C": ytrue_real,
-        "y_pred_C": preds_real,
-        "error_C": preds_real - ytrue_real,
-    })
-    out_df.to_csv(csv_out, index=False)
-    print(f"\nSaved results for ALL samples to: {csv_out}")
+    run_timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    summary_row = {
+        "model_name": os.path.basename(tflite_model_path),
+        "run_timestamp": run_timestamp,
+        "inference_type": inf_type,
+        "total_samples": int(len(preds_real)),
+        "total_wall_ms": round(total_s * 1000.0, 4),
+        "avg_ms": round(a.mean(), 4) if len(a) else None,
+        "min_ms": round(a.min(), 4) if len(a) else None,
+        "p50_ms": round(np.percentile(a, 50), 4) if len(a) else None,
+        "p90_ms": round(np.percentile(a, 90), 4) if len(a) else None,
+        "p95_ms": round(np.percentile(a, 95), 4) if len(a) else None,
+        "p99_ms": round(np.percentile(a, 99), 4) if len(a) else None,
+        "max_ms": round(a.max(), 4) if len(a) else None,
+    }
+
+    if os.path.exists(summary_csv):
+        df_summary = pd.read_csv(summary_csv)
+        df_summary = pd.concat([df_summary, pd.DataFrame([summary_row])], ignore_index=True)
+    else:
+        df_summary = pd.DataFrame([summary_row])
+
+    df_summary.to_csv(summary_csv, index=False, float_format="%.4f")
+    print(f"\nSaved summary row to: {summary_csv}")
