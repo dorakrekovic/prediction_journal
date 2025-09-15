@@ -38,6 +38,7 @@ preprocess     avg=  0.0553 ms | min=  0.0527 | p50=  0.0544 | p90=  0.0557 | p9
 io+compute     avg=  0.0411 ms | min=  0.0396 | p50=  0.0404 | p90=  0.0414 | p95=  0.0424 | p99=  0.0534 | max=  0.3868
 postprocess    avg=  0.0460 ms | min=  0.0440 | p50=  0.0453 | p90=  0.0460 | p95=  0.0472 | p99=  0.0579 | max=  0.5522
 total_e2e      avg=  0.1429 ms | min=  0.1377 | p50=  0.1406 | p90=  0.1447 | p95=  0.1515 | p99=  0.1684 | max=  1.5058
+
 Saved detailed results to: Suhopolje_cnn_float32_full_e2e_results.csv
 Saved summary to: summary_inference.csv
 (tf-env) iotlab@rpi4-3:~/Desktop/d17/prediction_journal/leona/validation $ python3 cnn_float32_inference_full.py
@@ -136,5 +137,109 @@ preprocess     avg=  0.0609 ms | min=  0.0573 | p50=  0.0592 | p90=  0.0618 | p9
 io+compute     avg=  0.1392 ms | min=  0.1332 | p50=  0.1361 | p90=  0.1419 | p95=  0.1520 | p99=  0.1986 | max=  0.7992
 postprocess    avg=  0.0508 ms | min=  0.0470 | p50=  0.0486 | p90=  0.0533 | p95=  0.0579 | p99=  0.0875 | max=  0.9611
 total_e2e      avg=  0.2525 ms | min=  0.2409 | p50=  0.2454 | p90=  0.2633 | p95=  0.2760 | p99=  0.3714 | max=  2.3545
+Saved detailed results to: Suhopolje_rnn_full_e2e_results.csv
+Saved summary to: summary_inference.csv
+
+
+=========================================JETSON=============================================
+
+
+iotlab@agxorin-2:~/Desktop/d17/prediction_journal/leona/validation$ python3 cnn_float32_inference_full.py 
+Normalization stats used:
+t2m: mean=13.044391, std=8.945176
+Using TFLite model: ../models/CNN_float32.tflite
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Input spec : [ 1 24  1] <class 'numpy.float32'>
+Output spec: [1 1] <class 'numpy.float32'>
+
+Total loop wall time: 954.2528 ms for 8735 samples
+Throughput (E2E): 9153.76 samples/sec
+preprocess     avg=  0.0507 ms | min=  0.0463 | p50=  0.0496 | p90=  0.0533 | p95=  0.0560 | p99=  0.0684 | max=  0.9767
+io+compute     avg=  0.0187 ms | min=  0.0169 | p50=  0.0180 | p90=  0.0194 | p95=  0.0229 | p99=  0.0252 | max=  1.4439
+postprocess    avg=  0.0372 ms | min=  0.0338 | p50=  0.0364 | p90=  0.0379 | p95=  0.0394 | p99=  0.0515 | max=  2.6155
+total_e2e      avg=  0.1070 ms | min=  0.0983 | p50=  0.1043 | p90=  0.1117 | p95=  0.1202 | p99=  0.1360 | max=  2.6953
+Saved detailed results to: Suhopolje_cnn_float32_full_e2e_results.csv
+Saved summary to: summary_inference.csv
+iotlab@agxorin-2:~/Desktop/d17/prediction_journal/leona/validation$ python3 cnn_float32_inference_full.py 
+Normalization stats used:
+t2m: mean=13.044391, std=8.945176
+Using TFLite model: ../models/CNN_float32.tflite
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Input spec : [ 1 24  1] <class 'numpy.float32'>
+Output spec: [1 1] <class 'numpy.float32'>
+
+Total loop wall time: 971.8126 ms for 8735 samples
+Throughput (E2E): 8988.36 samples/sec
+preprocess     avg=  0.0521 ms | min=  0.0448 | p50=  0.0483 | p90=  0.0533 | p95=  0.0591 | p99=  0.0993 | max=  6.5430
+io+compute     avg=  0.0194 ms | min=  0.0170 | p50=  0.0182 | p90=  0.0209 | p95=  0.0264 | p99=  0.0325 | max=  0.2421
+postprocess    avg=  0.0369 ms | min=  0.0327 | p50=  0.0352 | p90=  0.0375 | p95=  0.0404 | p99=  0.0694 | max=  1.0522
+total_e2e      avg=  0.1088 ms | min=  0.0956 | p50=  0.1021 | p90=  0.1153 | p95=  0.1277 | p99=  0.2005 | max=  6.7320
+Saved detailed results to: Suhopolje_cnn_float32_full_e2e_results.csv
+Saved summary to: summary_inference.csv
+iotlab@agxorin-2:~/Desktop/d17/prediction_journal/leona/validation$ python3 cnn_float32_inference_full.py 
+Normalization stats used:
+t2m: mean=13.044391, std=8.945176
+Using TFLite model: ../models/CNN_float32.tflite
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Input spec : [ 1 24  1] <class 'numpy.float32'>
+Output spec: [1 1] <class 'numpy.float32'>
+
+Total loop wall time: 942.4529 ms for 8735 samples
+Throughput (E2E): 9268.37 samples/sec
+preprocess     avg=  0.0504 ms | min=  0.0459 | p50=  0.0492 | p90=  0.0521 | p95=  0.0552 | p99=  0.0674 | max=  3.0100
+io+compute     avg=  0.0184 ms | min=  0.0169 | p50=  0.0180 | p90=  0.0190 | p95=  0.0224 | p99=  0.0248 | max=  0.1230
+postprocess    avg=  0.0365 ms | min=  0.0336 | p50=  0.0360 | p90=  0.0373 | p95=  0.0382 | p99=  0.0483 | max=  1.5298
+total_e2e      avg=  0.1057 ms | min=  0.0978 | p50=  0.1034 | p90=  0.1093 | p95=  0.1181 | p99=  0.1318 | max=  3.1576
+Saved detailed results to: Suhopolje_cnn_float32_full_e2e_results.csv
+Saved summary to: summary_inference.csv
+
+
+
+iotlab@agxorin-2:~/Desktop/d17/prediction_journal/leona/validation$ python3 rnn_inference_full.py 
+Normalization stats used:
+t2m: mean=13.044391, std=8.945176
+Using TFLite model: ../models/RNN_temp_in_C_new.tflite
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Input spec : [ 1 24  1] <class 'numpy.float32'>
+Output spec: [1 1] <class 'numpy.float32'>
+
+Total wall time (ALL samples): 1576.7528 ms for 8735 samples
+Throughput (E2E): 5539.87 samples/sec
+preprocess     avg=  0.0559 ms | min=  0.0516 | p50=  0.0545 | p90=  0.0589 | p95=  0.0617 | p99=  0.0730 | max=  1.8873
+io+compute     avg=  0.0784 ms | min=  0.0753 | p50=  0.0769 | p90=  0.0806 | p95=  0.0836 | p99=  0.0942 | max=  3.0759
+postprocess    avg=  0.0436 ms | min=  0.0403 | p50=  0.0424 | p90=  0.0450 | p95=  0.0505 | p99=  0.0667 | max=  0.2550
+total_e2e      avg=  0.1789 ms | min=  0.1694 | p50=  0.1749 | p90=  0.1883 | p95=  0.1968 | p99=  0.2180 | max=  3.4597
+Saved detailed results to: Suhopolje_rnn_full_e2e_results.csv
+Saved summary to: summary_inference.csv
+iotlab@agxorin-2:~/Desktop/d17/prediction_journal/leona/validation$ python3 rnn_inference_full.py 
+Normalization stats used:
+t2m: mean=13.044391, std=8.945176
+Using TFLite model: ../models/RNN_temp_in_C_new.tflite
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Input spec : [ 1 24  1] <class 'numpy.float32'>
+Output spec: [1 1] <class 'numpy.float32'>
+
+Total wall time (ALL samples): 1541.1419 ms for 8735 samples
+Throughput (E2E): 5667.88 samples/sec
+preprocess     avg=  0.0549 ms | min=  0.0505 | p50=  0.0536 | p90=  0.0580 | p95=  0.0613 | p99=  0.0745 | max=  0.2279
+io+compute     avg=  0.0776 ms | min=  0.0742 | p50=  0.0761 | p90=  0.0792 | p95=  0.0820 | p99=  0.0917 | max=  3.0548
+postprocess    avg=  0.0413 ms | min=  0.0378 | p50=  0.0403 | p90=  0.0430 | p95=  0.0476 | p99=  0.0611 | max=  0.1610
+total_e2e      avg=  0.1748 ms | min=  0.1659 | p50=  0.1709 | p90=  0.1839 | p95=  0.1925 | p99=  0.2116 | max=  3.3447
+Saved detailed results to: Suhopolje_rnn_full_e2e_results.csv
+Saved summary to: summary_inference.csv
+iotlab@agxorin-2:~/Desktop/d17/prediction_journal/leona/validation$ python3 rnn_inference_full.py 
+Normalization stats used:
+t2m: mean=13.044391, std=8.945176
+Using TFLite model: ../models/RNN_temp_in_C_new.tflite
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Input spec : [ 1 24  1] <class 'numpy.float32'>
+Output spec: [1 1] <class 'numpy.float32'>
+
+Total wall time (ALL samples): 1574.8929 ms for 8735 samples
+Throughput (E2E): 5546.41 samples/sec
+preprocess     avg=  0.0556 ms | min=  0.0506 | p50=  0.0541 | p90=  0.0590 | p95=  0.0622 | p99=  0.0736 | max=  0.6739
+io+compute     avg=  0.0784 ms | min=  0.0754 | p50=  0.0774 | p90=  0.0803 | p95=  0.0837 | p99=  0.0932 | max=  0.7325
+postprocess    avg=  0.0436 ms | min=  0.0395 | p50=  0.0420 | p90=  0.0449 | p95=  0.0504 | p99=  0.0659 | max=  3.6720
+total_e2e      avg=  0.1786 ms | min=  0.1678 | p50=  0.1746 | p90=  0.1880 | p95=  0.1966 | p99=  0.2162 | max=  3.8035
 Saved detailed results to: Suhopolje_rnn_full_e2e_results.csv
 Saved summary to: summary_inference.csv

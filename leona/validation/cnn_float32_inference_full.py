@@ -15,11 +15,9 @@ import tensorflow as tf
 # ======================
 location = "Suhopolje"
 excel_path = f"../../{location}2021.xlsx"
-<<<<<<< HEAD
-tflite_path_pattern = "../models/CNN_FLOAT32.tflite"  # exact path or glob pattern
-=======
+
 tflite_path_pattern = "../models/CNN_float32.tflite"  # exact path or glob pattern
->>>>>>> d96aba2 (new scripts)
+
 inf_type = "e2e"  # label saved to summary
 
 features_final = ["t2m"]
