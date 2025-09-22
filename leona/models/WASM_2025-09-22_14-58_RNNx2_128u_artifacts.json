@@ -1,0 +1,43 @@
+{
+  "train_mean": {
+    "t2m": 13.387053948318473
+  },
+  "train_std": {
+    "t2m": 8.542877561956537
+  },
+  "lag": 24,
+  "n_features": 1,
+  "n_ahead": 1,
+  "feature_order": [
+    "t2m"
+  ],
+  "input_shape": [
+    null,
+    24,
+    1
+  ],
+  "output_shape": [
+    null,
+    1
+  ],
+  "dtype": "float32",
+  "model": {
+    "type": "StackedSimpleRNN",
+    "layers": [
+      {
+        "SimpleRNN": 128,
+        "return_sequences": true,
+        "activation": "relu"
+      },
+      {
+        "SimpleRNN": 128,
+        "return_sequences": false,
+        "activation": "relu"
+      },
+      {
+        "Dense": 1
+      }
+    ]
+  },
+  "note": "Inputs/outputs are normalized. De-normalize outputs using y = y_norm*std + mean on feature 't2m'."
+}
