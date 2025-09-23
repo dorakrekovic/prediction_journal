@@ -9,9 +9,13 @@ import pandas as pd
 import tensorflow as tf
 from datetime import datetime
 
+script_start = time.perf_counter()
+run_timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")[:-3]
+
 # ======================
 # Config
 # ======================
+hardware = "jetson"
 location = "Suhopolje"
 excel_path = f"../../{location}2021.xlsx"
 tflite_path = "../models/RNN_temp_in_C_new.tflite"   # exact path or glob pattern
@@ -28,7 +32,7 @@ train_stats_share = 0.9
 # CSV outputs
 save_csv = True
 csv_out_detailed = f"{location}_rnn_full_e2e_results.csv"   # per-sample details
-csv_out_summary  = "summary_inference.csv"                  # one row per run
+csv_out_summary  = "summary_inference_NEW.csv"                  # one row per run
 
 # Optional benchmarking knobs
 WARMUP_RUNS = 5           # warmups before timing (0 to disable)
@@ -223,6 +227,7 @@ stats("total_e2e", t_total_ms)
 # ======================
 # 6) Save CSVs (rounded to 4 decimals)
 # ======================
+
 if save_csv and len(preds_real) > 0:
     # per-sample detailed
     detailed_df = pd.DataFrame({
@@ -240,6 +245,7 @@ if save_csv and len(preds_real) > 0:
 
     # summary (appendable one row)
     a_tot = np.array(t_total_ms, dtype=np.float64)
+    script_end = time.perf_counter()
     summary_row = {
         "model_name": os.path.basename(tflite_model_path),
         "run_timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
@@ -253,6 +259,9 @@ if save_csv and len(preds_real) > 0:
         "p95_ms": round(pct(a_tot, 95), 4) if len(a_tot) else None,
         "p99_ms": round(pct(a_tot, 99), 4) if len(a_tot) else None,
         "max_ms": round(a_tot.max(), 4) if len(a_tot) else None,
+        "end_time": f"{script_end - script_start:.4f}s",
+        "end_timestamp": datetime.now().strftime("%H:%M:%S.%f")[:-3],
+        "hw": hardware,
     }
 
     if os.path.exists(csv_out_summary):
@@ -263,3 +272,9 @@ if save_csv and len(preds_real) > 0:
 
     df_sum.to_csv(csv_out_summary, index=False, float_format="%.4f")
     print(f"Saved summary to: {csv_out_summary}")
+
+
+script_end2 = time.perf_counter()
+
+print(f"\n[Script Runtime] {script_end2 - script_start:.4f} seconds total")
+

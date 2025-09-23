@@ -7,15 +7,17 @@ import numpy as np
 import pandas as pd
 import tensorflow as tf
 from datetime import datetime
-
+script_start = time.perf_counter()
+run_timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")[:-3]
 # ---------------------
 # Config
 # ---------------------
+hardware = "jetson"
 tflite_model_path = "../models/CNN_float32.tflite"   # path to your float32 model
 t_mean = 13.387054  # training mean
 t_std  = 8.542878   # training std
 true_value = 5.3    # actual next-step temperature
-summary_csv = "summary_inference.csv"
+summary_csv = "summary_inference_NEW.csv"
 inf_type = "e2e_simple"
 
 # ---------------------
@@ -66,9 +68,9 @@ print(f"Inference time (E2E): {e2e_ms:.4f} ms")
 # ---------------------
 # Save summary to CSV
 # ---------------------
-run_timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-model_name = os.path.basename(tflite_model_path)
 
+model_name = os.path.basename(tflite_model_path)
+script_end = time.perf_counter()
 summary_row = {
     "model_name": os.path.basename(tflite_model_path),
     "run_timestamp": run_timestamp,
@@ -82,6 +84,9 @@ summary_row = {
     "p95_ms": round(e2e_ms, 4),
     "p99_ms": round(e2e_ms, 4),
     "max_ms": round(e2e_ms, 4),
+    "end_time": f"{script_end - script_start:.4f}s",
+    "end_timestamp": datetime.now().strftime("%H:%M:%S.%f")[:-3],
+    "hw": hardware,
 }
 
 if os.path.exists(summary_csv):
@@ -92,3 +97,7 @@ else:
 
 df_summary.to_csv(summary_csv, index=False, float_format="%.4f")
 print(f"\nSaved summary to: {summary_csv}")
+
+script_end2 = time.perf_counter()
+
+print(f"\n[Script Runtime] {script_end2 - script_start:.4f} seconds total")

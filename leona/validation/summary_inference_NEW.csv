@@ -1,0 +1,2 @@
+model_name,run_timestamp,inference_type,total_samples,total_wall_ms,avg_ms,min_ms,p50_ms,p90_ms,p95_ms,p99_ms,max_ms,end_time,end_timestamp,hw
+CNN_float32.tflite,2025-09-23 14:48:29.351,e2e,8735,413.6286,0.0459,0.0425,0.0447,0.0480,0.0517,0.0663,0.1615,1.4926s,14:48:30.836,jetson
