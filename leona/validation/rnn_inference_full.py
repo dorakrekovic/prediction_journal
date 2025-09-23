@@ -248,7 +248,7 @@ if save_csv and len(preds_real) > 0:
     script_end = time.perf_counter()
     summary_row = {
         "model_name": os.path.basename(tflite_model_path),
-        "run_timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        "run_timestamp": run_timestamp,
         "inference_type": inf_type,                     # "e2e"
         "total_samples": int(len(a_tot)),
         "total_wall_ms": round(total_wall_ms, 4),       # total time for ALL samples

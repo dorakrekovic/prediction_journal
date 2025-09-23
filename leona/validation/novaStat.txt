@@ -1,0 +1,863 @@
+iotlab@agxorin-2:~/Desktop/d17/prediction_journal/leona/validation$ time ./test.sh 
+=== All runs started at 2025-09-23T16:12:03.230 ===
+Run #1
+  Start: 2025-09-23T16:12:03.234
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (2.2.3) or chardet (3.0.4) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+Normalization stats used:
+t2m: mean=13.044391, std=8.945176
+Using TFLite model: ../models/RNN_temp_in_C_new.tflite
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Input spec : [ 1 24  1] <class 'numpy.float32'>
+Output spec: [1 1] <class 'numpy.float32'>
+
+Total wall time (ALL samples): 1187.1625 ms for 8735 samples
+Throughput (E2E): 7357.88 samples/sec
+preprocess     avg=  0.0290 ms | min=  0.0266 | p50=  0.0282 | p90=  0.0302 | p95=  0.0324 | p99=  0.0429 | max=  0.1361
+io+compute     avg=  0.0776 ms | min=  0.0736 | p50=  0.0759 | p90=  0.0780 | p95=  0.0824 | p99=  0.0928 | max=  3.1474
+postprocess    avg=  0.0269 ms | min=  0.0239 | p50=  0.0257 | p90=  0.0274 | p95=  0.0304 | p99=  0.0484 | max=  1.4203
+total_e2e      avg=  0.1344 ms | min=  0.1260 | p50=  0.1305 | p90=  0.1382 | p95=  0.1488 | p99=  0.1902 | max=  3.3425
+Saved detailed results to: Suhopolje_rnn_full_e2e_results.csv
+Saved summary to: summary_inference_NEW.csv
+
+[Script Runtime] 2.3133 seconds total
+  End  : 2025-09-23T16:12:10.811
+  Run #1 took 7576 ms
+---------------------------
+Run #2
+  Start: 2025-09-23T16:12:10.815
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (2.2.3) or chardet (3.0.4) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+Normalization stats used:
+t2m: mean=13.044391, std=8.945176
+Using TFLite model: ../models/RNN_temp_in_C_new.tflite
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Input spec : [ 1 24  1] <class 'numpy.float32'>
+Output spec: [1 1] <class 'numpy.float32'>
+
+Total wall time (ALL samples): 1172.6792 ms for 8735 samples
+Throughput (E2E): 7448.75 samples/sec
+preprocess     avg=  0.0280 ms | min=  0.0252 | p50=  0.0271 | p90=  0.0289 | p95=  0.0308 | p99=  0.0406 | max=  1.1882
+io+compute     avg=  0.0774 ms | min=  0.0742 | p50=  0.0759 | p90=  0.0777 | p95=  0.0824 | p99=  0.0942 | max=  2.6214
+postprocess    avg=  0.0267 ms | min=  0.0234 | p50=  0.0251 | p90=  0.0268 | p95=  0.0296 | p99=  0.0464 | max=  2.3991
+total_e2e      avg=  0.1329 ms | min=  0.1249 | p50=  0.1288 | p90=  0.1361 | p95=  0.1471 | p99=  0.1755 | max=  2.7064
+Saved detailed results to: Suhopolje_rnn_full_e2e_results.csv
+Saved summary to: summary_inference_NEW.csv
+
+[Script Runtime] 2.3081 seconds total
+  End  : 2025-09-23T16:12:18.318
+  Run #2 took 7502 ms
+---------------------------
+Run #3
+  Start: 2025-09-23T16:12:18.324
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (2.2.3) or chardet (3.0.4) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+Normalization stats used:
+t2m: mean=13.044391, std=8.945176
+Using TFLite model: ../models/RNN_temp_in_C_new.tflite
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Input spec : [ 1 24  1] <class 'numpy.float32'>
+Output spec: [1 1] <class 'numpy.float32'>
+
+Total wall time (ALL samples): 1185.8170 ms for 8735 samples
+Throughput (E2E): 7366.23 samples/sec
+preprocess     avg=  0.0293 ms | min=  0.0264 | p50=  0.0279 | p90=  0.0299 | p95=  0.0326 | p99=  0.0477 | max=  3.1604
+io+compute     avg=  0.0774 ms | min=  0.0741 | p50=  0.0757 | p90=  0.0777 | p95=  0.0822 | p99=  0.0939 | max=  2.4303
+postprocess    avg=  0.0268 ms | min=  0.0242 | p50=  0.0257 | p90=  0.0275 | p95=  0.0304 | p99=  0.0480 | max=  0.2526
+total_e2e      avg=  0.1343 ms | min=  0.1268 | p50=  0.1301 | p90=  0.1381 | p95=  0.1503 | p99=  0.1939 | max=  3.5476
+Saved detailed results to: Suhopolje_rnn_full_e2e_results.csv
+Saved summary to: summary_inference_NEW.csv
+
+[Script Runtime] 2.3188 seconds total
+  End  : 2025-09-23T16:12:25.859
+  Run #3 took 7533 ms
+---------------------------
+Run #4
+  Start: 2025-09-23T16:12:25.863
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (2.2.3) or chardet (3.0.4) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+Normalization stats used:
+t2m: mean=13.044391, std=8.945176
+Using TFLite model: ../models/RNN_temp_in_C_new.tflite
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Input spec : [ 1 24  1] <class 'numpy.float32'>
+Output spec: [1 1] <class 'numpy.float32'>
+
+Total wall time (ALL samples): 1162.9742 ms for 8735 samples
+Throughput (E2E): 7510.91 samples/sec
+preprocess     avg=  0.0279 ms | min=  0.0256 | p50=  0.0271 | p90=  0.0289 | p95=  0.0306 | p99=  0.0385 | max=  1.0311
+io+compute     avg=  0.0768 ms | min=  0.0739 | p50=  0.0755 | p90=  0.0771 | p95=  0.0812 | p99=  0.0928 | max=  1.7343
+postprocess    avg=  0.0262 ms | min=  0.0238 | p50=  0.0252 | p90=  0.0267 | p95=  0.0285 | p99=  0.0441 | max=  2.6801
+total_e2e      avg=  0.1318 ms | min=  0.1251 | p50=  0.1284 | p90=  0.1350 | p95=  0.1439 | p99=  0.1665 | max=  2.7857
+Saved detailed results to: Suhopolje_rnn_full_e2e_results.csv
+Saved summary to: summary_inference_NEW.csv
+
+[Script Runtime] 2.2786 seconds total
+  End  : 2025-09-23T16:12:33.365
+  Run #4 took 7502 ms
+---------------------------
+Run #5
+  Start: 2025-09-23T16:12:33.370
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (2.2.3) or chardet (3.0.4) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+Normalization stats used:
+t2m: mean=13.044391, std=8.945176
+Using TFLite model: ../models/RNN_temp_in_C_new.tflite
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Input spec : [ 1 24  1] <class 'numpy.float32'>
+Output spec: [1 1] <class 'numpy.float32'>
+
+Total wall time (ALL samples): 1169.9243 ms for 8735 samples
+Throughput (E2E): 7466.30 samples/sec
+preprocess     avg=  0.0285 ms | min=  0.0255 | p50=  0.0272 | p90=  0.0292 | p95=  0.0308 | p99=  0.0409 | max=  2.4402
+io+compute     avg=  0.0771 ms | min=  0.0736 | p50=  0.0754 | p90=  0.0777 | p95=  0.0812 | p99=  0.0937 | max=  0.5142
+postprocess    avg=  0.0261 ms | min=  0.0236 | p50=  0.0249 | p90=  0.0267 | p95=  0.0290 | p99=  0.0477 | max=  0.3884
+total_e2e      avg=  0.1326 ms | min=  0.1248 | p50=  0.1283 | p90=  0.1356 | p95=  0.1455 | p99=  0.1781 | max=  2.6160
+Saved detailed results to: Suhopolje_rnn_full_e2e_results.csv
+Saved summary to: summary_inference_NEW.csv
+
+[Script Runtime] 2.2727 seconds total
+  End  : 2025-09-23T16:12:40.919
+  Run #5 took 7548 ms
+---------------------------
+Run #6
+  Start: 2025-09-23T16:12:40.924
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (2.2.3) or chardet (3.0.4) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+Normalization stats used:
+t2m: mean=13.044391, std=8.945176
+Using TFLite model: ../models/RNN_temp_in_C_new.tflite
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Input spec : [ 1 24  1] <class 'numpy.float32'>
+Output spec: [1 1] <class 'numpy.float32'>
+
+Total wall time (ALL samples): 1191.6191 ms for 8735 samples
+Throughput (E2E): 7330.36 samples/sec
+preprocess     avg=  0.0287 ms | min=  0.0260 | p50=  0.0275 | p90=  0.0294 | p95=  0.0317 | p99=  0.0462 | max=  0.5137
+io+compute     avg=  0.0782 ms | min=  0.0744 | p50=  0.0760 | p90=  0.0779 | p95=  0.0820 | p99=  0.1073 | max=  0.7103
+postprocess    avg=  0.0273 ms | min=  0.0240 | p50=  0.0255 | p90=  0.0274 | p95=  0.0309 | p99=  0.0529 | max=  2.4910
+total_e2e      avg=  0.1349 ms | min=  0.1263 | p50=  0.1297 | p90=  0.1371 | p95=  0.1503 | p99=  0.2375 | max=  2.5964
+Saved detailed results to: Suhopolje_rnn_full_e2e_results.csv
+Saved summary to: summary_inference_NEW.csv
+
+[Script Runtime] 2.2575 seconds total
+  End  : 2025-09-23T16:12:48.445
+  Run #6 took 7519 ms
+---------------------------
+Run #7
+  Start: 2025-09-23T16:12:48.449
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (2.2.3) or chardet (3.0.4) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+Normalization stats used:
+t2m: mean=13.044391, std=8.945176
+Using TFLite model: ../models/RNN_temp_in_C_new.tflite
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Input spec : [ 1 24  1] <class 'numpy.float32'>
+Output spec: [1 1] <class 'numpy.float32'>
+
+Total wall time (ALL samples): 1149.5372 ms for 8735 samples
+Throughput (E2E): 7598.71 samples/sec
+preprocess     avg=  0.0275 ms | min=  0.0254 | p50=  0.0269 | p90=  0.0286 | p95=  0.0301 | p99=  0.0390 | max=  0.4776
+io+compute     avg=  0.0762 ms | min=  0.0736 | p50=  0.0750 | p90=  0.0767 | p95=  0.0818 | p99=  0.0916 | max=  2.5998
+postprocess    avg=  0.0257 ms | min=  0.0233 | p50=  0.0246 | p90=  0.0262 | p95=  0.0282 | p99=  0.0439 | max=  1.1131
+total_e2e      avg=  0.1303 ms | min=  0.1242 | p50=  0.1274 | p90=  0.1338 | p95=  0.1430 | p99=  0.1654 | max=  2.8233
+Saved detailed results to: Suhopolje_rnn_full_e2e_results.csv
+Saved summary to: summary_inference_NEW.csv
+
+[Script Runtime] 2.2951 seconds total
+  End  : 2025-09-23T16:12:55.950
+  Run #7 took 7499 ms
+---------------------------
+Run #8
+  Start: 2025-09-23T16:12:55.955
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (2.2.3) or chardet (3.0.4) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+Normalization stats used:
+t2m: mean=13.044391, std=8.945176
+Using TFLite model: ../models/RNN_temp_in_C_new.tflite
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Input spec : [ 1 24  1] <class 'numpy.float32'>
+Output spec: [1 1] <class 'numpy.float32'>
+
+Total wall time (ALL samples): 1200.4459 ms for 8735 samples
+Throughput (E2E): 7276.46 samples/sec
+preprocess     avg=  0.0300 ms | min=  0.0259 | p50=  0.0279 | p90=  0.0300 | p95=  0.0321 | p99=  0.0422 | max=  6.2433
+io+compute     avg=  0.0785 ms | min=  0.0733 | p50=  0.0751 | p90=  0.0772 | p95=  0.0821 | p99=  0.0970 | max=  6.0111
+postprocess    avg=  0.0266 ms | min=  0.0232 | p50=  0.0249 | p90=  0.0268 | p95=  0.0298 | p99=  0.0492 | max=  2.4277
+total_e2e      avg=  0.1360 ms | min=  0.1243 | p50=  0.1288 | p90=  0.1368 | p95=  0.1479 | p99=  0.2200 | max=  6.3985
+Saved detailed results to: Suhopolje_rnn_full_e2e_results.csv
+Saved summary to: summary_inference_NEW.csv
+
+[Script Runtime] 2.3327 seconds total
+  End  : 2025-09-23T16:13:03.489
+  Run #8 took 7533 ms
+---------------------------
+Run #9
+  Start: 2025-09-23T16:13:03.493
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (2.2.3) or chardet (3.0.4) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+Normalization stats used:
+t2m: mean=13.044391, std=8.945176
+Using TFLite model: ../models/RNN_temp_in_C_new.tflite
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Input spec : [ 1 24  1] <class 'numpy.float32'>
+Output spec: [1 1] <class 'numpy.float32'>
+
+Total wall time (ALL samples): 1248.8389 ms for 8735 samples
+Throughput (E2E): 6994.50 samples/sec
+preprocess     avg=  0.0317 ms | min=  0.0260 | p50=  0.0277 | p90=  0.0303 | p95=  0.0343 | p99=  0.0527 | max= 10.0602
+io+compute     avg=  0.0810 ms | min=  0.0734 | p50=  0.0751 | p90=  0.0784 | p95=  0.0843 | p99=  0.1215 | max= 10.4382
+postprocess    avg=  0.0279 ms | min=  0.0230 | p50=  0.0249 | p90=  0.0275 | p95=  0.0328 | p99=  0.0550 | max=  4.4760
+total_e2e      avg=  0.1415 ms | min=  0.1245 | p50=  0.1285 | p90=  0.1402 | p95=  0.1557 | p99=  0.4150 | max= 10.5558
+Saved detailed results to: Suhopolje_rnn_full_e2e_results.csv
+Saved summary to: summary_inference_NEW.csv
+
+[Script Runtime] 2.3958 seconds total
+  End  : 2025-09-23T16:13:11.103
+  Run #9 took 7609 ms
+---------------------------
+Run #10
+  Start: 2025-09-23T16:13:11.109
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (2.2.3) or chardet (3.0.4) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+Normalization stats used:
+t2m: mean=13.044391, std=8.945176
+Using TFLite model: ../models/RNN_temp_in_C_new.tflite
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Input spec : [ 1 24  1] <class 'numpy.float32'>
+Output spec: [1 1] <class 'numpy.float32'>
+
+Total wall time (ALL samples): 1182.4065 ms for 8735 samples
+Throughput (E2E): 7387.48 samples/sec
+preprocess     avg=  0.0284 ms | min=  0.0259 | p50=  0.0274 | p90=  0.0292 | p95=  0.0314 | p99=  0.0433 | max=  0.5449
+io+compute     avg=  0.0780 ms | min=  0.0747 | p50=  0.0763 | p90=  0.0783 | p95=  0.0827 | p99=  0.0951 | max=  2.7068
+postprocess    avg=  0.0268 ms | min=  0.0243 | p50=  0.0256 | p90=  0.0276 | p95=  0.0303 | p99=  0.0474 | max=  0.8462
+total_e2e      avg=  0.1340 ms | min=  0.1266 | p50=  0.1299 | p90=  0.1376 | p95=  0.1471 | p99=  0.1773 | max=  2.8098
+Saved detailed results to: Suhopolje_rnn_full_e2e_results.csv
+Saved summary to: summary_inference_NEW.csv
+
+[Script Runtime] 2.2930 seconds total
+  End  : 2025-09-23T16:13:18.576
+  Run #10 took 7467 ms
+---------------------------
+=== All runs finished at 2025-09-23T16:13:18.582 ===
+All runs completed in 75352 ms
+
+real	1m15,362s
+user	2m15,535s
+sys	3m18,559s
+
+
+==========================================CNN FULL ===================================================
+
+
+
+iotlab@agxorin-2:~/Desktop/d17/prediction_journal/leona/validation$ time ./test.sh 
+=== All runs started at 2025-09-23T16:17:20.069 ===
+Run #1
+  Start: 2025-09-23T16:17:20.073
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (2.2.3) or chardet (3.0.4) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+Normalization stats used:
+t2m: mean=13.044391, std=8.945176
+Using TFLite model: ../models/CNN_float32.tflite
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Input spec : [ 1 24  1] <class 'numpy.float32'>
+Output spec: [1 1] <class 'numpy.float32'>
+
+Total loop wall time: 551.8845 ms for 8735 samples
+Throughput (E2E): 15827.59 samples/sec
+preprocess     avg=  0.0245 ms | min=  0.0218 | p50=  0.0237 | p90=  0.0247 | p95=  0.0259 | p99=  0.0349 | max=  2.4717
+io+compute     avg=  0.0159 ms | min=  0.0146 | p50=  0.0155 | p90=  0.0160 | p95=  0.0176 | p99=  0.0258 | max=  0.1430
+postprocess    avg=  0.0205 ms | min=  0.0189 | p50=  0.0201 | p90=  0.0207 | p95=  0.0214 | p99=  0.0269 | max=  1.4430
+total_e2e      avg=  0.0612 ms | min=  0.0561 | p50=  0.0595 | p90=  0.0617 | p95=  0.0665 | p99=  0.0880 | max=  2.6755
+Saved detailed results to: Suhopolje_cnn_float32_full_e2e_results.csv
+Saved summary to: summary_inference_NEW.csv
+
+[Script Runtime] 1.6683 seconds total
+  End  : 2025-09-23T16:17:26.904
+  Run #1 took 6830 ms
+---------------------------
+Run #2
+  Start: 2025-09-23T16:17:26.910
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (2.2.3) or chardet (3.0.4) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+Normalization stats used:
+t2m: mean=13.044391, std=8.945176
+Using TFLite model: ../models/CNN_float32.tflite
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Input spec : [ 1 24  1] <class 'numpy.float32'>
+Output spec: [1 1] <class 'numpy.float32'>
+
+Total loop wall time: 566.1294 ms for 8735 samples
+Throughput (E2E): 15429.33 samples/sec
+preprocess     avg=  0.0254 ms | min=  0.0220 | p50=  0.0240 | p90=  0.0251 | p95=  0.0265 | p99=  0.0376 | max=  2.6419
+io+compute     avg=  0.0163 ms | min=  0.0142 | p50=  0.0154 | p90=  0.0161 | p95=  0.0175 | p99=  0.0246 | max=  2.8176
+postprocess    avg=  0.0209 ms | min=  0.0184 | p50=  0.0202 | p90=  0.0211 | p95=  0.0219 | p99=  0.0338 | max=  1.7122
+total_e2e      avg=  0.0630 ms | min=  0.0556 | p50=  0.0600 | p90=  0.0626 | p95=  0.0684 | p99=  0.0923 | max=  2.8837
+Saved detailed results to: Suhopolje_cnn_float32_full_e2e_results.csv
+Saved summary to: summary_inference_NEW.csv
+
+[Script Runtime] 1.6898 seconds total
+  End  : 2025-09-23T16:17:33.795
+  Run #2 took 6884 ms
+---------------------------
+Run #3
+  Start: 2025-09-23T16:17:33.799
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (2.2.3) or chardet (3.0.4) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+Normalization stats used:
+t2m: mean=13.044391, std=8.945176
+Using TFLite model: ../models/CNN_float32.tflite
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Input spec : [ 1 24  1] <class 'numpy.float32'>
+Output spec: [1 1] <class 'numpy.float32'>
+
+Total loop wall time: 559.7548 ms for 8735 samples
+Throughput (E2E): 15605.05 samples/sec
+preprocess     avg=  0.0249 ms | min=  0.0215 | p50=  0.0234 | p90=  0.0247 | p95=  0.0260 | p99=  0.0378 | max=  2.6433
+io+compute     avg=  0.0162 ms | min=  0.0145 | p50=  0.0154 | p90=  0.0162 | p95=  0.0178 | p99=  0.0257 | max=  1.3700
+postprocess    avg=  0.0208 ms | min=  0.0184 | p50=  0.0201 | p90=  0.0209 | p95=  0.0218 | p99=  0.0346 | max=  1.8310
+total_e2e      avg=  0.0623 ms | min=  0.0551 | p50=  0.0592 | p90=  0.0623 | p95=  0.0680 | p99=  0.0979 | max=  2.7092
+Saved detailed results to: Suhopolje_cnn_float32_full_e2e_results.csv
+Saved summary to: summary_inference_NEW.csv
+
+[Script Runtime] 1.6978 seconds total
+  End  : 2025-09-23T16:17:40.751
+  Run #3 took 6950 ms
+---------------------------
+Run #4
+  Start: 2025-09-23T16:17:40.755
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (2.2.3) or chardet (3.0.4) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+Normalization stats used:
+t2m: mean=13.044391, std=8.945176
+Using TFLite model: ../models/CNN_float32.tflite
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Input spec : [ 1 24  1] <class 'numpy.float32'>
+Output spec: [1 1] <class 'numpy.float32'>
+
+Total loop wall time: 549.7909 ms for 8735 samples
+Throughput (E2E): 15887.86 samples/sec
+preprocess     avg=  0.0239 ms | min=  0.0212 | p50=  0.0228 | p90=  0.0243 | p95=  0.0254 | p99=  0.0343 | max=  2.7748
+io+compute     avg=  0.0162 ms | min=  0.0148 | p50=  0.0158 | p90=  0.0166 | p95=  0.0177 | p99=  0.0246 | max=  0.1248
+postprocess    avg=  0.0207 ms | min=  0.0182 | p50=  0.0196 | p90=  0.0206 | p95=  0.0213 | p99=  0.0294 | max=  2.4630
+total_e2e      avg=  0.0611 ms | min=  0.0555 | p50=  0.0584 | p90=  0.0619 | p95=  0.0661 | p99=  0.0888 | max=  2.8439
+Saved detailed results to: Suhopolje_cnn_float32_full_e2e_results.csv
+Saved summary to: summary_inference_NEW.csv
+
+[Script Runtime] 1.6754 seconds total
+  End  : 2025-09-23T16:17:47.629
+  Run #4 took 6873 ms
+---------------------------
+Run #5
+  Start: 2025-09-23T16:17:47.633
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (2.2.3) or chardet (3.0.4) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+Normalization stats used:
+t2m: mean=13.044391, std=8.945176
+Using TFLite model: ../models/CNN_float32.tflite
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Input spec : [ 1 24  1] <class 'numpy.float32'>
+Output spec: [1 1] <class 'numpy.float32'>
+
+Total loop wall time: 582.0253 ms for 8735 samples
+Throughput (E2E): 15007.94 samples/sec
+preprocess     avg=  0.0263 ms | min=  0.0232 | p50=  0.0253 | p90=  0.0265 | p95=  0.0278 | p99=  0.0390 | max=  2.3846
+io+compute     avg=  0.0165 ms | min=  0.0149 | p50=  0.0160 | p90=  0.0166 | p95=  0.0180 | p99=  0.0280 | max=  0.4052
+postprocess    avg=  0.0217 ms | min=  0.0195 | p50=  0.0212 | p90=  0.0220 | p95=  0.0228 | p99=  0.0312 | max=  0.4654
+total_e2e      avg=  0.0647 ms | min=  0.0581 | p50=  0.0628 | p90=  0.0656 | p95=  0.0700 | p99=  0.0936 | max=  2.5069
+Saved detailed results to: Suhopolje_cnn_float32_full_e2e_results.csv
+Saved summary to: summary_inference_NEW.csv
+
+[Script Runtime] 1.7160 seconds total
+  End  : 2025-09-23T16:17:54.551
+  Run #5 took 6917 ms
+---------------------------
+Run #6
+  Start: 2025-09-23T16:17:54.554
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (2.2.3) or chardet (3.0.4) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+Normalization stats used:
+t2m: mean=13.044391, std=8.945176
+Using TFLite model: ../models/CNN_float32.tflite
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Input spec : [ 1 24  1] <class 'numpy.float32'>
+Output spec: [1 1] <class 'numpy.float32'>
+
+Total loop wall time: 577.4391 ms for 8735 samples
+Throughput (E2E): 15127.14 samples/sec
+preprocess     avg=  0.0254 ms | min=  0.0218 | p50=  0.0238 | p90=  0.0251 | p95=  0.0266 | p99=  0.0422 | max=  2.4790
+io+compute     avg=  0.0165 ms | min=  0.0146 | p50=  0.0156 | p90=  0.0163 | p95=  0.0178 | p99=  0.0275 | max=  1.2468
+postprocess    avg=  0.0219 ms | min=  0.0186 | p50=  0.0207 | p90=  0.0216 | p95=  0.0224 | p99=  0.0360 | max=  1.6905
+total_e2e      avg=  0.0641 ms | min=  0.0561 | p50=  0.0605 | p90=  0.0633 | p95=  0.0694 | p99=  0.1052 | max=  2.5587
+Saved detailed results to: Suhopolje_cnn_float32_full_e2e_results.csv
+Saved summary to: summary_inference_NEW.csv
+
+[Script Runtime] 1.7123 seconds total
+  End  : 2025-09-23T16:18:01.437
+  Run #6 took 6882 ms
+---------------------------
+Run #7
+  Start: 2025-09-23T16:18:01.442
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (2.2.3) or chardet (3.0.4) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+Normalization stats used:
+t2m: mean=13.044391, std=8.945176
+Using TFLite model: ../models/CNN_float32.tflite
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Input spec : [ 1 24  1] <class 'numpy.float32'>
+Output spec: [1 1] <class 'numpy.float32'>
+
+Total loop wall time: 563.2342 ms for 8735 samples
+Throughput (E2E): 15508.65 samples/sec
+preprocess     avg=  0.0252 ms | min=  0.0227 | p50=  0.0244 | p90=  0.0255 | p95=  0.0267 | p99=  0.0372 | max=  2.5737
+io+compute     avg=  0.0162 ms | min=  0.0148 | p50=  0.0158 | p90=  0.0163 | p95=  0.0177 | p99=  0.0245 | max=  0.1667
+postprocess    avg=  0.0208 ms | min=  0.0191 | p50=  0.0205 | p90=  0.0213 | p95=  0.0222 | p99=  0.0294 | max=  0.1577
+total_e2e      avg=  0.0625 ms | min=  0.0575 | p50=  0.0611 | p90=  0.0636 | p95=  0.0680 | p99=  0.0892 | max=  2.8180
+Saved detailed results to: Suhopolje_cnn_float32_full_e2e_results.csv
+Saved summary to: summary_inference_NEW.csv
+
+[Script Runtime] 1.6871 seconds total
+  End  : 2025-09-23T16:18:08.364
+  Run #7 took 6922 ms
+---------------------------
+Run #8
+  Start: 2025-09-23T16:18:08.368
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (2.2.3) or chardet (3.0.4) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+Normalization stats used:
+t2m: mean=13.044391, std=8.945176
+Using TFLite model: ../models/CNN_float32.tflite
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Input spec : [ 1 24  1] <class 'numpy.float32'>
+Output spec: [1 1] <class 'numpy.float32'>
+
+Total loop wall time: 546.1665 ms for 8735 samples
+Throughput (E2E): 15993.29 samples/sec
+preprocess     avg=  0.0240 ms | min=  0.0215 | p50=  0.0236 | p90=  0.0248 | p95=  0.0268 | p99=  0.0347 | max=  0.1289
+io+compute     avg=  0.0160 ms | min=  0.0147 | p50=  0.0157 | p90=  0.0163 | p95=  0.0171 | p99=  0.0243 | max=  0.0596
+postprocess    avg=  0.0205 ms | min=  0.0186 | p50=  0.0201 | p90=  0.0209 | p95=  0.0225 | p99=  0.0285 | max=  0.1378
+total_e2e      avg=  0.0607 ms | min=  0.0557 | p50=  0.0597 | p90=  0.0623 | p95=  0.0684 | p99=  0.0861 | max=  0.1845
+Saved detailed results to: Suhopolje_cnn_float32_full_e2e_results.csv
+Saved summary to: summary_inference_NEW.csv
+
+[Script Runtime] 1.6700 seconds total
+  End  : 2025-09-23T16:18:15.225
+  Run #8 took 6856 ms
+---------------------------
+Run #9
+  Start: 2025-09-23T16:18:15.229
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (2.2.3) or chardet (3.0.4) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+Normalization stats used:
+t2m: mean=13.044391, std=8.945176
+Using TFLite model: ../models/CNN_float32.tflite
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Input spec : [ 1 24  1] <class 'numpy.float32'>
+Output spec: [1 1] <class 'numpy.float32'>
+
+Total loop wall time: 538.0503 ms for 8735 samples
+Throughput (E2E): 16234.54 samples/sec
+preprocess     avg=  0.0237 ms | min=  0.0220 | p50=  0.0231 | p90=  0.0245 | p95=  0.0259 | p99=  0.0326 | max=  1.1307
+io+compute     avg=  0.0159 ms | min=  0.0146 | p50=  0.0152 | p90=  0.0158 | p95=  0.0169 | p99=  0.0239 | max=  2.5828
+postprocess    avg=  0.0199 ms | min=  0.0185 | p50=  0.0195 | p90=  0.0204 | p95=  0.0212 | p99=  0.0288 | max=  0.3791
+total_e2e      avg=  0.0598 ms | min=  0.0557 | p50=  0.0580 | p90=  0.0613 | p95=  0.0653 | p99=  0.0826 | max=  2.7832
+Saved detailed results to: Suhopolje_cnn_float32_full_e2e_results.csv
+Saved summary to: summary_inference_NEW.csv
+
+[Script Runtime] 1.6513 seconds total
+  End  : 2025-09-23T16:18:22.071
+  Run #9 took 6839 ms
+---------------------------
+Run #10
+  Start: 2025-09-23T16:18:22.076
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (2.2.3) or chardet (3.0.4) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+Normalization stats used:
+t2m: mean=13.044391, std=8.945176
+Using TFLite model: ../models/CNN_float32.tflite
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Input spec : [ 1 24  1] <class 'numpy.float32'>
+Output spec: [1 1] <class 'numpy.float32'>
+
+Total loop wall time: 562.2993 ms for 8735 samples
+Throughput (E2E): 15534.43 samples/sec
+preprocess     avg=  0.0249 ms | min=  0.0223 | p50=  0.0240 | p90=  0.0252 | p95=  0.0264 | p99=  0.0348 | max=  2.6874
+io+compute     avg=  0.0161 ms | min=  0.0148 | p50=  0.0157 | p90=  0.0163 | p95=  0.0174 | p99=  0.0239 | max=  0.0556
+postprocess    avg=  0.0211 ms | min=  0.0191 | p50=  0.0206 | p90=  0.0214 | p95=  0.0223 | p99=  0.0281 | max=  1.0455
+total_e2e      avg=  0.0624 ms | min=  0.0570 | p50=  0.0608 | p90=  0.0635 | p95=  0.0673 | p99=  0.0867 | max=  2.7757
+Saved detailed results to: Suhopolje_cnn_float32_full_e2e_results.csv
+Saved summary to: summary_inference_NEW.csv
+
+[Script Runtime] 1.6882 seconds total
+  End  : 2025-09-23T16:18:29.014
+  Run #10 took 6936 ms
+---------------------------
+=== All runs finished at 2025-09-23T16:18:29.018 ===
+All runs completed in 68948 ms
+
+real	1m8,958s
+user	1m58,316s
+sys	2m46,603s
+
+
+=======================================================CNN simple ================================================
+iotlab@agxorin-2:~/Desktop/d17/prediction_journal/leona/validation$ time ./test.sh 
+=== All runs started at 2025-09-23T16:20:30.712 ===
+Run #1
+  Start: 2025-09-23T16:20:30.717
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (2.2.3) or chardet (3.0.4) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Input spec : [ 1 24  1] <class 'numpy.float32'>
+Output spec: [1 1] <class 'numpy.float32'>
+
+===== Single-Step Prediction =====
+Predicted:  5.7589 °C
+Actual:     5.3000 °C
+Difference: +0.4589 °C
+Inference time (E2E): 0.2680 ms
+
+Saved summary to: summary_inference_NEW.csv
+
+[Script Runtime] 0.0248 seconds total
+  End  : 2025-09-23T16:20:35.899
+  Run #1 took 5181 ms
+---------------------------
+Run #2
+  Start: 2025-09-23T16:20:35.903
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (2.2.3) or chardet (3.0.4) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Input spec : [ 1 24  1] <class 'numpy.float32'>
+Output spec: [1 1] <class 'numpy.float32'>
+
+===== Single-Step Prediction =====
+Predicted:  5.7589 °C
+Actual:     5.3000 °C
+Difference: +0.4589 °C
+Inference time (E2E): 0.2887 ms
+
+Saved summary to: summary_inference_NEW.csv
+
+[Script Runtime] 0.0250 seconds total
+  End  : 2025-09-23T16:20:41.186
+  Run #2 took 5281 ms
+---------------------------
+Run #3
+  Start: 2025-09-23T16:20:41.191
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (2.2.3) or chardet (3.0.4) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Input spec : [ 1 24  1] <class 'numpy.float32'>
+Output spec: [1 1] <class 'numpy.float32'>
+
+===== Single-Step Prediction =====
+Predicted:  5.7589 °C
+Actual:     5.3000 °C
+Difference: +0.4589 °C
+Inference time (E2E): 0.1542 ms
+
+Saved summary to: summary_inference_NEW.csv
+
+[Script Runtime] 0.0161 seconds total
+  End  : 2025-09-23T16:20:46.252
+  Run #3 took 5059 ms
+---------------------------
+Run #4
+  Start: 2025-09-23T16:20:46.258
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (2.2.3) or chardet (3.0.4) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Input spec : [ 1 24  1] <class 'numpy.float32'>
+Output spec: [1 1] <class 'numpy.float32'>
+
+===== Single-Step Prediction =====
+Predicted:  5.7589 °C
+Actual:     5.3000 °C
+Difference: +0.4589 °C
+Inference time (E2E): 0.2802 ms
+
+Saved summary to: summary_inference_NEW.csv
+
+[Script Runtime] 0.0237 seconds total
+  End  : 2025-09-23T16:20:51.400
+  Run #4 took 5142 ms
+---------------------------
+Run #5
+  Start: 2025-09-23T16:20:51.405
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (2.2.3) or chardet (3.0.4) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Input spec : [ 1 24  1] <class 'numpy.float32'>
+Output spec: [1 1] <class 'numpy.float32'>
+
+===== Single-Step Prediction =====
+Predicted:  5.7589 °C
+Actual:     5.3000 °C
+Difference: +0.4589 °C
+Inference time (E2E): 0.2616 ms
+
+Saved summary to: summary_inference_NEW.csv
+
+[Script Runtime] 0.0241 seconds total
+  End  : 2025-09-23T16:20:56.360
+  Run #5 took 4955 ms
+---------------------------
+Run #6
+  Start: 2025-09-23T16:20:56.365
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (2.2.3) or chardet (3.0.4) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Input spec : [ 1 24  1] <class 'numpy.float32'>
+Output spec: [1 1] <class 'numpy.float32'>
+
+===== Single-Step Prediction =====
+Predicted:  5.7589 °C
+Actual:     5.3000 °C
+Difference: +0.4589 °C
+Inference time (E2E): 0.2745 ms
+
+Saved summary to: summary_inference_NEW.csv
+
+[Script Runtime] 0.0243 seconds total
+  End  : 2025-09-23T16:21:01.538
+  Run #6 took 5173 ms
+---------------------------
+Run #7
+  Start: 2025-09-23T16:21:01.542
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (2.2.3) or chardet (3.0.4) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Input spec : [ 1 24  1] <class 'numpy.float32'>
+Output spec: [1 1] <class 'numpy.float32'>
+
+===== Single-Step Prediction =====
+Predicted:  5.7589 °C
+Actual:     5.3000 °C
+Difference: +0.4589 °C
+Inference time (E2E): 0.2802 ms
+
+Saved summary to: summary_inference_NEW.csv
+
+[Script Runtime] 0.0288 seconds total
+  End  : 2025-09-23T16:21:06.688
+  Run #7 took 5146 ms
+---------------------------
+Run #8
+  Start: 2025-09-23T16:21:06.693
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (2.2.3) or chardet (3.0.4) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Input spec : [ 1 24  1] <class 'numpy.float32'>
+Output spec: [1 1] <class 'numpy.float32'>
+
+===== Single-Step Prediction =====
+Predicted:  5.7589 °C
+Actual:     5.3000 °C
+Difference: +0.4589 °C
+Inference time (E2E): 0.2908 ms
+
+Saved summary to: summary_inference_NEW.csv
+
+[Script Runtime] 0.0283 seconds total
+  End  : 2025-09-23T16:21:11.855
+  Run #8 took 5161 ms
+---------------------------
+Run #9
+  Start: 2025-09-23T16:21:11.861
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (2.2.3) or chardet (3.0.4) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Input spec : [ 1 24  1] <class 'numpy.float32'>
+Output spec: [1 1] <class 'numpy.float32'>
+
+===== Single-Step Prediction =====
+Predicted:  5.7589 °C
+Actual:     5.3000 °C
+Difference: +0.4589 °C
+Inference time (E2E): 0.2786 ms
+
+Saved summary to: summary_inference_NEW.csv
+
+[Script Runtime] 0.0242 seconds total
+  End  : 2025-09-23T16:21:17.014
+  Run #9 took 5153 ms
+---------------------------
+Run #10
+  Start: 2025-09-23T16:21:17.019
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (2.2.3) or chardet (3.0.4) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Input spec : [ 1 24  1] <class 'numpy.float32'>
+Output spec: [1 1] <class 'numpy.float32'>
+
+===== Single-Step Prediction =====
+Predicted:  5.7589 °C
+Actual:     5.3000 °C
+Difference: +0.4589 °C
+Inference time (E2E): 0.2582 ms
+
+Saved summary to: summary_inference_NEW.csv
+
+[Script Runtime] 0.0277 seconds total
+  End  : 2025-09-23T16:21:22.145
+  Run #10 took 5124 ms
+---------------------------
+=== All runs finished at 2025-09-23T16:21:22.151 ===
+All runs completed in 51438 ms
+
+real	0m51,450s
+user	1m12,553s
+sys	1m14,018s
+
+=======================================================RNN SIMPLE ==============================================
+iotlab@agxorin-2:~/Desktop/d17/prediction_journal/leona/validation$ time ./test.sh 
+=== All runs started at 2025-09-23T16:23:21.201 ===
+Run #1
+  Start: 2025-09-23T16:23:21.205
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (2.2.3) or chardet (3.0.4) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Pred: 4.4035 °C | True: 5.3000 °C | Diff: -0.8965 °C
+E2E time: 0.5176 ms
+
+Saved summary to: summary_inference_NEW.csv
+
+[Script Runtime] 0.0245 seconds total
+  End  : 2025-09-23T16:23:26.175
+  Run #1 took 4968 ms
+---------------------------
+Run #2
+  Start: 2025-09-23T16:23:26.179
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (2.2.3) or chardet (3.0.4) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Pred: 4.4035 °C | True: 5.3000 °C | Diff: -0.8965 °C
+E2E time: 0.5353 ms
+
+Saved summary to: summary_inference_NEW.csv
+
+[Script Runtime] 0.0237 seconds total
+  End  : 2025-09-23T16:23:31.354
+  Run #2 took 5173 ms
+---------------------------
+Run #3
+  Start: 2025-09-23T16:23:31.358
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (2.2.3) or chardet (3.0.4) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Pred: 4.4035 °C | True: 5.3000 °C | Diff: -0.8965 °C
+E2E time: 0.4894 ms
+
+Saved summary to: summary_inference_NEW.csv
+
+[Script Runtime] 0.0258 seconds total
+  End  : 2025-09-23T16:23:36.432
+  Run #3 took 5074 ms
+---------------------------
+Run #4
+  Start: 2025-09-23T16:23:36.435
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (2.2.3) or chardet (3.0.4) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Pred: 4.4035 °C | True: 5.3000 °C | Diff: -0.8965 °C
+E2E time: 0.5398 ms
+
+Saved summary to: summary_inference_NEW.csv
+
+[Script Runtime] 0.0245 seconds total
+  End  : 2025-09-23T16:23:41.615
+  Run #4 took 5178 ms
+---------------------------
+Run #5
+  Start: 2025-09-23T16:23:41.622
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (2.2.3) or chardet (3.0.4) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Pred: 4.4035 °C | True: 5.3000 °C | Diff: -0.8965 °C
+E2E time: 0.5396 ms
+
+Saved summary to: summary_inference_NEW.csv
+
+[Script Runtime] 0.0259 seconds total
+  End  : 2025-09-23T16:23:46.660
+  Run #5 took 5039 ms
+---------------------------
+Run #6
+  Start: 2025-09-23T16:23:46.664
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (2.2.3) or chardet (3.0.4) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Pred: 4.4035 °C | True: 5.3000 °C | Diff: -0.8965 °C
+E2E time: 0.5165 ms
+
+Saved summary to: summary_inference_NEW.csv
+
+[Script Runtime] 0.0248 seconds total
+  End  : 2025-09-23T16:23:51.856
+  Run #6 took 5190 ms
+---------------------------
+Run #7
+  Start: 2025-09-23T16:23:51.862
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (2.2.3) or chardet (3.0.4) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Pred: 4.4035 °C | True: 5.3000 °C | Diff: -0.8965 °C
+E2E time: 0.4778 ms
+
+Saved summary to: summary_inference_NEW.csv
+
+[Script Runtime] 0.0253 seconds total
+  End  : 2025-09-23T16:23:56.839
+  Run #7 took 4978 ms
+---------------------------
+Run #8
+  Start: 2025-09-23T16:23:56.846
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (2.2.3) or chardet (3.0.4) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Pred: 4.4035 °C | True: 5.3000 °C | Diff: -0.8965 °C
+E2E time: 0.4914 ms
+
+Saved summary to: summary_inference_NEW.csv
+
+[Script Runtime] 0.0247 seconds total
+  End  : 2025-09-23T16:24:02.042
+  Run #8 took 5196 ms
+---------------------------
+Run #9
+  Start: 2025-09-23T16:24:02.047
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (2.2.3) or chardet (3.0.4) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Pred: 4.4035 °C | True: 5.3000 °C | Diff: -0.8965 °C
+E2E time: 0.4916 ms
+
+Saved summary to: summary_inference_NEW.csv
+
+[Script Runtime] 0.0216 seconds total
+  End  : 2025-09-23T16:24:07.024
+  Run #9 took 4974 ms
+---------------------------
+Run #10
+  Start: 2025-09-23T16:24:07.028
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (2.2.3) or chardet (3.0.4) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Pred: 4.4035 °C | True: 5.3000 °C | Diff: -0.8965 °C
+E2E time: 0.4979 ms
+
+Saved summary to: summary_inference_NEW.csv
+
+[Script Runtime] 0.0273 seconds total
+  End  : 2025-09-23T16:24:11.982
+  Run #10 took 4953 ms
+---------------------------
+=== All runs finished at 2025-09-23T16:24:11.987 ===
+All runs completed in 50785 ms
+
+real	0m50,796s
+user	1m11,424s
+sys	1m13,258s
