@@ -1,0 +1,14 @@
+# Python envs / builds
+leona/tf-env/
+leona/Python-3.8.12/
+.venv/
+__pycache__/
+*.pyc
+
+# notebooks/cache
+.ipynb_checkpoints/
+
+# OS/editor junk
+.DS_Store
+
+
