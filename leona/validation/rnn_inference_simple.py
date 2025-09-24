@@ -15,7 +15,7 @@ run_timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")[:-3]
 # -------------------------
 # Config
 # -------------------------
-hardware = "jetson"
+hardware = "rpi4"
 location = "Suhopolje"
 tflite_model_path = f"../models/RNN_temp_in_C_new.tflite"
 lag = 24
@@ -118,7 +118,7 @@ a = np.array(times_ms)
 # 4) Metrics
 # -------------------------
 diff = preds_real[0] - y_true_next_c
-print(f"Pred: {preds_real[0]:.4f} °C | True: {y_true_next_c:.4f} °C | Diff: {diff:+.4f} °C")
+#print(f"Pred: {preds_real[0]:.4f} °C | True: {y_true_next_c:.4f} °C | Diff: {diff:+.4f} °C")
 print(f"E2E time: {a[0]:.4f} ms")
 
 # -------------------------
@@ -151,7 +151,7 @@ else:
     df_summary = pd.DataFrame([summary_row])
 
 df_summary.to_csv(summary_csv, index=False, float_format="%.4f")
-print(f"\nSaved summary to: {summary_csv}")
+#print(f"\nSaved summary to: {summary_csv}")
 
 
 script_end2 = time.perf_counter()

@@ -15,7 +15,7 @@ run_timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")[:-3]
 # ======================
 # Config
 # ======================
-hardware = "jetson"
+hardware = "rpi4"
 location = "Suhopolje"
 excel_path = f"../../{location}2021.xlsx"
 tflite_path = "../models/RNN_temp_in_C_new.tflite"   # exact path or glob pattern
@@ -90,8 +90,8 @@ else:
     raise ValueError("NORMALIZE_ON must be 'train' or 'all'.")
 
 print("Normalization stats used:")
-for col in train_mean.index:
-    print(f"{col}: mean={train_mean[col]:.6f}, std={train_std[col]:.6f}")
+#for col in train_mean.index:
+    #print(f"{col}: mean={train_mean[col]:.6f}, std={train_std[col]:.6f}")
 
 # Also build normalized series for aligning targets
 ts_norm = (ts - train_mean) / train_std
@@ -115,14 +115,14 @@ assert len(ts_datetimes_all) == num_samples
 # 4) Load TFLite model
 # ======================
 tflite_model_path = load_latest_tflite(tflite_path)
-print(f"Using TFLite model: {tflite_model_path}")
+#print(f"Using TFLite model: {tflite_model_path}")
 
 interpreter = tf.lite.Interpreter(model_path=tflite_model_path)
 interpreter.allocate_tensors()
 in_det  = interpreter.get_input_details()[0]
 out_det = interpreter.get_output_details()[0]
-print("Input spec :", in_det["shape"], in_det["dtype"])
-print("Output spec:", out_det["shape"], out_det["dtype"])
+#print("Input spec :", in_det["shape"], in_det["dtype"])
+#print("Output spec:", out_det["shape"], out_det["dtype"])
 
 # ======================
 # 5) E2E per-sample timing from RAW → prediction
@@ -241,7 +241,7 @@ if save_csv and len(preds_real) > 0:
         "total_e2e_ms":  np.round(t_total_ms, 4),
     })
     detailed_df.to_csv(csv_out_detailed, index=False, float_format="%.4f")
-    print(f"Saved detailed results to: {csv_out_detailed}")
+    #print(f"Saved detailed results to: {csv_out_detailed}")
 
     # summary (appendable one row)
     a_tot = np.array(t_total_ms, dtype=np.float64)
@@ -271,7 +271,7 @@ if save_csv and len(preds_real) > 0:
         df_sum = pd.DataFrame([summary_row])
 
     df_sum.to_csv(csv_out_summary, index=False, float_format="%.4f")
-    print(f"Saved summary to: {csv_out_summary}")
+    #print(f"Saved summary to: {csv_out_summary}")
 
 
 script_end2 = time.perf_counter()

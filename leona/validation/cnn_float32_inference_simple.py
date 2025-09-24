@@ -12,7 +12,7 @@ run_timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")[:-3]
 # ---------------------
 # Config
 # ---------------------
-hardware = "jetson"
+hardware = "rpi4"
 tflite_model_path = "../models/CNN_float32.tflite"   # path to your float32 model
 t_mean = 13.387054  # training mean
 t_std  = 8.542878   # training std
@@ -28,8 +28,8 @@ interpreter.allocate_tensors()
 in_det  = interpreter.get_input_details()[0]
 out_det = interpreter.get_output_details()[0]
 
-print("Input spec :", in_det["shape"], in_det["dtype"])
-print("Output spec:", out_det["shape"], out_det["dtype"])
+#print("Input spec :", in_det["shape"], in_det["dtype"])
+#print("Output spec:", out_det["shape"], out_det["dtype"])
 
 # ---------------------
 # Prepare input
@@ -59,10 +59,10 @@ t1 = time.perf_counter()
 e2e_ms = (t1 - t0) * 1000.0
 diff = float(y_pred_real[0, 0] - true_value)
 
-print("\n===== Single-Step Prediction =====")
-print(f"Predicted:  {y_pred_real[0,0]:.4f} °C")
-print(f"Actual:     {true_value:.4f} °C")
-print(f"Difference: {diff:+.4f} °C")
+#print("\n===== Single-Step Prediction =====")
+#print(f"Predicted:  {y_pred_real[0,0]:.4f} °C")
+#print(f"Actual:     {true_value:.4f} °C")
+#print(f"Difference: {diff:+.4f} °C")
 print(f"Inference time (E2E): {e2e_ms:.4f} ms")
 
 # ---------------------
@@ -96,7 +96,7 @@ else:
     df_summary = pd.DataFrame([summary_row])
 
 df_summary.to_csv(summary_csv, index=False, float_format="%.4f")
-print(f"\nSaved summary to: {summary_csv}")
+#print(f"\nSaved summary to: {summary_csv}")
 
 script_end2 = time.perf_counter()
 
