@@ -1,6 +1,9 @@
 #!/bin/bash
 
-# Path to your Python script
+#rnn_inference_simple.py
+#rnn_inference_full.py
+#cnn_float32_inference_full.py
+#cnn_float32_inference_simple.py
 PYTHON_SCRIPT="rnn_inference_simple.py"
 
 # Total start time
