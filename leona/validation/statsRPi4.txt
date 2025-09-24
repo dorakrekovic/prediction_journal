@@ -1,0 +1,555 @@
+RNN simple:
+
+(venv) iotlab@rpi4-3:~/Desktop/d17/prediction_journal/leona/validation $ time ./test.sh
+=== All runs started at 2025-09-24T11:20:58.229 ===
+Run #1
+  Start: 2025-09-24T11:20:58.243
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+E2E time: 0.5720 ms
+
+[Script Runtime] 0.0255 seconds total
+  End  : 2025-09-24T11:21:07.397
+  Run #1 took 9157 ms
+---------------------------
+Run #2
+  Start: 2025-09-24T11:21:07.402
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+E2E time: 0.5551 ms
+
+[Script Runtime] 0.0255 seconds total
+  End  : 2025-09-24T11:21:16.621
+  Run #2 took 9218 ms
+---------------------------
+Run #3
+  Start: 2025-09-24T11:21:16.626
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+E2E time: 0.5795 ms
+
+[Script Runtime] 0.0255 seconds total
+  End  : 2025-09-24T11:21:25.726
+  Run #3 took 9099 ms
+---------------------------
+Run #4
+  Start: 2025-09-24T11:21:25.731
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+E2E time: 0.6271 ms
+
+[Script Runtime] 0.0270 seconds total
+  End  : 2025-09-24T11:21:34.832
+  Run #4 took 9100 ms
+---------------------------
+Run #5
+  Start: 2025-09-24T11:21:34.837
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+E2E time: 0.5900 ms
+
+[Script Runtime] 0.0255 seconds total
+  End  : 2025-09-24T11:21:43.947
+  Run #5 took 9109 ms
+---------------------------
+Run #6
+  Start: 2025-09-24T11:21:43.952
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+E2E time: 0.5535 ms
+
+[Script Runtime] 0.0254 seconds total
+  End  : 2025-09-24T11:21:53.099
+  Run #6 took 9147 ms
+---------------------------
+Run #7
+  Start: 2025-09-24T11:21:53.105
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+E2E time: 0.5508 ms
+
+[Script Runtime] 0.0255 seconds total
+  End  : 2025-09-24T11:22:02.229
+  Run #7 took 9124 ms
+---------------------------
+Run #8
+  Start: 2025-09-24T11:22:02.235
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+E2E time: 0.5491 ms
+
+[Script Runtime] 0.0394 seconds total
+  End  : 2025-09-24T11:22:11.492
+  Run #8 took 9257 ms
+---------------------------
+Run #9
+  Start: 2025-09-24T11:22:11.498
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+E2E time: 0.5682 ms
+
+[Script Runtime] 0.0256 seconds total
+  End  : 2025-09-24T11:22:20.642
+  Run #9 took 9144 ms
+---------------------------
+Run #10
+  Start: 2025-09-24T11:22:20.647
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+E2E time: 0.5479 ms
+
+[Script Runtime] 0.0256 seconds total
+  End  : 2025-09-24T11:22:29.832
+  Run #10 took 9184 ms
+---------------------------
+=== All runs finished at 2025-09-24T11:22:29.838 ===
+All runs completed in 91612 ms
+
+real	1m31.633s
+user	1m25.238s
+sys	0m10.791s
+
+
+================================================RNN FULL ====================================================
+(venv) iotlab@rpi4-3:~/Desktop/d17/prediction_journal/leona/validation $ time ./test.sh
+=== All runs started at 2025-09-24T11:24:42.362 ===
+Run #1
+  Start: 2025-09-24T11:24:42.375
+Normalization stats used:
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+Total wall time (ALL samples): 2222.6874 ms for 8735 samples
+Throughput (E2E): 3929.93 samples/sec
+preprocess     avg=  0.0608 ms | min=  0.0577 | p50=  0.0599 | p90=  0.0622 | p95=  0.0638 | p99=  0.0789 | max=  0.4738
+io+compute     avg=  0.1386 ms | min=  0.1339 | p50=  0.1370 | p90=  0.1411 | p95=  0.1450 | p99=  0.1631 | max=  0.6117
+postprocess    avg=  0.0506 ms | min=  0.0473 | p50=  0.0491 | p90=  0.0533 | p95=  0.0579 | p99=  0.0727 | max=  0.5521
+total_e2e      avg=  0.2515 ms | min=  0.2419 | p50=  0.2475 | p90=  0.2621 | p95=  0.2710 | p99=  0.2988 | max=  1.4653
+
+[Script Runtime] 4.1485 seconds total
+  End  : 2025-09-24T11:24:55.720
+  Run #1 took 13348 ms
+---------------------------
+Run #2
+  Start: 2025-09-24T11:24:55.725
+Normalization stats used:
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+Total wall time (ALL samples): 2230.0288 ms for 8735 samples
+Throughput (E2E): 3916.99 samples/sec
+preprocess     avg=  0.0613 ms | min=  0.0581 | p50=  0.0601 | p90=  0.0626 | p95=  0.0644 | p99=  0.0790 | max=  1.8546
+io+compute     avg=  0.1385 ms | min=  0.1333 | p50=  0.1366 | p90=  0.1411 | p95=  0.1485 | p99=  0.1699 | max=  0.6003
+postprocess    avg=  0.0510 ms | min=  0.0476 | p50=  0.0494 | p90=  0.0535 | p95=  0.0587 | p99=  0.0739 | max=  0.5081
+total_e2e      avg=  0.2524 ms | min=  0.2429 | p50=  0.2477 | p90=  0.2624 | p95=  0.2708 | p99=  0.3188 | max=  2.2834
+
+[Script Runtime] 4.1305 seconds total
+  End  : 2025-09-24T11:25:08.972
+  Run #2 took 13246 ms
+---------------------------
+Run #3
+  Start: 2025-09-24T11:25:08.979
+Normalization stats used:
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+Total wall time (ALL samples): 2229.3644 ms for 8735 samples
+Throughput (E2E): 3918.16 samples/sec
+preprocess     avg=  0.0609 ms | min=  0.0579 | p50=  0.0598 | p90=  0.0621 | p95=  0.0638 | p99=  0.0801 | max=  0.5476
+io+compute     avg=  0.1393 ms | min=  0.1342 | p50=  0.1375 | p90=  0.1421 | p95=  0.1491 | p99=  0.1662 | max=  0.4850
+postprocess    avg=  0.0506 ms | min=  0.0475 | p50=  0.0492 | p90=  0.0534 | p95=  0.0573 | p99=  0.0711 | max=  0.4963
+total_e2e      avg=  0.2524 ms | min=  0.2431 | p50=  0.2480 | p90=  0.2625 | p95=  0.2723 | p99=  0.3101 | max=  1.2592
+
+[Script Runtime] 4.1409 seconds total
+  End  : 2025-09-24T11:25:22.362
+  Run #3 took 13383 ms
+---------------------------
+Run #4
+  Start: 2025-09-24T11:25:22.368
+Normalization stats used:
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+Total wall time (ALL samples): 2228.3701 ms for 8735 samples
+Throughput (E2E): 3919.91 samples/sec
+preprocess     avg=  0.0613 ms | min=  0.0588 | p50=  0.0606 | p90=  0.0625 | p95=  0.0640 | p99=  0.0777 | max=  0.4405
+io+compute     avg=  0.1385 ms | min=  0.1343 | p50=  0.1371 | p90=  0.1406 | p95=  0.1439 | p99=  0.1603 | max=  0.6128
+postprocess    avg=  0.0510 ms | min=  0.0480 | p50=  0.0497 | p90=  0.0533 | p95=  0.0561 | p99=  0.0704 | max=  0.5713
+total_e2e      avg=  0.2524 ms | min=  0.2442 | p50=  0.2489 | p90=  0.2613 | p95=  0.2693 | p99=  0.2922 | max=  1.5318
+
+[Script Runtime] 4.1170 seconds total
+  End  : 2025-09-24T11:25:35.626
+  Run #4 took 13257 ms
+---------------------------
+Run #5
+  Start: 2025-09-24T11:25:35.631
+Normalization stats used:
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+Total wall time (ALL samples): 2240.8861 ms for 8735 samples
+Throughput (E2E): 3898.01 samples/sec
+preprocess     avg=  0.0619 ms | min=  0.0591 | p50=  0.0611 | p90=  0.0630 | p95=  0.0645 | p99=  0.0783 | max=  0.4247
+io+compute     avg=  0.1391 ms | min=  0.1347 | p50=  0.1378 | p90=  0.1414 | p95=  0.1462 | p99=  0.1593 | max=  0.6272
+postprocess    avg=  0.0512 ms | min=  0.0483 | p50=  0.0499 | p90=  0.0536 | p95=  0.0563 | p99=  0.0711 | max=  0.4890
+total_e2e      avg=  0.2537 ms | min=  0.2453 | p50=  0.2503 | p90=  0.2630 | p95=  0.2709 | p99=  0.2927 | max=  1.4651
+
+[Script Runtime] 4.1554 seconds total
+  End  : 2025-09-24T11:25:48.915
+  Run #5 took 13284 ms
+---------------------------
+Run #6
+  Start: 2025-09-24T11:25:48.921
+Normalization stats used:
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+Total wall time (ALL samples): 2229.9899 ms for 8735 samples
+Throughput (E2E): 3917.06 samples/sec
+preprocess     avg=  0.0613 ms | min=  0.0584 | p50=  0.0604 | p90=  0.0628 | p95=  0.0643 | p99=  0.0797 | max=  0.4053
+io+compute     avg=  0.1388 ms | min=  0.1341 | p50=  0.1373 | p90=  0.1414 | p95=  0.1460 | p99=  0.1606 | max=  0.5927
+postprocess    avg=  0.0506 ms | min=  0.0476 | p50=  0.0493 | p90=  0.0533 | p95=  0.0570 | p99=  0.0717 | max=  0.4896
+total_e2e      avg=  0.2523 ms | min=  0.2436 | p50=  0.2485 | p90=  0.2625 | p95=  0.2713 | p99=  0.2927 | max=  1.4166
+
+[Script Runtime] 4.1541 seconds total
+  End  : 2025-09-24T11:26:02.207
+  Run #6 took 13286 ms
+---------------------------
+Run #7
+  Start: 2025-09-24T11:26:02.213
+Normalization stats used:
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+Total wall time (ALL samples): 2229.2416 ms for 8735 samples
+Throughput (E2E): 3918.37 samples/sec
+preprocess     avg=  0.0603 ms | min=  0.0575 | p50=  0.0594 | p90=  0.0618 | p95=  0.0634 | p99=  0.0787 | max=  0.3913
+io+compute     avg=  0.1402 ms | min=  0.1356 | p50=  0.1386 | p90=  0.1427 | p95=  0.1492 | p99=  0.1641 | max=  0.6400
+postprocess    avg=  0.0503 ms | min=  0.0473 | p50=  0.0489 | p90=  0.0529 | p95=  0.0567 | p99=  0.0725 | max=  0.5627
+total_e2e      avg=  0.2524 ms | min=  0.2440 | p50=  0.2483 | p90=  0.2622 | p95=  0.2717 | p99=  0.3001 | max=  1.5373
+
+[Script Runtime] 4.2652 seconds total
+  End  : 2025-09-24T11:26:15.748
+  Run #7 took 13535 ms
+---------------------------
+Run #8
+  Start: 2025-09-24T11:26:15.754
+Normalization stats used:
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+Total wall time (ALL samples): 2247.7066 ms for 8735 samples
+Throughput (E2E): 3886.18 samples/sec
+preprocess     avg=  0.0609 ms | min=  0.0577 | p50=  0.0599 | p90=  0.0621 | p95=  0.0636 | p99=  0.0799 | max=  0.5566
+io+compute     avg=  0.1412 ms | min=  0.1363 | p50=  0.1393 | p90=  0.1441 | p95=  0.1523 | p99=  0.1718 | max=  0.5421
+postprocess    avg=  0.0508 ms | min=  0.0475 | p50=  0.0493 | p90=  0.0536 | p95=  0.0584 | p99=  0.0728 | max=  0.5366
+total_e2e      avg=  0.2545 ms | min=  0.2453 | p50=  0.2499 | p90=  0.2661 | p95=  0.2753 | p99=  0.3174 | max=  1.5689
+
+[Script Runtime] 4.1668 seconds total
+  End  : 2025-09-24T11:26:29.033
+  Run #8 took 13278 ms
+---------------------------
+Run #9
+  Start: 2025-09-24T11:26:29.038
+Normalization stats used:
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+Total wall time (ALL samples): 2247.4436 ms for 8735 samples
+Throughput (E2E): 3886.64 samples/sec
+preprocess     avg=  0.0607 ms | min=  0.0575 | p50=  0.0596 | p90=  0.0620 | p95=  0.0639 | p99=  0.0822 | max=  0.4364
+io+compute     avg=  0.1416 ms | min=  0.1363 | p50=  0.1397 | p90=  0.1442 | p95=  0.1528 | p99=  0.1719 | max=  0.6382
+postprocess    avg=  0.0506 ms | min=  0.0473 | p50=  0.0489 | p90=  0.0533 | p95=  0.0579 | p99=  0.0750 | max=  0.5555
+total_e2e      avg=  0.2544 ms | min=  0.2453 | p50=  0.2497 | p90=  0.2650 | p95=  0.2739 | p99=  0.3212 | max=  1.6253
+
+[Script Runtime] 4.1693 seconds total
+  End  : 2025-09-24T11:26:42.419
+  Run #9 took 13381 ms
+---------------------------
+Run #10
+  Start: 2025-09-24T11:26:42.425
+Normalization stats used:
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+Total wall time (ALL samples): 2244.1146 ms for 8735 samples
+Throughput (E2E): 3892.40 samples/sec
+preprocess     avg=  0.0612 ms | min=  0.0581 | p50=  0.0602 | p90=  0.0626 | p95=  0.0644 | p99=  0.0799 | max=  0.5145
+io+compute     avg=  0.1401 ms | min=  0.1344 | p50=  0.1383 | p90=  0.1429 | p95=  0.1514 | p99=  0.1679 | max=  0.6150
+postprocess    avg=  0.0511 ms | min=  0.0477 | p50=  0.0494 | p90=  0.0536 | p95=  0.0581 | p99=  0.0739 | max=  1.7594
+total_e2e      avg=  0.2540 ms | min=  0.2445 | p50=  0.2493 | p90=  0.2649 | p95=  0.2732 | p99=  0.3113 | max=  1.9568
+
+[Script Runtime] 4.1557 seconds total
+  End  : 2025-09-24T11:26:55.736
+  Run #10 took 13311 ms
+---------------------------
+=== All runs finished at 2025-09-24T11:26:55.742 ===
+All runs completed in 133382 ms
+
+real	2m13.402s
+user	2m6.243s
+sys	0m11.068s
+
+
+======================================================= CNNN FULL ===========================================================
+(venv) iotlab@rpi4-3:~/Desktop/d17/prediction_journal/leona/validation $ time ./test.sh
+=== All runs started at 2025-09-24T11:30:56.776 ===
+Run #1
+  Start: 2025-09-24T11:30:56.788
+Normalization stats used:
+t2m: mean=13.044391, std=8.945176
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+Total loop wall time: 1268.6406 ms for 8735 samples
+Throughput (E2E): 6885.32 samples/sec
+preprocess     avg=  0.0548 ms | min=  0.0526 | p50=  0.0541 | p90=  0.0555 | p95=  0.0570 | p99=  0.0697 | max=  0.4601
+io+compute     avg=  0.0408 ms | min=  0.0393 | p50=  0.0401 | p90=  0.0415 | p95=  0.0429 | p99=  0.0539 | max=  0.3260
+postprocess    avg=  0.0455 ms | min=  0.0438 | p50=  0.0450 | p90=  0.0458 | p95=  0.0468 | p99=  0.0579 | max=  0.4309
+total_e2e      avg=  0.1417 ms | min=  0.1373 | p50=  0.1398 | p90=  0.1440 | p95=  0.1528 | p99=  0.1661 | max=  1.2244
+
+[Script Runtime] 3.1793 seconds total
+  End  : 2025-09-24T11:31:09.132
+  Run #1 took 12347 ms
+---------------------------
+Run #2
+  Start: 2025-09-24T11:31:09.137
+Normalization stats used:
+t2m: mean=13.044391, std=8.945176
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+Total loop wall time: 1275.3204 ms for 8735 samples
+Throughput (E2E): 6849.26 samples/sec
+preprocess     avg=  0.0549 ms | min=  0.0527 | p50=  0.0542 | p90=  0.0554 | p95=  0.0574 | p99=  0.0694 | max=  0.4642
+io+compute     avg=  0.0409 ms | min=  0.0394 | p50=  0.0402 | p90=  0.0411 | p95=  0.0423 | p99=  0.0530 | max=  2.0043
+postprocess    avg=  0.0460 ms | min=  0.0443 | p50=  0.0456 | p90=  0.0463 | p95=  0.0471 | p99=  0.0591 | max=  0.6221
+total_e2e      avg=  0.1424 ms | min=  0.1382 | p50=  0.1405 | p90=  0.1444 | p95=  0.1528 | p99=  0.1666 | max=  2.6901
+
+[Script Runtime] 3.1821 seconds total
+  End  : 2025-09-24T11:31:21.541
+  Run #2 took 12403 ms
+---------------------------
+Run #3
+  Start: 2025-09-24T11:31:21.547
+Normalization stats used:
+t2m: mean=13.044391, std=8.945176
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+Total loop wall time: 1264.9579 ms for 8735 samples
+Throughput (E2E): 6905.37 samples/sec
+preprocess     avg=  0.0546 ms | min=  0.0524 | p50=  0.0539 | p90=  0.0553 | p95=  0.0571 | p99=  0.0687 | max=  0.3642
+io+compute     avg=  0.0405 ms | min=  0.0392 | p50=  0.0400 | p90=  0.0411 | p95=  0.0423 | p99=  0.0523 | max=  0.2807
+postprocess    avg=  0.0456 ms | min=  0.0440 | p50=  0.0451 | p90=  0.0459 | p95=  0.0468 | p99=  0.0591 | max=  0.3103
+total_e2e      avg=  0.1413 ms | min=  0.1370 | p50=  0.1395 | p90=  0.1435 | p95=  0.1521 | p99=  0.1645 | max=  0.9050
+
+[Script Runtime] 3.1724 seconds total
+  End  : 2025-09-24T11:31:33.840
+  Run #3 took 12293 ms
+---------------------------
+Run #4
+  Start: 2025-09-24T11:31:33.846
+Normalization stats used:
+t2m: mean=13.044391, std=8.945176
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+Total loop wall time: 1268.0886 ms for 8735 samples
+Throughput (E2E): 6888.32 samples/sec
+preprocess     avg=  0.0548 ms | min=  0.0525 | p50=  0.0541 | p90=  0.0552 | p95=  0.0568 | p99=  0.0682 | max=  0.3588
+io+compute     avg=  0.0405 ms | min=  0.0392 | p50=  0.0399 | p90=  0.0407 | p95=  0.0424 | p99=  0.0523 | max=  0.2966
+postprocess    avg=  0.0457 ms | min=  0.0442 | p50=  0.0453 | p90=  0.0459 | p95=  0.0465 | p99=  0.0583 | max=  0.3537
+total_e2e      avg=  0.1416 ms | min=  0.1375 | p50=  0.1399 | p90=  0.1434 | p95=  0.1522 | p99=  0.1656 | max=  0.9657
+
+[Script Runtime] 3.1687 seconds total
+  End  : 2025-09-24T11:31:46.140
+  Run #4 took 12294 ms
+---------------------------
+Run #5
+  Start: 2025-09-24T11:31:46.146
+Normalization stats used:
+t2m: mean=13.044391, std=8.945176
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+Total loop wall time: 1265.6997 ms for 8735 samples
+Throughput (E2E): 6901.32 samples/sec
+preprocess     avg=  0.0547 ms | min=  0.0524 | p50=  0.0540 | p90=  0.0552 | p95=  0.0566 | p99=  0.0685 | max=  0.3851
+io+compute     avg=  0.0405 ms | min=  0.0392 | p50=  0.0400 | p90=  0.0409 | p95=  0.0418 | p99=  0.0524 | max=  0.2779
+postprocess    avg=  0.0455 ms | min=  0.0437 | p50=  0.0451 | p90=  0.0457 | p95=  0.0465 | p99=  0.0570 | max=  0.3403
+total_e2e      avg=  0.1413 ms | min=  0.1373 | p50=  0.1396 | p90=  0.1431 | p95=  0.1513 | p99=  0.1637 | max=  1.0032
+
+[Script Runtime] 3.1694 seconds total
+  End  : 2025-09-24T11:31:58.452
+  Run #5 took 12306 ms
+---------------------------
+Run #6
+  Start: 2025-09-24T11:31:58.457
+Normalization stats used:
+t2m: mean=13.044391, std=8.945176
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+Total loop wall time: 1262.4743 ms for 8735 samples
+Throughput (E2E): 6918.95 samples/sec
+preprocess     avg=  0.0545 ms | min=  0.0520 | p50=  0.0538 | p90=  0.0552 | p95=  0.0568 | p99=  0.0692 | max=  0.3806
+io+compute     avg=  0.0403 ms | min=  0.0391 | p50=  0.0398 | p90=  0.0409 | p95=  0.0419 | p99=  0.0503 | max=  0.2888
+postprocess    avg=  0.0456 ms | min=  0.0438 | p50=  0.0450 | p90=  0.0458 | p95=  0.0470 | p99=  0.0596 | max=  0.3800
+total_e2e      avg=  0.1410 ms | min=  0.1367 | p50=  0.1392 | p90=  0.1431 | p95=  0.1518 | p99=  0.1674 | max=  1.0215
+
+[Script Runtime] 3.1759 seconds total
+  End  : 2025-09-24T11:32:10.857
+  Run #6 took 12400 ms
+---------------------------
+Run #7
+  Start: 2025-09-24T11:32:10.863
+Normalization stats used:
+t2m: mean=13.044391, std=8.945176
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+Total loop wall time: 1268.3792 ms for 8735 samples
+Throughput (E2E): 6886.74 samples/sec
+preprocess     avg=  0.0547 ms | min=  0.0524 | p50=  0.0539 | p90=  0.0556 | p95=  0.0571 | p99=  0.0699 | max=  0.3628
+io+compute     avg=  0.0406 ms | min=  0.0393 | p50=  0.0401 | p90=  0.0412 | p95=  0.0422 | p99=  0.0527 | max=  0.3194
+postprocess    avg=  0.0458 ms | min=  0.0440 | p50=  0.0452 | p90=  0.0459 | p95=  0.0476 | p99=  0.0601 | max=  0.3968
+total_e2e      avg=  0.1417 ms | min=  0.1373 | p50=  0.1397 | p90=  0.1439 | p95=  0.1530 | p99=  0.1686 | max=  1.0852
+
+[Script Runtime] 3.1904 seconds total
+  End  : 2025-09-24T11:32:23.153
+  Run #7 took 12289 ms
+---------------------------
+Run #8
+  Start: 2025-09-24T11:32:23.158
+Normalization stats used:
+t2m: mean=13.044391, std=8.945176
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+Total loop wall time: 1272.1607 ms for 8735 samples
+Throughput (E2E): 6866.27 samples/sec
+preprocess     avg=  0.0551 ms | min=  0.0527 | p50=  0.0544 | p90=  0.0556 | p95=  0.0570 | p99=  0.0703 | max=  0.3556
+io+compute     avg=  0.0408 ms | min=  0.0395 | p50=  0.0402 | p90=  0.0413 | p95=  0.0424 | p99=  0.0538 | max=  0.3203
+postprocess    avg=  0.0456 ms | min=  0.0436 | p50=  0.0450 | p90=  0.0458 | p95=  0.0467 | p99=  0.0589 | max=  0.4055
+total_e2e      avg=  0.1420 ms | min=  0.1376 | p50=  0.1402 | p90=  0.1442 | p95=  0.1526 | p99=  0.1666 | max=  1.0147
+
+[Script Runtime] 3.1779 seconds total
+  End  : 2025-09-24T11:32:35.475
+  Run #8 took 12317 ms
+---------------------------
+Run #9
+  Start: 2025-09-24T11:32:35.481
+Normalization stats used:
+t2m: mean=13.044391, std=8.945176
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+Total loop wall time: 1266.3788 ms for 8735 samples
+Throughput (E2E): 6897.62 samples/sec
+preprocess     avg=  0.0546 ms | min=  0.0524 | p50=  0.0539 | p90=  0.0553 | p95=  0.0568 | p99=  0.0707 | max=  0.4374
+io+compute     avg=  0.0408 ms | min=  0.0394 | p50=  0.0402 | p90=  0.0415 | p95=  0.0427 | p99=  0.0536 | max=  0.3092
+postprocess    avg=  0.0454 ms | min=  0.0436 | p50=  0.0448 | p90=  0.0456 | p95=  0.0468 | p99=  0.0596 | max=  0.3966
+total_e2e      avg=  0.1414 ms | min=  0.1371 | p50=  0.1395 | p90=  0.1439 | p95=  0.1526 | p99=  0.1683 | max=  1.0979
+
+[Script Runtime] 3.1776 seconds total
+  End  : 2025-09-24T11:32:47.780
+  Run #9 took 12299 ms
+---------------------------
+Run #10
+  Start: 2025-09-24T11:32:47.786
+Normalization stats used:
+t2m: mean=13.044391, std=8.945176
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+Total loop wall time: 1281.2565 ms for 8735 samples
+Throughput (E2E): 6817.53 samples/sec
+preprocess     avg=  0.0550 ms | min=  0.0521 | p50=  0.0539 | p90=  0.0558 | p95=  0.0586 | p99=  0.0767 | max=  0.5205
+io+compute     avg=  0.0413 ms | min=  0.0394 | p50=  0.0403 | p90=  0.0420 | p95=  0.0438 | p99=  0.0611 | max=  0.2911
+postprocess    avg=  0.0461 ms | min=  0.0439 | p50=  0.0452 | p90=  0.0461 | p95=  0.0490 | p99=  0.0649 | max=  0.3953
+total_e2e      avg=  0.1430 ms | min=  0.1372 | p50=  0.1399 | p90=  0.1456 | p95=  0.1583 | p99=  0.1987 | max=  0.9885
+
+[Script Runtime] 3.1995 seconds total
+  End  : 2025-09-24T11:33:00.115
+  Run #10 took 12329 ms
+---------------------------
+=== All runs finished at 2025-09-24T11:33:00.121 ===
+All runs completed in 123348 ms
+
+real	2m3.368s
+user	1m56.401s
+sys	0m11.151s
+
+
+================================================= CNN SIMPLE ========================================================
+
+
+(venv) iotlab@rpi4-3:~/Desktop/d17/prediction_journal/leona/validation $ time ./test.sh
+=== All runs started at 2025-09-24T11:35:10.973 ===
+Run #1
+  Start: 2025-09-24T11:35:10.979
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Inference time (E2E): 0.2867 ms
+
+[Script Runtime] 0.0238 seconds total
+  End  : 2025-09-24T11:35:20.081
+  Run #1 took 9102 ms
+---------------------------
+Run #2
+  Start: 2025-09-24T11:35:20.086
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Inference time (E2E): 0.2942 ms
+
+[Script Runtime] 0.0239 seconds total
+  End  : 2025-09-24T11:35:29.175
+  Run #2 took 9088 ms
+---------------------------
+Run #3
+  Start: 2025-09-24T11:35:29.180
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Inference time (E2E): 0.3111 ms
+
+[Script Runtime] 0.0240 seconds total
+  End  : 2025-09-24T11:35:38.280
+  Run #3 took 9100 ms
+---------------------------
+Run #4
+  Start: 2025-09-24T11:35:38.286
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Inference time (E2E): 0.2871 ms
+
+[Script Runtime] 0.0240 seconds total
+  End  : 2025-09-24T11:35:47.414
+  Run #4 took 9128 ms
+---------------------------
+Run #5
+  Start: 2025-09-24T11:35:47.420
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Inference time (E2E): 0.2856 ms
+
+[Script Runtime] 0.0241 seconds total
+  End  : 2025-09-24T11:35:56.526
+  Run #5 took 9105 ms
+---------------------------
+Run #6
+  Start: 2025-09-24T11:35:56.531
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Inference time (E2E): 0.2856 ms
+
+[Script Runtime] 0.0239 seconds total
+  End  : 2025-09-24T11:36:05.640
+  Run #6 took 9108 ms
+---------------------------
+Run #7
+  Start: 2025-09-24T11:36:05.645
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Inference time (E2E): 0.2878 ms
+
+[Script Runtime] 0.0259 seconds total
+  End  : 2025-09-24T11:36:14.872
+  Run #7 took 9227 ms
+---------------------------
+Run #8
+  Start: 2025-09-24T11:36:14.878
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Inference time (E2E): 0.3367 ms
+
+[Script Runtime] 0.0242 seconds total
+  End  : 2025-09-24T11:36:23.997
+  Run #8 took 9119 ms
+---------------------------
+Run #9
+  Start: 2025-09-24T11:36:24.003
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Inference time (E2E): 0.3041 ms
+
+[Script Runtime] 0.0243 seconds total
+  End  : 2025-09-24T11:36:33.111
+  Run #9 took 9107 ms
+---------------------------
+Run #10
+  Start: 2025-09-24T11:36:33.116
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Inference time (E2E): 0.2914 ms
+
+[Script Runtime] 0.0241 seconds total
+  End  : 2025-09-24T11:36:42.233
+  Run #10 took 9117 ms
+---------------------------
+=== All runs finished at 2025-09-24T11:36:42.239 ===
+All runs completed in 91266 ms
+
+real	1m31.276s
+user	1m24.994s
+sys	0m10.565s

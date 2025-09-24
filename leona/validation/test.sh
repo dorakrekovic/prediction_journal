@@ -4,7 +4,7 @@
 #rnn_inference_full.py
 #cnn_float32_inference_full.py
 #cnn_float32_inference_simple.py
-PYTHON_SCRIPT="rnn_inference_simple.py"
+PYTHON_SCRIPT="cnn_float32_inference_simple.py"
 
 # Total start time
 TOTAL_START_NS=$(date +%s%N)
