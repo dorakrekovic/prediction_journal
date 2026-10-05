@@ -16,7 +16,7 @@ from wandb.integration.keras import WandbCallback, WandbMetricsLogger, WandbMode
 print("TensorFlow version:", tf.__version__)
 print("Keras version:", tf.keras.__version__)
 time_stamp = datetime.now().strftime('%Y-%m-%d_%H-%M')
-location = "Nasice"
+location = "Suhopolje"
 saved_model_path = f'models/{location}_{time_stamp}_tf_1h.h5'
 
 filename = os.path.basename(saved_model_path)
@@ -163,7 +163,7 @@ class PredictionModel():
                 batch_size=self.batch,
                 validation_data=(self.Xval, self.Yval),
                 shuffle=False,
-                callbacks=[self.modelSave(), WandbMetricsLogger(), WandbModelCheckpoint("model-tensorflow-u"), WandbCallback()])
+                callbacks=[self.modelSave(), WandbMetricsLogger(), WandbModelCheckpoint("../model-tensorflow-u"), WandbCallback()])
         else:
             history = empty_model.fit(
                 self.X,

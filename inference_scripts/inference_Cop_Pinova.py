@@ -1,13 +1,12 @@
 import os
-import numpy as np
 import pandas as pd
 from tensorflow.keras.models import load_model
 from datetime import datetime
-from tf_1h import create_X_Y, train_mean, train_std, n_ahead, lag
+from train.tf_1h import create_X_Y, train_mean, train_std, n_ahead, lag
 time_stamp = datetime.now().strftime('%Y-%m-%d_%H-%M')
 
 location = "Kamenac"
-saved_model_path = f'models/Copernicus/Kamenac_2025-07-15_17-56_tf_1h.h5'
+saved_model_path = f'../models/Copernicus/Kamenac_2025-07-15_17-56_tf_1h.h5'
 # Get filename
 filename = os.path.basename(saved_model_path)
 

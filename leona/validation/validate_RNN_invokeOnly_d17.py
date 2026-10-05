@@ -31,7 +31,7 @@ summary_csv = "summary_inference.csv"         # <--- summary file you asked for
 
 # Optional benchmarking knobs
 WARMUP_RUNS = 5         # do a few warmups before timing (0 to disable)
-PRINT_PER_SAMPLE = False  # set True to print each inference time
+PRINT_PER_SAMPLE = False  # set True to print each inference_scripts time
 
 # -------------------------
 # Helpers
@@ -154,7 +154,7 @@ for i in range(len(X_all)):
 
     interpreter.set_tensor(in_det["index"], x_in)
 
-    # Measure pure model inference time
+    # Measure pure model inference_scripts time
     t0 = time.perf_counter()
     interpreter.invoke()
     t1 = time.perf_counter()
@@ -189,12 +189,12 @@ if len(times_ms) > 0:
     avg_ms = (total_s / len(times_ms)) * 1000.0
     thr = len(times_ms) / total_s if total_s > 0 else float("inf")
 
-    print(f"\nTotal inference loop duration (all {len(times_ms)} samples): {total_s:.4f} s")
+    print(f"\nTotal inference_scripts loop duration (all {len(times_ms)} samples): {total_s:.4f} s")
     print(f"Average per-sample (invoke only): {avg_ms:.4f} ms")
     print(f"Throughput: {thr:.4f} samples/sec")
 else:
     a = np.array([], dtype=np.float64)
-    print("\nNo samples to run inference on.")
+    print("\nNo samples to run inference_scripts on.")
 
 # -------------------------
 # 7) Save SUMMARY CSV (one row appended)

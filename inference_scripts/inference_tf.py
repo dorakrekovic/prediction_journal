@@ -3,11 +3,11 @@ import os
 import pandas as pd
 from tensorflow.keras.models import load_model
 from datetime import datetime
-from tf_1h import create_X_Y, train_mean, train_std, n_ahead, lag
+from train.tf_1h import create_X_Y, train_mean, train_std, n_ahead, lag
 time_stamp = datetime.now().strftime('%Y-%m-%d_%H-%M')
 
 location = "Nasice"
-saved_model_path = f'models/Nasice_2025-07-18_12-27_tf_1h.h5'
+saved_model_path = f'../models/Nasice_2025-07-18_12-27_tf_1h.h5'
 # Get filename
 filename = os.path.basename(saved_model_path)
 

@@ -19,7 +19,7 @@ from matplotlib import patheffects as pe
 # =========================
 # CONFIG
 # =========================
-CSV_PATH = "summary2.csv"
+CSV_PATH = "inference_all.csv"
 OUTDIR   = "figs"
 
 # Consistent model colors/markers everywhere
@@ -76,7 +76,7 @@ def ensure_outdir(path: str):
 def savefig(path_base: str):
     plt.tight_layout()
     plt.savefig(path_base + ".png", dpi=200)
-    plt.savefig(path_base + ".svg")
+    #plt.savefig(path_base + ".svg")
     plt.close()
 
 # =========================

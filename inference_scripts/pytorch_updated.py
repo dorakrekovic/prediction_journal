@@ -10,7 +10,7 @@ from sklearn.preprocessing import StandardScaler, RobustScaler
 import seaborn as sns
 import wandb
 
-df = pd.read_csv("data/Nasice_19_20.csv")
+df = pd.read_csv("../data/Nasice_19_20.csv")
 final_location = "Nasice"
 df.head(1)
 

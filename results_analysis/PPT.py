@@ -3,7 +3,7 @@ import pandas as pd
 import glob
 import os
 
-folder_path = 'inference_results/Pinova/'
+folder_path = '../inference_results/Pinova/'
 csv_files = glob.glob(os.path.join(folder_path, '*.csv'))
 
 all_accuracy_results = []

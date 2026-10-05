@@ -20,7 +20,7 @@ location = "Suhopolje"
 tflite_model_path = f"../models/RNN_temp_in_C_new.tflite"
 lag = 24
 n_ahead = 1
-inf_type = "e2e_simple"   # label for inference type
+inf_type = "e2e_simple"   # label for inference_scripts type
 summary_csv = "summary_inference_NEW.csv"
 
 # Input window and ground truth
@@ -75,7 +75,7 @@ out_det = interpreter.get_output_details()[0]
 x_raw = np.array(last_24_raw, dtype=np.float32).reshape(1, lag, 1)
 
 # -------------------------
-# 3) Run inference (E2E timing)
+# 3) Run inference_scripts (E2E timing)
 # -------------------------
 times_ms = []
 preds_real = []
@@ -92,7 +92,7 @@ for _ in range(1):  # single sample, but loop for uniformity
     else:
         raise TypeError(f"Unsupported input dtype: {in_det['dtype']}")
 
-    # inference
+    # inference_scripts
     interpreter.set_tensor(in_det["index"], x_in)
     interpreter.invoke()
     y_out = interpreter.get_tensor(out_det["index"])

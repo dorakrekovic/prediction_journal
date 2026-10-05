@@ -1,4 +1,6 @@
-iotlab@agxorin-2:~/Desktop/d17/prediction_journal/leona/validation$ time ./test.sh 
+=============================RNN ALL================================================================
+
+iotlab@agxorin-2:~/Desktop/d17/prediction_journal/leona/validation$ time ./test.sh
 === All runs started at 2025-09-23T16:12:03.230 ===
 Run #1
   Start: 2025-09-23T16:12:03.234

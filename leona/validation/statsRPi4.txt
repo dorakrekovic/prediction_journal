@@ -1,4 +1,4 @@
-RNN simple:
+========================================RNN simple======================================================
 
 (venv) iotlab@rpi4-3:~/Desktop/d17/prediction_journal/leona/validation $ time ./test.sh
 === All runs started at 2025-09-24T11:20:58.229 ===
@@ -271,7 +271,7 @@ user	2m6.243s
 sys	0m11.068s
 
 
-======================================================= CNNN FULL ===========================================================
+======================================================= CNN FULL ===========================================================
 (venv) iotlab@rpi4-3:~/Desktop/d17/prediction_journal/leona/validation $ time ./test.sh
 === All runs started at 2025-09-24T11:30:56.776 ===
 Run #1

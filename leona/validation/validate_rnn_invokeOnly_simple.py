@@ -80,7 +80,7 @@ print("Output spec:", out_det["shape"], out_det["dtype"])
 x_raw = last_24_raw.reshape(1, lag, 1)
 
 # -------------------------
-# E2E inference timing
+# E2E inference_scripts timing
 # (normalize -> maybe quantize -> set_tensor -> invoke -> get_tensor -> maybe dequantize -> denormalize)
 # -------------------------
 t0_all = time.perf_counter()

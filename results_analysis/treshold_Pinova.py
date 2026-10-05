@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # Load the CSV file
-csv_file = 'inference_results/Copernicus/results_inference_on_Kamenac_2025-03-13_11-20_2021data_modelUsed_Suhopolje_2025-03-13_11-08_tf_1h.csv'
+csv_file = '../inference_results/Pinova/results_inference_on_Suhopolje_2025-07-15_14-15_2021data_modelUsed_Suhopolje_2025-07-15_10-45_tf.csv'
 df = pd.read_csv(csv_file)
 
 # Convert datetime column to datetime type
@@ -12,9 +12,6 @@ df['datetime'] = pd.to_datetime(df['datetime'])
 # Calculate the absolute difference
 df['abs_diff'] = abs(df['real_value'] - df['predicted_value'])
 
-# Convert Kelvin to Celsius for visualization (optional, purely for nicer axis scale)
-df['real_celsius'] = df['real_value'] - 273.15
-df['predicted_celsius'] = df['predicted_value'] - 273.15
 
 # Define color based on difference thresholds
 def color_diff(row):
@@ -31,10 +28,10 @@ df['color'] = df.apply(color_diff, axis=1)
 plt.figure(figsize=(16, 8))
 
 # Plot the real values as a line
-plt.plot(df['datetime'], df['real_celsius'], label='Real Value (°C)', color='blue', linewidth=2)
+plt.plot(df['datetime'], df['real_value'], label='Real Value (°C)', color='blue', linewidth=2)
 
 # Plot the predicted values with color coding
-plt.scatter(df['datetime'], df['predicted_celsius'], c=df['color'], label='Predicted Value (°C)', s=50)
+plt.scatter(df['datetime'], df['predicted_value'], c=df['color'], label='Predicted Value (°C)', s=50)
 
 # Add legends for thresholds
 import matplotlib.patches as mpatches
@@ -90,8 +87,8 @@ plt.tight_layout()
 plt.show()
 
 # Convert Kelvin to Celsius for better readability
-df['real_c'] = df['real_value'] - 273.15
-df['predicted_c'] = df['predicted_value'] - 273.15
+df['real_c'] = df['real_value']
+df['predicted_c'] = df['predicted_value']
 
 # Scatter plot
 plt.figure(figsize=(8, 8))
@@ -124,13 +121,13 @@ fig.update_traces(marker=dict(size=6))
 fig.show()
 
 # Create rolling averages (window = 24 for daily average on hourly data)
-df['real_smoothed'] = df['real_value'].rolling(window=24).mean() - 273.15
-df['predicted_smoothed'] = df['predicted_value'].rolling(window=24).mean() - 273.15
+df['real_smoothed'] = df['real_value'].rolling(window=24).mean()
+df['predicted_smoothed'] = df['predicted_value'].rolling(window=24).mean()
 
 # Plot smoothed values
 plt.figure(figsize=(16, 6))
-plt.plot(df['datetime'], df['real_smoothed'], label='Real (Smoothed)', color='blue')
-plt.plot(df['datetime'], df['predicted_smoothed'], label='Predicted (Smoothed)', color='green')
+plt.plot(df['time'], df['real_smoothed'], label='Real (Smoothed)', color='blue')
+plt.plot(df['time'], df['predicted_smoothed'], label='Predicted (Smoothed)', color='green')
 
 plt.title('Real vs Predicted Temperatures (Smoothed)')
 plt.xlabel('Datetime')
